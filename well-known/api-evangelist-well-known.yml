@@ -1,0 +1,77 @@
+generated: '2026-08-10'
+method: searched
+source: live GET of /.well-known/* on every host in apis.yml
+note: >-
+  Probed apievangelist.com, developer.apievangelist.com, api.apievangelist.com and
+  mcp.apievangelist.com. api.apievangelist.com is an AWS API Gateway custom domain and
+  answers 403 "Missing Authentication Token" for any unrouted path, so a 403 there is
+  "no route", not "gated". mcp.apievangelist.com answers 405 "Use POST for JSON-RPC"
+  for every GET. Neither is evidence of a document.
+hosts:
+- host: https://apievangelist.com
+  documents:
+  - path: /.well-known/api-catalog          # RFC 9264 linkset
+    status: 200
+    content_type: application/json
+    file: api-evangelist-api-catalog.json
+  - path: /.well-known/mcp/server-card.json # MCP server card
+    status: 200
+    content_type: application/json
+    file: api-evangelist-mcp-server-card.json
+  - path: /.well-known/agent-skills/index.json  # Cloudflare agent-skills discovery RFC
+    status: 200
+    content_type: application/json
+    file: api-evangelist-agent-skills-index.json
+  - path: /.well-known/security.txt         # RFC 9116
+    status: 404
+  - path: /.well-known/agent-card.json      # A2A 1.0.0
+    status: 404
+  - path: /.well-known/agent.json           # A2A pre-0.3 legacy
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://developer.apievangelist.com
+  documents:
+  - path: /.well-known/api-catalog          # RFC 9264 linkset — the two OpenAPI contracts
+    status: 200
+    content_type: application/json
+    file: api-evangelist-developer-api-catalog.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+- host: https://api.apievangelist.com
+  note: every /.well-known/* path returns 403 "Missing Authentication Token" (API Gateway no-route)
+  documents:
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+- host: https://mcp.apievangelist.com
+  note: every GET returns 405 {"error":"Use POST for JSON-RPC"}
+  documents:
+  - path: /.well-known/api-catalog
+    status: 405
+  - path: /.well-known/agent-card.json
+    status: 405
+gaps:
+- No /.well-known/security.txt on any host (RFC 9116) — no machine-readable
+  vulnerability-disclosure contact is published.
+- No A2A agent card at either the canonical or the legacy path.
+x-evidence:
+  fetched: '2026-08-10'
+  method: curl GET, following redirects, status + content-type recorded per path

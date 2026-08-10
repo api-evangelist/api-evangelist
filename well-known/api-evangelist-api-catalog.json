@@ -1,0 +1,20 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://apievangelist.com/skills/",
+      "service-desc": [
+        {
+          "href": "https://apievangelist.com/skills/index.json",
+          "type": "application/json",
+          "title": "Agent skills index"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://apievangelist.com/about/api-evangelist",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

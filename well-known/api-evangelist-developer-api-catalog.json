@@ -1,0 +1,103 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://api.apievangelist.com/",
+      "service-desc": [
+        {
+          "href": "https://developer.apievangelist.com/apis/apievangelist-v1-openapi.yml",
+          "type": "application/vnd.oai.openapi;version=3.1",
+          "title": "API Evangelist Network API — OpenAPI 3.1 contract"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://developer.apievangelist.com/",
+          "type": "text/html",
+          "title": "API Evangelist developer portal"
+        },
+        {
+          "href": "https://developer.apievangelist.com/api",
+          "type": "text/html",
+          "title": "API reference"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://github.com/api-evangelist/apievangelist-aws",
+          "type": "text/html",
+          "title": "Source repository"
+        }
+      ],
+      "linkset-meta": {
+        "tags": [
+          "API"
+        ]
+      }
+    },
+    {
+      "anchor": "https://api.apievangelist.com/v1/governance",
+      "service-desc": [
+        {
+          "href": "https://developer.apievangelist.com/apis/apievangelist-governance-openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.1",
+          "title": "API Evangelist Governance & Discovery API — OpenAPI 3.1 contract"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://developer.apievangelist.com/governance-api",
+          "type": "text/html",
+          "title": "Governance API reference"
+        },
+        {
+          "href": "https://developer.apievangelist.com/governance/index",
+          "type": "text/html",
+          "title": "Governance & Discovery documentation"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://github.com/api-evangelist/apievangelist-aws",
+          "type": "text/html",
+          "title": "Source repository"
+        }
+      ],
+      "linkset-meta": {
+        "tags": [
+          "Governance",
+          "Discovery"
+        ]
+      }
+    },
+    {
+      "anchor": "https://mcp.apievangelist.com/",
+      "service-desc": [
+        {
+          "href": "https://apievangelist.com/.well-known/mcp/server-card.json",
+          "type": "application/json",
+          "title": "MCP server card"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://developer.apievangelist.com/mcp-server",
+          "type": "text/html",
+          "title": "MCP server documentation"
+        }
+      ],
+      "service-meta": [
+        {
+          "href": "https://github.com/api-evangelist/apievangelist-aws",
+          "type": "text/html",
+          "title": "Source repository"
+        }
+      ],
+      "linkset-meta": {
+        "tags": [
+          "MCP",
+          "Agents"
+        ]
+      }
+    }
+  ]
+}

@@ -35,6 +35,10 @@ apis:
     url: https://developer.apievangelist.com
   - type: OpenAPI
     url: openapi/apievangelist-v1-openapi.yml
+  - type: Overlay
+    url: overlays/api-evangelist-v1-overlay.yaml
+  - type: APIReference
+    url: https://developer.apievangelist.com/api
   - type: Pricing
     url: https://developer.apievangelist.com/plans/
   - type: RateLimits
@@ -60,6 +64,10 @@ apis:
     url: https://developer.apievangelist.com
   - type: OpenAPI
     url: openapi/apievangelist-governance-openapi.json
+  - type: Overlay
+    url: overlays/api-evangelist-governance-overlay.yaml
+  - type: APIReference
+    url: https://developer.apievangelist.com/governance-api
   - type: Pricing
     url: https://developer.apievangelist.com/plans/
   contact:
@@ -80,10 +88,16 @@ apis:
     url: https://developer.apievangelist.com/mcp-server
   - type: MCP
     url: https://mcp.apievangelist.com/mcp
+  - type: MCPServer
+    url: mcp/api-evangelist-mcp.yml
+  - type: ToolCrosswalk
+    url: mcp/api-evangelist-tool-crosswalk.yml
   - type: MCPServerCard
     url: https://apievangelist.com/.well-known/mcp/server-card.json
   - type: AgentSkills
     url: https://apievangelist.com/skills/
+  - type: AgentSkill
+    url: skills/_index.yml
   - type: LLMsTxt
     url: https://apievangelist.com/llms.txt
   contact:
@@ -373,6 +387,12 @@ apis:
   - FN: Kin Lane
     email: info@apievangelist.com
 common:
+- type: AgenticAccess
+  url: agentic-access/api-evangelist-agentic-access.yml
+- type: DomainSecurity
+  url: security/api-evangelist-domain-security.yml
+- type: Authentication
+  url: authentication/api-evangelist-authentication.yml
 - type: DeveloperPortal
   url: https://developer.apievangelist.com
 - type: Documentation
@@ -385,6 +405,40 @@ common:
   url: https://mcp.apievangelist.com/mcp
 - type: MCPServerCard
   url: https://apievangelist.com/.well-known/mcp/server-card.json
+- type: APIReference
+  url: https://developer.apievangelist.com/api
+- type: GettingStarted
+  url: https://developer.apievangelist.com/getting-started
+- type: Support
+  url: https://apievangelist.com/contact
+- type: Pricing
+  url: https://developer.apievangelist.com/plans/
+- type: SignUp
+  url: https://api.apievangelist.com/v1/auth/login
+- type: TermsOfService
+  url: https://apievangelist.com/terms
+- type: PrivacyPolicy
+  url: https://apievangelist.com/privacy
+- type: WellKnown
+  url: well-known/api-evangelist-well-known.yml
+- type: APICatalog
+  url: https://developer.apievangelist.com/.well-known/api-catalog
+- type: LLMsTxt
+  url: llms/api-evangelist-llms.txt
+- type: MCPServer
+  url: mcp/api-evangelist-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Conventions
+  url: conventions/api-evangelist-conventions.yml
+- type: ErrorCatalog
+  url: errors/api-evangelist-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/api-evangelist-lifecycle.yml
+- type: Conformance
+  url: conformance/api-evangelist-conformance.yml
+- type: DataModel
+  url: data-model/api-evangelist-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
@@ -395,3 +449,8 @@ x-evidence:
   note: 'Pointers that did not resolve were removed rather than carried forward. Dead at check time: posts.apievangelist.com
     and videos.apievangelist.com (NXDOMAIN), partners/utilities apis.json and spotlight-rules.com/rules.json (404), policies+properties
     openapi.yml (404). GitHubRepository pointers to private api-evangelist repos were dropped — anonymous fetchers get a 404.'
+x-enrichment:
+  date: '2026-08-10'
+  status: enriched
+  artifacts_added: 26
+  pass: local-v1
