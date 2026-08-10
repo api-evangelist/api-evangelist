@@ -1,0 +1,1433 @@
+openapi: 3.1.0
+info:
+  title: API Evangelist Network API
+  version: 1.2.0
+  summary: Sixteen years of API research as one API.
+  description: |
+    The API Evangelist network — 5,000+ stories, 77 topic areas, 2,400+ governance building
+    blocks (guidance, rules, policies, standards, strategies, schema, properties, experiences,
+    lifecycle), conversations, videos, white papers, tools, timelines, services, and the API
+    vocabulary — served as a single, searchable REST API.
+
+    **Tiers.** The API works without a key on the free tier (5 req/s, 1,000 req/day). Requests
+    from apievangelist.com network sites get the internal tier automatically. Higher-limit keys
+    are available by request — email info@apievangelist.com.
+
+    **Providers.** The API provider catalog (4,500+ companies) intentionally lives on
+    [APIs.io](https://apis.io/developer/) — this API covers API Evangelist's own research
+    network and does not duplicate it.
+
+    **MCP.** Every resource here is also available as MCP tools at
+    `https://mcp.apievangelist.com/mcp` (Streamable HTTP), including concierge tools
+    (`get_overview`, `guide_topic`) that bundle curated guidance for a topic.
+  contact:
+    name: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com
+  license:
+    name: CC BY-SA 4.0
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+x-apis-io:
+  # DX/AX experience map for the API Evangelist API — the tier model, and for every operation its
+  # tier, the MCP tool it maps to, and the Agent Skill it belongs to (where one exists). Rendered by
+  # the API Experience tool (experience.apicommons.org) as the API -> MCP -> Agent-Skill journey.
+  # Kept in sync with the deployed gating (lambdas/search GATED set) + MCP tools/prompts/resources.
+  tiers:
+    free:
+      label: Free
+      description: Browse, search, and read summaries across the whole network — stories, areas, guidance, building blocks, papers, tags, related. Keyless.
+    pro:
+      label: Pro
+      description: The research depth — full content (include=content), curated topic guides (/guide), and catalog intelligence (/stats). Requires X-API-Key.
+      plans: https://developer.apievangelist.com/plans/
+  mcp:
+    endpoint: https://mcp.apievangelist.com/mcp
+  agentSkills:
+    index: https://apievangelist.com/.well-known/agent-skills/index.json
+  prompts:
+    - { name: where_can_ae_help,      tier: free, description: "Map a team's API need to the relevant research areas + the services Kin Lane offers.", uses: [search_api_evangelist, find_services] }
+    - { name: catch_up,               tier: free, description: "Catch up on a topic — the most recent stories, newest first.", uses: [find_posts] }
+    - { name: research_topic,         tier: pro,  description: "PRO — Deep-research a topic: the curated guide bundle plus the full research bodies.", uses: [guide_topic, get_post, find_related] }
+    - { name: governance_starter_kit, tier: pro,  description: "PRO — Assemble an API governance starter kit: guidance, rules, policies, standards + services.", uses: [guide_topic, find_building_blocks] }
+    - { name: vendor_landscape,       tier: pro,  description: "PRO — Map the vendor + tooling landscape for a capability, with research context.", uses: [find_solutions, find_tools, guide_topic] }
+  resources:
+    - { uri: "ae://overview",     tier: free, description: "Service root — what the network offers, counts, entry points, how to engage.", operation: getServiceInfo }
+    - { uri: "ae://services",     tier: free, description: "The services Kin Lane offers teams.", operation: listServices }
+    - { uri: "ae://contact",      tier: free, description: "Every way to reach API Evangelist.", operation: getContact }
+    - { uri: "ae://stats",        tier: pro,  description: "PRO — per-type counts, stories-per-year, top tags by reach.", operation: getStats }
+    - { uri: "ae://area/{slug}",  tier: free, description: "One topic area with its related-area graph.", operation: getArea }
+    - { uri: "ae://tag/{slug}",   tier: free, description: "One tag with per-type counts and everything it labels.", operation: getTag }
+    - { uri: "ae://post/{slug}",  tier: free, description: "One story by slug.", operation: getPost }
+    - { uri: "ae://guide/{topic}", tier: pro, description: "PRO — a curated cross-network guide bundle for a topic.", operation: getGuide }
+  operations:
+    getServiceInfo:        { tier: free, mcpTool: get_overview }
+    searchNetwork:         { tier: free, mcpTool: search_api_evangelist, agentSkill: brief-on-topic }
+    listPosts:             { tier: free, mcpTool: find_posts, agentSkill: brief-on-topic }
+    getPost:               { tier: free, mcpTool: get_post }
+    listAreas:             { tier: free, mcpTool: find_areas, agentSkill: brief-on-topic }
+    getArea:               { tier: free, mcpTool: get_area }
+    listGuidanceHistory:   { tier: free, mcpTool: get_guidance_section }
+    listGuidanceTechnology: { tier: free, mcpTool: get_guidance_section }
+    listGuidanceBusiness:  { tier: free, mcpTool: get_guidance_section }
+    listGuidancePolitics:  { tier: free, mcpTool: get_guidance_section }
+    listGuidanceGovernance: { tier: free, mcpTool: get_guidance_section }
+    listGuidanceEvangelism: { tier: free, mcpTool: get_guidance_section }
+    listGuidance:          { tier: free, mcpTool: find_building_blocks, agentSkill: governance-starter-kit }
+    getGuidanceItem:       { tier: free, mcpTool: get_building_block }
+    listPolicies:          { tier: free, mcpTool: find_building_blocks, agentSkill: governance-starter-kit }
+    getPoliciesItem:       { tier: free, mcpTool: get_building_block }
+    listRules:             { tier: free, mcpTool: find_building_blocks, agentSkill: governance-starter-kit }
+    getRulesItem:          { tier: free, mcpTool: get_building_block }
+    listStandards:         { tier: free, mcpTool: find_building_blocks, agentSkill: governance-starter-kit }
+    getStandardsItem:      { tier: free, mcpTool: get_building_block }
+    listSolutions:         { tier: free, mcpTool: find_solutions, agentSkill: map-vendor-landscape }
+    getSolution:           { tier: free, mcpTool: get_solution }
+    listTools:             { tier: free, mcpTool: find_tools, agentSkill: map-vendor-landscape }
+    getTool:               { tier: free, mcpTool: get_tool }
+    listSchema:            { tier: free, mcpTool: find_building_blocks }
+    getSchemaItem:         { tier: free, mcpTool: get_building_block }
+    listProperties:        { tier: free, mcpTool: find_building_blocks }
+    getPropertiesItem:     { tier: free, mcpTool: get_building_block }
+    listStrategies:        { tier: free, mcpTool: find_building_blocks }
+    getStrategiesItem:     { tier: free, mcpTool: get_building_block }
+    listExperiences:       { tier: free, mcpTool: find_building_blocks }
+    getExperiencesItem:    { tier: free, mcpTool: get_building_block }
+    listLifecycle:         { tier: free, mcpTool: find_building_blocks }
+    getLifecycleItem:      { tier: free, mcpTool: get_building_block }
+    listConversations:     { tier: free, mcpTool: find_conversations }
+    getConversation:       { tier: free, mcpTool: get_conversation }
+    listVideos:            { tier: free, mcpTool: find_videos }
+    getVideo:              { tier: free, mcpTool: get_video }
+    listPapers:            { tier: free, mcpTool: find_papers, agentSkill: research-with-api-evangelist }
+    getPaper:              { tier: free, mcpTool: get_paper }
+    listNewsletters:       { tier: free, mcpTool: search_api_evangelist }
+    listVocabulary:        { tier: free, mcpTool: find_vocabulary }
+    listVocabularyCategory: { tier: free, mcpTool: find_vocabulary }
+    listFeeds:             { tier: free, mcpTool: get_feeds }
+    getTimelineApi:        { tier: free, mcpTool: get_timeline }
+    getTimelineResources:  { tier: free, mcpTool: get_timeline }
+    getTimelineIndustries: { tier: free, mcpTool: get_timeline }
+    getTimelinePeople:     { tier: free, mcpTool: get_timeline }
+    listServices:          { tier: free, mcpTool: find_services, agentSkill: find-where-ae-helps }
+    getService:            { tier: free, mcpTool: get_service, agentSkill: find-where-ae-helps }
+    getContact:            { tier: free, mcpTool: get_contact, agentSkill: find-where-ae-helps }
+    listTags:              { tier: free, mcpTool: find_tags, agentSkill: brief-on-topic }
+    getTag:                { tier: free, mcpTool: get_tag, agentSkill: brief-on-topic }
+    getGuide:              { tier: pro, mcpTool: guide_topic, agentSkill: research-with-api-evangelist }
+    getStats:              { tier: pro, mcpTool: get_stats }
+    getPostRelated:        { tier: free, mcpTool: find_related, agentSkill: brief-on-topic }
+    getAreaRelated:        { tier: free, mcpTool: find_related, agentSkill: brief-on-topic }
+    getPaperRelated:       { tier: free, mcpTool: find_related, agentSkill: research-with-api-evangelist }
+    getGuidanceRelated:    { tier: free, mcpTool: find_related, agentSkill: brief-on-topic }
+servers:
+  - url: https://api.apievangelist.com/v1
+security:
+  - {}
+  - ApiKeyAuth: []
+tags:
+  - name: Overview
+    description: Service info and unified search across the whole network.
+  - name: Stories
+    description: The API Evangelist blog — 5,000+ posts since 2010.
+  - name: Areas
+    description: The 77 focused topic areas and their related-area graph.
+  - name: Guidance
+    description: Editorial guidance across the history, technology, business, politics, governance, and evangelism of APIs.
+  - name: Governance
+    description: The policies and rules that align the business and engineering sides of API operations.
+  - name: Toolbox
+    description: Standards, solutions, tools, schema, and properties — the raw materials of API operations.
+  - name: Operations
+    description: Strategies, experiences, and the stops along the API lifecycle.
+  - name: Media
+    description: Conversations, videos, white papers, and the newsletter.
+  - name: Reference
+    description: The API vocabulary and the static machine-readable feeds.
+  - name: Timelines
+    description: The API, resource, industry, and people timelines behind sixteen years of research.
+  - name: Services
+    description: API Evangelist's first-party offerings — the front door to working with Kin Lane.
+  - name: Contact
+    description: Every way to reach API Evangelist.
+  - name: Insights
+    description: Demand-side intelligence — what ~5,800 companies (Fortune 1000 + API providers) build, buy, and hire for around APIs, data, and AI. Discovery is free; per-company depth + gaps are Pro. (The supply↔demand provider match lives on apis.io.)
+paths:
+  # ---- Overview ----
+  /:
+    get:
+      operationId: getServiceInfo
+      tags: [Overview]
+      summary: Info
+      description: Counts per resource type, entry points, documentation links, and how to engage.
+      responses:
+        '200':
+          description: Service overview.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  service: { type: string }
+                  version: { type: string }
+                  description: { type: string }
+                  counts:
+                    type: object
+                    additionalProperties: { type: integer }
+                  resources:
+                    type: array
+                    items: { type: string }
+                  documentation: { type: string, format: uri }
+                  openapi: { type: string, format: uri }
+                  mcp: { type: string, format: uri }
+                  engage: { $ref: '#/components/schemas/Engage' }
+  /search:
+    get:
+      operationId: searchNetwork
+      tags: [Overview]
+      summary: Search
+      description: >
+        Search every resource type at once. `meta.facets.types` carries per-type hit counts
+        for the full result set (useful for filter chips); narrow with `types=`.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - name: types
+          in: query
+          description: Comma-separated resource types to include (default all).
+          schema: { type: string, example: 'posts,guidance,solutions' }
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Sort'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged, type-faceted results.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SearchEnvelope' }
+              examples:
+                gateway:
+                  summary: Search "gateway" across the network
+                  value:
+                    meta:
+                      total: 1835
+                      page: 1
+                      limit: 3
+                      pages: 612
+                      query: { q: gateway }
+                      facets:
+                        types: { posts: 1076, areas: 22, guidance: 24, standards: 67 }
+                    data:
+                      - type: areas
+                        slug: gateway
+                        title: Gateway
+                        summary: A collection of services, tooling, and open source solutions for API gateway management…
+                        url: https://gateway.apievangelist.com
+                        tags: [API Gateway, Traffic Management]
+
+  # ---- Stories ----
+  /posts:
+    get:
+      operationId: listPosts
+      tags: [Stories]
+      summary: Stories
+      description: Search or browse 5,000+ API Evangelist stories (2010–present); filter by year or tags.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - name: year
+          in: query
+          description: Filter to one publication year.
+          schema: { type: string, example: '2026' }
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Sort'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged stories, newest first by default.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /posts/{slug}:
+    get:
+      operationId: getPost
+      tags: [Stories]
+      summary: Story
+      description: One story by slug (YYYY-MM-DD-slug); `include=content` adds the full markdown body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The story.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Areas ----
+  /areas:
+    get:
+      operationId: listAreas
+      tags: [Areas]
+      summary: Areas
+      description: Search or browse the 77 focused topic areas of the network.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: The 77 topic areas.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /areas/{slug}:
+    get:
+      operationId: getArea
+      tags: [Areas]
+      summary: Area
+      description: One topic area with its related-area graph resolved to full objects.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+      responses:
+        '200':
+          description: The area; `related` is resolved to `{slug,title,url,summary}` objects.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Area' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Guidance ----
+  /guidance/sections/history:
+    get:
+      operationId: listGuidanceHistory
+      tags: [Guidance]
+      summary: History
+      description: Guidance from the history of APIs — the providers, tooling, and moments that shaped the space.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Paged guidance tagged History.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance/sections/technology:
+    get:
+      operationId: listGuidanceTechnology
+      tags: [Guidance]
+      summary: Technology
+      description: Guidance on the technology of APIs — protocols, patterns, and the technical landscape.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Paged guidance tagged Technology.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance/sections/business:
+    get:
+      operationId: listGuidanceBusiness
+      tags: [Guidance]
+      summary: Business
+      description: Guidance on the business of APIs — monetization, plans, partners, and go-to-market.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Paged guidance tagged Business.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance/sections/politics:
+    get:
+      operationId: listGuidancePolitics
+      tags: [Guidance]
+      summary: Politics
+      description: Guidance on the politics of APIs — regulation, privacy, terms of service, and power.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Paged guidance tagged Politics.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance/sections/governance:
+    get:
+      operationId: listGuidanceGovernance
+      tags: [Guidance]
+      summary: Governance
+      description: Guidance on API governance — aligning policies, rules, and lifecycle across operations.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Paged guidance tagged Governance.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance/sections/evangelism:
+    get:
+      operationId: listGuidanceEvangelism
+      tags: [Guidance]
+      summary: Evangelism
+      description: Guidance on API evangelism — carrying the API message and earning adoption.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Paged guidance tagged Evangelism.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance:
+    get:
+      operationId: listGuidance
+      tags: [Guidance]
+      summary: Guidance
+      description: Search or browse the full guidance collection (177) — editorial guidance for API producers and consumers.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged guidance.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /guidance/{slug}:
+    get:
+      operationId: getGuidanceItem
+      tags: [Guidance]
+      summary: Guidance Entry
+      description: One entry from the guidance collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Governance ----
+  /policies:
+    get:
+      operationId: listPolicies
+      tags: [Governance]
+      summary: Policies
+      description: Search or browse the policies collection (283) — API policies for enterprise operations.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged policies.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /policies/{slug}:
+    get:
+      operationId: getPoliciesItem
+      tags: [Governance]
+      summary: Policy
+      description: One entry from the policies collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /rules:
+    get:
+      operationId: listRules
+      tags: [Governance]
+      summary: Rules
+      description: Search or browse the rules collection (617) — machine-readable API governance rules.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged rules.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /rules/{slug}:
+    get:
+      operationId: getRulesItem
+      tags: [Governance]
+      summary: Rule
+      description: One entry from the rules collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Toolbox ----
+  /standards:
+    get:
+      operationId: listStandards
+      tags: [Toolbox]
+      summary: Standards
+      description: Search or browse the standards collection (432) — the API standards landscape.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged standards.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /standards/{slug}:
+    get:
+      operationId: getStandardsItem
+      tags: [Toolbox]
+      summary: Standard
+      description: One entry from the standards collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /solutions:
+    get:
+      operationId: listSolutions
+      tags: [Toolbox]
+      summary: Solutions
+      description: >
+        The solutions registry (742) — third-party API services and tools (gateways, portals,
+        testing, monitoring, …) ranked by adoption across the companies API Evangelist
+        tracks. Browse the site at https://solutions.apievangelist.com.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Solutions.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /solutions/{slug}:
+    get:
+      operationId: getSolution
+      tags: [Toolbox]
+      summary: Solution
+      description: One solution from the vendor registry, with its website and adoption count.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+      responses:
+        '200':
+          description: The solution.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /tools:
+    get:
+      operationId: listTools
+      tags: [Toolbox]
+      summary: Tools
+      description: >
+        The open-source tooling registry (405) — the tools in use across the companies API
+        Evangelist tracks, each with adoption counts and technology-radar placement. Browse
+        the site at https://tools.apievangelist.com.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Tools.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /tools/{slug}:
+    get:
+      operationId: getTool
+      tags: [Toolbox]
+      summary: Tool
+      description: One tool from the tooling registry, with its website, adoption count, and radar ring.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+      responses:
+        '200':
+          description: The tool.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /schema:
+    get:
+      operationId: listSchema
+      tags: [Toolbox]
+      summary: Schemas
+      description: Search or browse the schema collection (11) — schema definitions and patterns.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged schema.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /schema/{slug}:
+    get:
+      operationId: getSchemaItem
+      tags: [Toolbox]
+      summary: Schema
+      description: One entry from the schema collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /properties:
+    get:
+      operationId: listProperties
+      tags: [Toolbox]
+      summary: Properties
+      description: Search or browse the properties collection (790) — API property patterns.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged properties.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /properties/{slug}:
+    get:
+      operationId: getPropertiesItem
+      tags: [Toolbox]
+      summary: Property
+      description: One entry from the properties collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Operations ----
+  /strategies:
+    get:
+      operationId: listStrategies
+      tags: [Operations]
+      summary: Strategies
+      description: Search or browse the strategies collection (75) — API strategy patterns.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged strategies.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /strategies/{slug}:
+    get:
+      operationId: getStrategiesItem
+      tags: [Operations]
+      summary: Strategy
+      description: One entry from the strategies collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /experiences:
+    get:
+      operationId: listExperiences
+      tags: [Operations]
+      summary: Experiences
+      description: Search or browse the experiences collection (46) — API producer and consumer experience patterns.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged experiences.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /experiences/{slug}:
+    get:
+      operationId: getExperiencesItem
+      tags: [Operations]
+      summary: Experience
+      description: One entry from the experiences collection; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /lifecycle:
+    get:
+      operationId: listLifecycle
+      tags: [Operations]
+      summary: Lifecycle
+      description: Search or browse the lifecycle collection (29) — stops along the API lifecycle.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Match'
+        - $ref: '#/components/parameters/Fields'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Paged lifecycle.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /lifecycle/{slug}:
+    get:
+      operationId: getLifecycleItem
+      tags: [Operations]
+      summary: Lifecycle Stage
+      description: One stop along the API lifecycle; `include=content` adds the full body.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The entry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Media ----
+  /conversations:
+    get:
+      operationId: listConversations
+      tags: [Media]
+      summary: Conversations
+      description: Search or browse recorded conversations with API practitioners, with guest and media metadata.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Recorded conversations with guest and media metadata.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /conversations/{slug}:
+    get:
+      operationId: getConversation
+      tags: [Media]
+      summary: Conversation
+      description: One conversation with guest detail and YouTube/SoundCloud links.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The conversation.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /videos:
+    get:
+      operationId: listVideos
+      tags: [Media]
+      summary: Videos
+      description: >
+        Search or browse the video library (video.apievangelist.com) — interviews and
+        discussions from across the API space, searchable by transcript.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Videos with YouTube metadata.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /videos/{slug}:
+    get:
+      operationId: getVideo
+      tags: [Media]
+      summary: Video
+      description: One video with its YouTube id; `include=content` adds the full transcript.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The video.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /papers:
+    get:
+      operationId: listPapers
+      tags: [Media]
+      summary: Papers
+      description: API Evangelist white papers — deep dives distilled from sixteen years of research, with outlines.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Papers with outlines and landing URLs.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /papers/{slug}:
+    get:
+      operationId: getPaper
+      tags: [Media]
+      summary: Paper
+      description: One paper with its full outline and landing URL.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+      responses:
+        '200':
+          description: The paper.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /newsletters:
+    get:
+      operationId: listNewsletters
+      tags: [Media]
+      summary: Newsletter
+      description: Weekly newsletter editions.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Weekly newsletter editions.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+
+  # ---- Reference ----
+  /vocabulary:
+    get:
+      operationId: listVocabulary
+      tags: [Reference]
+      summary: Vocabularies
+      description: Search the full API vocabulary — resources, actions, personas, domains, schemas, and tags.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - name: category
+          in: query
+          schema: { type: string, enum: [resources, actions, personas, domains, schemas, tags] }
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Vocabulary terms.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /vocabulary/{category}:
+    get:
+      operationId: listVocabularyCategory
+      tags: [Reference]
+      summary: Vocabulary
+      description: The terms in one vocabulary category.
+      parameters:
+        - name: category
+          in: path
+          required: true
+          schema: { type: string, enum: [resources, actions, personas, domains, schemas, tags] }
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Terms in the category.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /feeds:
+    get:
+      operationId: listFeeds
+      tags: [Reference]
+      summary: Feeds
+      description: The zero-auth JSON feeds every network site publishes — the no-key alternative to this API.
+      responses:
+        '200':
+          description: Feed registry.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+
+  # ---- Timelines ----
+  /timelines/api:
+    get:
+      operationId: getTimelineApi
+      tags: [Timelines]
+      summary: API
+      description: >
+        The API timeline — the moments that led to and shaped web APIs, from early
+        communication technology through the modern API economy, in chronological order.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Timeline events in chronological order.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /timelines/resources:
+    get:
+      operationId: getTimelineResources
+      tags: [Timelines]
+      summary: Resources
+      description: The resources timeline — which digital resources became APIs, and when, in chronological order.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Timeline events in chronological order.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /timelines/industries:
+    get:
+      operationId: getTimelineIndustries
+      tags: [Timelines]
+      summary: Industries
+      description: The industries timeline — the industrial history that frames how API infrastructure evolves, in chronological order.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Timeline events in chronological order.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /timelines/people:
+    get:
+      operationId: getTimelinePeople
+      tags: [Timelines]
+      summary: People
+      description: The people timeline — the people whose work made compute, the internet, and APIs possible.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Fields'
+      responses:
+        '200':
+          description: Timeline entries.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+
+  # ---- Services ----
+  /services:
+    get:
+      operationId: listServices
+      tags: [Services]
+      summary: Services
+      description: >
+        API Evangelist's own offerings — the front door to working with Kin Lane on API
+        strategy, governance, and discovery. (The third-party vendor registry lives at
+        `/solutions`.)
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Tags'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200':
+          description: Services.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PagedEnvelope' }
+  /services/{slug}:
+    get:
+      operationId: getService
+      tags: [Services]
+      summary: Service
+      description: One service offering; first-party entries include a contact.
+      parameters:
+        - $ref: '#/components/parameters/Slug'
+        - $ref: '#/components/parameters/Include'
+      responses:
+        '200':
+          description: The service.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Doc' }
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  # ---- Contact ----
+  /contact:
+    get:
+      operationId: getContact
+      tags: [Contact]
+      summary: Contact
+      description: Every way to reach API Evangelist — email, contact form, newsletter, GitHub, social channels, and postal mail.
+      responses:
+        '200':
+          description: The list of contact options.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  meta:
+                    type: object
+                    properties:
+                      total: { type: integer }
+                  data:
+                    type: array
+                    items: { $ref: '#/components/schemas/ContactOption' }
+  /tags:
+    get:
+      operationId: listTags
+      x-tier: free
+      x-mcp-tool: find_tags
+      x-agent-skill: brief-on-topic
+      tags: [Tags]
+      summary: Browse and rank the network tag taxonomy.
+      description: Every subject tag across 16k+ docs, ranked by frequency (default) or breadth (how many content types use it). Search with q. The map of what API Evangelist covers.
+      parameters:
+        - { name: q, in: query, schema: { type: string } }
+        - { name: sort, in: query, schema: { type: string, enum: [count, breadth] } }
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: A page of tags., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /tags/{slug}:
+    get:
+      operationId: getTag
+      x-tier: free
+      x-mcp-tool: get_tag
+      x-agent-skill: brief-on-topic
+      tags: [Tags]
+      summary: One tag with everything it labels across the network.
+      description: The tag's per-type counts plus the docs it labels across every content type. Filter with types.
+      parameters:
+        - { name: slug, in: path, required: true, schema: { type: string } }
+        - { name: types, in: query, description: "Restrict to these content types (comma-separated).", schema: { type: string } }
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: The tag and its tagged docs., content: { application/json: { schema: { type: object, additionalProperties: true } } }
+        }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /guide:
+    get:
+      operationId: getGuide
+      x-tier: pro
+      x-mcp-tool: guide_topic
+      x-agent-skill: research-with-api-evangelist
+      security: [{ ApiKeyAuth: [] }]
+      tags: [Synthesis]
+      summary: PRO — Curated cross-network guide for a topic.
+      description: PRO — Bundles the matching topic area (with related areas), top guidance, rules, policies, and standards, relevant papers and recent stories, plus the services that can help a team with this topic.
+      parameters:
+        - { name: topic, in: query, required: true, schema: { type: string } }
+      responses:
+        '200': { description: The curated topic guide., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '400': { $ref: '#/components/responses/NotFound' }
+        '403': { $ref: '#/components/responses/NotFound' }
+  /stats:
+    get:
+      operationId: getStats
+      x-tier: pro
+      x-mcp-tool: get_stats
+      security: [{ ApiKeyAuth: [] }]
+      tags: [Synthesis]
+      summary: PRO — Catalog intelligence.
+      description: PRO — Per-type counts, stories-per-year, and the top tags by reach across the network.
+      responses:
+        '200': { description: Catalog statistics., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /posts/{slug}/related:
+    get:
+      operationId: getPostRelated
+      x-tier: free
+      x-mcp-tool: find_related
+      x-agent-skill: brief-on-topic
+      tags: [APIs]
+      summary: Related content across the network.
+      description: Stories, areas, guidance, and papers related to a story. Ranked by shared-tag relevance (rare, specific tags weigh most). Cross-type by default; filter with types.
+      parameters:
+        - { name: slug, in: path, required: true, schema: { type: string } }
+        - { name: types, in: query, description: "Restrict to these content types (comma-separated).", schema: { type: string } }
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: A page of related content., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /areas/{slug}/related:
+    get:
+      operationId: getAreaRelated
+      x-tier: free
+      x-mcp-tool: find_related
+      x-agent-skill: brief-on-topic
+      tags: [Areas]
+      summary: Related content across the network.
+      description: Content across the network related to a topic area. Ranked by shared-tag relevance (rare, specific tags weigh most). Cross-type by default; filter with types.
+      parameters:
+        - { name: slug, in: path, required: true, schema: { type: string } }
+        - { name: types, in: query, description: "Restrict to these content types (comma-separated).", schema: { type: string } }
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: A page of related content., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /papers/{slug}/related:
+    get:
+      operationId: getPaperRelated
+      x-tier: free
+      x-mcp-tool: find_related
+      x-agent-skill: research-with-api-evangelist
+      tags: [Papers]
+      summary: Related content across the network.
+      description: Content related to a paper. Ranked by shared-tag relevance (rare, specific tags weigh most). Cross-type by default; filter with types.
+      parameters:
+        - { name: slug, in: path, required: true, schema: { type: string } }
+        - { name: types, in: query, description: "Restrict to these content types (comma-separated).", schema: { type: string } }
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: A page of related content., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /guidance/{slug}/related:
+    get:
+      operationId: getGuidanceRelated
+      x-tier: free
+      x-mcp-tool: find_related
+      x-agent-skill: brief-on-topic
+      tags: [Building Blocks]
+      summary: Related content across the network.
+      description: Content related to a guidance building block. Ranked by shared-tag relevance (rare, specific tags weigh most). Cross-type by default; filter with types.
+      parameters:
+        - { name: slug, in: path, required: true, schema: { type: string } }
+        - { name: types, in: query, description: "Restrict to these content types (comma-separated).", schema: { type: string } }
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: A page of related content., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  # ---- Insights (demand-side) ----
+  /insights:
+    get:
+      operationId: getInsightsSummary
+      x-mcp-tool: find_company_insights
+      tags: [Insights]
+      summary: Insights overview.
+      description: Company/dimension/adoption counts and the top investment dimensions. Free.
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /insights/dimensions:
+    get:
+      operationId: listInsightDimensions
+      x-mcp-tool: insights_dimensions
+      tags: [Insights]
+      summary: Rank the 40 investment dimensions by company signal. Free.
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /insights/adoption:
+    get:
+      operationId: listInsightAdoption
+      x-mcp-tool: insights_adoption
+      tags: [Insights]
+      summary: Services / tools / standards ranked by adoption. Free.
+      parameters:
+        - name: type
+          in: query
+          schema: { type: string, enum: [service, tool, standard], default: service }
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /insights/industries:
+    get:
+      operationId: listInsightIndustries
+      tags: [Insights]
+      summary: Industry rollup. Free.
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /insights/companies:
+    get:
+      operationId: listInsightCompanies
+      x-mcp-tool: find_company_insights
+      tags: [Insights]
+      summary: Browse profiled companies by name, ranked by readiness. Free.
+      parameters:
+        - $ref: '#/components/parameters/Q'
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/Limit'
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+  /insights/company/{slug}:
+    get:
+      operationId: getCompanyInsight
+      x-mcp-tool: get_company_insight
+      tags: [Insights]
+      summary: One company's demand-side profile — thin preview (free) or full 40-dimension profile (Pro).
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /insights/company/{slug}/gaps:
+    get:
+      operationId: getCompanyGaps
+      x-tier: pro
+      x-mcp-tool: company_gaps
+      security: [{ ApiKeyAuth: [] }]
+      tags: [Insights]
+      summary: PRO — a company's weakest investment dimensions.
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: OK., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+        '403': { description: Requires the Pro tier., content: { application/json: { schema: { type: object, additionalProperties: true } } } }
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: Optional — raises rate limits above the keyless free tier.
+  parameters:
+    Q:
+      name: q
+      in: query
+      description: Free-text query over title, summary, tags, and body.
+      schema: { type: string }
+    Tags:
+      name: tags
+      in: query
+      description: Comma-separated tag slugs.
+      schema: { type: string }
+    Match:
+      name: match
+      in: query
+      description: Tag match mode.
+      schema: { type: string, enum: [any, all], default: any }
+    Sort:
+      name: sort
+      in: query
+      schema: { type: string, enum: [default, title, date] }
+    Fields:
+      name: fields
+      in: query
+      description: Comma-separated sparse field projection.
+      schema: { type: string, example: 'slug,title,url' }
+    Page:
+      name: page
+      in: query
+      schema: { type: integer, minimum: 1, default: 1 }
+    Limit:
+      name: limit
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 100, default: 25 }
+    Slug:
+      name: slug
+      in: path
+      required: true
+      schema: { type: string }
+    Include:
+      name: include
+      in: query
+      description: Set to `content` to inline the full markdown body (up to 200 KB).
+      schema: { type: string, enum: [content] }
+  responses:
+    NotFound:
+      description: No such resource.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+  schemas:
+    Doc:
+      type: object
+      description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
+      properties:
+        type: { type: string }
+        slug: { type: string }
+        title: { type: string }
+        summary: { type: string }
+        url: { type: string, format: uri }
+        tags:
+          type: array
+          items: { type: string }
+        date: { type: string }
+        content: { type: string, description: 'Full markdown body when include=content.' }
+      additionalProperties: true
+    Area:
+      allOf:
+        - $ref: '#/components/schemas/Doc'
+        - type: object
+          properties:
+            related:
+              type: array
+              items:
+                type: object
+                properties:
+                  slug: { type: string }
+                  title: { type: string }
+                  url: { type: string, format: uri }
+                  summary: { type: string }
+    PagedEnvelope:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            total: { type: integer }
+            page: { type: integer }
+            limit: { type: integer }
+            pages: { type: integer }
+            query: { type: object, additionalProperties: true }
+        data:
+          type: array
+          items: { $ref: '#/components/schemas/Doc' }
+    SearchEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/PagedEnvelope'
+        - type: object
+          properties:
+            meta:
+              type: object
+              properties:
+                facets:
+                  type: object
+                  properties:
+                    types:
+                      type: object
+                      additionalProperties: { type: integer }
+    Engage:
+      type: object
+      properties:
+        email: { type: string, format: email }
+        services_url: { type: string, format: uri }
+        newsletter: { type: string, format: uri }
+    ContactOption:
+      type: object
+      properties:
+        channel: { type: string, description: 'Machine-readable channel key (email, form, newsletter, github, linkedin, bluesky, youtube, mail).' }
+        label: { type: string }
+        value: { type: string, description: 'The address itself, where the channel is not a URL.' }
+        url: { type: string }
+        description: { type: string }
+    Error:
+      type: object
+      properties:
+        error: { type: string }
+        detail: { type: string }
