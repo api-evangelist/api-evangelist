@@ -1,0 +1,189 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: API Evangelist
+providerId: api-evangelist
+method: harvested
+source: https://developer.apievangelist.com/plans
+created: '2026-08-11'
+modified: '2026-08-11'
+reconciled: true
+tags:
+  - API Research
+  - Governance
+  - Discovery
+  - Subscription
+note: >-
+  API Evangelist operates this catalog and is also a provider listed in it. This
+  artifact is first-party: every figure below is transcribed from API Evangelist's
+  own published pricing page rather than researched about a third party. It is
+  recorded here under the same rules applied to every other provider, and it is
+  disclosed rather than assumed.
+description: >-
+  The API Evangelist Network API and the Governance & Discovery API share one
+  four-tier line. Discovery is free and keyless; the research depth — full content
+  bodies, curated topic guides, catalog intelligence and per-company insight — is
+  Pro. On the Governance & Discovery API the same line falls differently: checking
+  an API (lint, validate, coverage, waivers, classify, diff, scorecard, onboarding,
+  rule catalog) is free, while generating artifacts, certifying, auditing pipelines
+  and rolling up across many APIs is Pro. Pro and Team unlock identical
+  capabilities — Team adds multiple keys, higher limits and priority support for a
+  group. Enterprise pairs API access with Kin Lane's advisory engagements. Prices
+  are introductory; annual billing and volume pricing are available on request.
+sources:
+  - https://developer.apievangelist.com/plans
+  - https://developer.apievangelist.com/authentication
+  - https://developer.apievangelist.com/governance/free-vs-pro
+plans:
+  - id: api-evangelist-free
+    name: Free
+    type: subscription
+    description: >-
+      Discovery across the whole network, keyless. Search and browse every content
+      type, with summaries, metadata, the tag taxonomy, the shared-tag relevance
+      graph, and insights discovery. Free on the Governance API covers every
+      checking operation.
+    entries:
+      - label: Monthly subscription
+        name: monthly_subscription
+        type: subscription
+        metric: month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: $0 USD / mo
+        userMultiplied: false
+      - label: API requests
+        name: api_requests
+        type: quota
+        metric: request
+        limit: 1000
+        timeFrame: day
+        geo: global
+        unit: 1
+        price: included
+        userMultiplied: false
+    elements:
+      - name: Keyless access
+      - name: Search and browse every content type
+      - name: Summaries and metadata for every item
+      - name: Tag taxonomy
+      - name: Related content graph
+      - name: Insights discovery (dimensions, adoption, companies)
+      - name: Governance checking — lint, validate, coverage, waivers, report, verify
+      - name: Governance classify, diff, scorecard, onboarding
+      - name: Rule catalog and ruleset registry
+      - name: Community support
+  - id: api-evangelist-pro
+    name: Pro
+    type: subscription
+    description: >-
+      The research layer — full markdown bodies and transcripts, curated topic
+      guides, catalog intelligence, and the full 40-dimension company profiles.
+      Adds the Pro governance operations: certify, agent export, pipeline audit,
+      toolsmith, context gate, overlay, mock, snippets, agent descriptor,
+      reusability, experience, SARIF output and bulk multi-API input.
+    entries:
+      - label: Monthly subscription
+        name: monthly_subscription
+        type: subscription
+        metric: month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: $29 USD / mo
+        userMultiplied: false
+      - label: API requests
+        name: api_requests
+        type: quota
+        metric: request
+        limit: 5000
+        timeFrame: day
+        geo: global
+        unit: 1
+        price: included
+        userMultiplied: false
+    elements:
+      - name: Everything in Free
+      - name: Full research content (include=content)
+      - name: Curated topic guides (/guide)
+      - name: Catalog intelligence (/stats)
+      - name: Insights company depth (/insights/company/{slug})
+      - name: Paid MCP prompts and resources
+      - name: Pro governance operations — certify, agent export, pipeline audit
+      - name: 1 key
+      - name: Email support
+  - id: api-evangelist-team
+    name: Team
+    type: subscription
+    description: >-
+      The same capabilities as Pro for a group — multiple keys, higher limits and
+      priority support.
+    entries:
+      - label: Monthly subscription
+        name: monthly_subscription
+        type: subscription
+        metric: month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: $149 USD / mo
+        userMultiplied: false
+      - label: API requests
+        name: api_requests
+        type: quota
+        metric: request
+        limit: 25000
+        timeFrame: day
+        geo: global
+        unit: 1
+        price: included
+        userMultiplied: false
+    elements:
+      - name: Everything in Pro
+      - name: Multiple keys
+      - name: Priority email support
+  - id: api-evangelist-enterprise
+    name: Enterprise
+    type: subscription
+    description: >-
+      Negotiated access paired with Kin Lane's advisory engagements — API strategy,
+      governance, discovery and evangelism drawn from the same research.
+    entries:
+      - label: Monthly subscription
+        name: monthly_subscription
+        type: subscription
+        metric: month
+        limit: 1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: contact — negotiated
+        userMultiplied: false
+      - label: API requests
+        name: api_requests
+        type: quota
+        metric: request
+        limit: -1
+        timeFrame: day
+        geo: global
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Everything in Pro
+      - name: Advisory engagements with Kin Lane
+      - name: Negotiated keys and limits
+      - name: Direct support from Kin
+onboarding:
+  model: self-serve
+  steps:
+    - Sign in with GitHub at https://api.apievangelist.com/v1/auth/login to create an account and a free-tier key.
+    - Upgrade to Pro or Team at https://developer.apievangelist.com/account via Stripe checkout.
+    - Send the key in the x-api-key header.
+  notes: >-
+    No email required for Pro or Team. Hand-set-up accounts, annual billing and
+    volume pricing are available by emailing info@apievangelist.com.

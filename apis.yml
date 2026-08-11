@@ -439,6 +439,14 @@ common:
   url: conformance/api-evangelist-conformance.yml
 - type: DataModel
   url: data-model/api-evangelist-data-model.yml
+- type: SpectralRules
+  url: rules/api-evangelist-spectral-rules.yml
+- type: Vocabulary
+  url: https://vocabularies.apievangelist.com
+- type: Plans
+  url: plans/api-evangelist-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/api-evangelist-rate-limits.yml
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
