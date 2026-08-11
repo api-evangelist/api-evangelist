@@ -387,6 +387,8 @@ apis:
   - FN: Kin Lane
     email: info@apievangelist.com
 common:
+- type: IssueTracker
+  url: https://github.com/api-evangelist/posts/issues
 - type: AgenticAccess
   url: agentic-access/api-evangelist-agentic-access.yml
 - type: DomainSecurity
