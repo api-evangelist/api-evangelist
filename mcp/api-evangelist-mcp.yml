@@ -443,3 +443,11 @@ tools:
 - name: generate_agent_descriptor
   description: Generate an API's llms.txt and an AGENTS.md consumption contract — base URL, auth, the
     operation table, deprecated operations to avoid, and usage rules.
+deployment:
+  mode: remote
+  endpoint: https://mcp.apievangelist.com/mcp
+  verified: probed
+  probe: live
+  tools: 57
+  checked: '2026-08-12'
+  source: catalog MCP census
