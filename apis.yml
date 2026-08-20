@@ -28,7 +28,10 @@ tags_raw:
 - API Vocabulary
 created: '2024-10-14'
 modified: '2026-08-10'
-url: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/apis.yml
+# Served from the host we control; mirrored from the repo on every portal build
+# by developer/scripts/mirror-apis-yml.mjs. The repo copy stays canonical.
+url: https://developer.apievangelist.com/apis.yml
+x-canonical-profile: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/apis.yml
 apis:
 - aid: api-evangelist-api
   name: API Evangelist Network API
@@ -54,6 +57,22 @@ apis:
     url: https://developer.apievangelist.com/plans/
   - type: RateLimits
     url: https://developer.apievangelist.com/plans/
+  - type: JSONSchema
+    url: schema/index.yml
+  - type: JSONSchema
+    url: schema/Doc.yml
+  - type: JSONSchema
+    url: schema/Area.yml
+  - type: JSONSchema
+    url: schema/PagedEnvelope.yml
+  - type: JSONSchema
+    url: schema/SearchEnvelope.yml
+  - type: JSONSchema
+    url: schema/Engage.yml
+  - type: JSONSchema
+    url: schema/ContactOption.yml
+  - type: JSONSchema
+    url: schema/Error.yml
   contact:
   - FN: Kin Lane
     email: info@apievangelist.com
@@ -120,6 +139,7 @@ apis:
     sectors and accompanied by OpenAPI reviews.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://apis.apievangelist.com
+  baseURL: https://apis.apievangelist.com
   tags:
   - Discovery
   tags_raw:
@@ -127,7 +147,7 @@ apis:
   - Discovery
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/apis
+    url: https://developer.apievangelist.com/catalog-feeds
   - type: APIsJSON
     url: https://apis.apievangelist.com/apis.json
   contact:
@@ -139,13 +159,14 @@ apis:
     are changing the way we live and work.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/posts
   tags:
   - Posts
   - Stories
   - Blog
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/posts
+    url: https://developer.apievangelist.com/api
   - type: GitHubRepository
     url: https://github.com/api-evangelist/posts
   contact:
@@ -157,12 +178,13 @@ apis:
     their biggest challenges are.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://conversations.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/conversations
   tags:
   - Conversations
   - Interviews
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/conversations
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://conversations.apievangelist.com/conversations.json
   contact:
@@ -174,12 +196,13 @@ apis:
     business sector.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://providers.apievangelist.com
+  baseURL: https://providers.apievangelist.com
   tags:
   - Companies
   - APIs.json
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/companies
+    url: https://developer.apievangelist.com/catalog-feeds
   - type: APIsJSON
     url: https://providers.apievangelist.com/apis.json
   contact:
@@ -191,6 +214,7 @@ apis:
     them as part of business.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://experiences.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/experiences
   tags:
   - Experience
   - Developer Experience
@@ -199,7 +223,7 @@ apis:
   - Developer Experience
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/experiences
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://experiences.apievangelist.com/experiences.json
   contact:
@@ -211,28 +235,15 @@ apis:
     moving forward.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://guidance.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/guidance
   tags:
   - Guidance
   - Best Practices
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/guidance
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://guidance.apievangelist.com/guidance.json
-  contact:
-  - FN: Kin Lane
-    email: info@apievangelist.com
-- aid: api-evangelist-partners
-  name: API Evangelist Partners
-  description: Information about API Evangelist partners and collaboration opportunities supporting API operations.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
-  humanURL: https://partners.apievangelist.com
-  tags:
-  - Partners
-  - Network
-  properties:
-  - type: Documentation
-    url: https://developer.apievangelist.com/feeds/partners
   contact:
   - FN: Kin Lane
     email: info@apievangelist.com
@@ -242,12 +253,13 @@ apis:
     the business side of things.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://policies.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/policies
   tags:
   - Policies
   - Governance
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/policies
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://policies.apievangelist.com/policies.json
   contact:
@@ -259,12 +271,13 @@ apis:
     governed to standardize how things work.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://properties.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/properties
   tags:
   - Properties
   - Governance
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/properties
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://properties.apievangelist.com/properties.json
   contact:
@@ -276,13 +289,14 @@ apis:
     to deliver the desired experience.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://rules.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/rules
   tags:
   - Rules
   - Spectral
   - Governance
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/rules
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://rules.apievangelist.com/rules.json
   contact:
@@ -294,6 +308,7 @@ apis:
     applications we use.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://schema.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/schema
   tags:
   - Schema
   - JSON-Schema
@@ -304,7 +319,7 @@ apis:
   - Data Models
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/schema
+    url: https://developer.apievangelist.com/api
   - type: APIsJSON
     url: https://schema.apievangelist.com/apis.json
   contact:
@@ -316,12 +331,13 @@ apis:
     well-defined and interoperable.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://standards.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/standards
   tags:
   - Standards
   - Interoperability
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/standards
+    url: https://developer.apievangelist.com/api
   - type: APIsJSON
     url: https://standards.apievangelist.com/apis.json
   contact:
@@ -333,29 +349,15 @@ apis:
     the platform.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://strategies.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/strategies
   tags:
   - Strategies
   - API Strategy
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/strategies
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://strategies.apievangelist.com/strategies.json
-  contact:
-  - FN: Kin Lane
-    email: info@apievangelist.com
-- aid: api-evangelist-utilities
-  name: API Evangelist Utilities
-  description: Utility APIs for managing API Evangelist operations — a catch-all collection of internal tools used to manage
-    the platform.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
-  humanURL: https://utilities.apievangelist.com
-  tags:
-  - Utilities
-  - Tooling
-  properties:
-  - type: Documentation
-    url: https://developer.apievangelist.com/feeds/utilities
   contact:
   - FN: Kin Lane
     email: info@apievangelist.com
@@ -364,12 +366,13 @@ apis:
   description: Video content covering API topics, interviews, and walkthroughs of API concepts and technologies.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://video.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/videos
   tags:
   - Videos
   - Media
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/videos
+    url: https://developer.apievangelist.com/api
   contact:
   - FN: Kin Lane
     email: info@apievangelist.com
@@ -379,30 +382,15 @@ apis:
     us get on the same page.
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://vocabularies.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1/vocabulary
   tags:
   - Vocabularies
   - Taxonomy
   properties:
   - type: Documentation
-    url: https://developer.apievangelist.com/feeds/vocabularies
+    url: https://developer.apievangelist.com/api
   - type: JSONFeed
     url: https://vocabularies.apievangelist.com/vocabularies.json
-  contact:
-  - FN: Kin Lane
-    email: info@apievangelist.com
-- aid: spotlight-rules
-  name: Spotlight Rules
-  description: Standalone spotlight on API governance rules — guardrails for API operations delivered as a curated ruleset
-    alongside the rules collection.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
-  humanURL: https://spotlight-rules.com
-  tags:
-  - Rules
-  - Spotlight
-  - Governance
-  properties:
-  - type: Documentation
-    url: https://developer.apievangelist.com/feeds/spotlight-rules
   contact:
   - FN: Kin Lane
     email: info@apievangelist.com
@@ -469,6 +457,22 @@ common:
   url: plans/api-evangelist-plans-pricing.yml
 - type: RateLimits
   url: rate-limits/api-evangelist-rate-limits.yml
+- type: Postman
+  url: collections/apievangelist-v1.postman_collection.json
+- type: Postman
+  url: collections/apievangelist-governance.postman_collection.json
+- type: OpenCollection
+  url: collections/apievangelist-governance.opencollection.json
+- type: ChangeLog
+  url: https://developer.apievangelist.com/changelog
+- type: Deprecation
+  url: https://developer.apievangelist.com/deprecation
+- type: Security
+  url: https://developer.apievangelist.com/security
+- type: SecurityTxt
+  url: https://developer.apievangelist.com/.well-known/security.txt
+- type: RoadMap
+  url: https://developer.apievangelist.com/roadmap
 maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
