@@ -6,6 +6,16 @@ description: The index of everything available via the API Evangelist developer 
   years of API research served as one REST API, an MCP server for agents, and the static JSON feeds behind each network collection.
 image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
 tags:
+- API Evangelist
+- Developer Portal
+- API Research
+- API Governance
+- API Discovery
+- MCP
+- Agents
+- API Standards
+- API Vocabulary
+tags_raw:
 - APIs
 - API Evangelist
 - Developer Portal
@@ -28,7 +38,8 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
-  tags:
+  tags: []
+  tags_raw:
   - API
   properties:
   - type: Documentation
@@ -110,6 +121,8 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://apis.apievangelist.com
   tags:
+  - Discovery
+  tags_raw:
   - APIs
   - Discovery
   properties:
@@ -179,6 +192,9 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://experiences.apievangelist.com
   tags:
+  - Experience
+  - Developer Experience
+  tags_raw:
   - Experiences
   - Developer Experience
   properties:
@@ -279,6 +295,10 @@ apis:
   image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://schema.apievangelist.com
   tags:
+  - Schema
+  - JSON-Schema
+  - Data Models
+  tags_raw:
   - Schema
   - JSON Schema
   - Data Models
