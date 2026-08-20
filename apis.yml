@@ -28,10 +28,14 @@ tags_raw:
 - API Vocabulary
 created: '2024-10-14'
 modified: '2026-08-10'
-# Served from the host we control; mirrored from the repo on every portal build
-# by developer/scripts/mirror-apis-yml.mjs. The repo copy stays canonical.
-url: https://developer.apievangelist.com/apis.yml
-x-canonical-profile: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/apis.yml
+# NOTE: developer.apievangelist.com/apis.yml is now published by the portal build
+# (developer/scripts/mirror-apis-yml.mjs) and documented at /catalog-feeds. Point
+# `url` at it only AFTER that portal deploy is live -- pointing here first
+# advertises a 404, which is the soft-pointer failure we score other providers on.
+# It buys no score either way: apievangelist.com is in the scorer's CATALOG_HOSTS,
+# so `apis_json_self_hosted` can never pass for the catalog operator itself.
+url: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/apis.yml
+x-self-hosted-profile: https://developer.apievangelist.com/apis.yml
 apis:
 - aid: api-evangelist-api
   name: API Evangelist Network API
