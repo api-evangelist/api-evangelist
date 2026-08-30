@@ -413,7 +413,8 @@ apis:
     Individual API resources tracked across the network, and the relevance graph between them.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
-  tags:
+  tags: []
+  tags_raw:
   - APIs
   properties:
   - type: OpenAPI
@@ -746,7 +747,8 @@ apis:
   description: Strategies, experiences, and the stops along the API lifecycle.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
-  tags:
+  tags: []
+  tags_raw:
   - Operations
   properties:
   - type: OpenAPI
