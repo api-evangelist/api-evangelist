@@ -1133,6 +1133,8 @@ common:
   url: https://github.com/api-evangelist/posts/issues
 - type: AgenticAccess
   url: agentic-access/api-evangelist-agentic-access.yml
+- type: AgentCard
+  url: a2a/api-evangelist-a2a.yml
 - type: DomainSecurity
   url: security/api-evangelist-domain-security.yml
 - type: Authentication

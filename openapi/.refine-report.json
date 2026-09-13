@@ -1,0 +1,42 @@
+{
+  "provider": "api-evangelist",
+  "sources": [
+    "apievangelist-governance-openapi.json",
+    "apievangelist-v1-openapi.yml"
+  ],
+  "outputs": [
+    "api-evangelist-account-api-openapi.yml",
+    "api-evangelist-discovery-api-openapi.yml",
+    "api-evangelist-governance-api-openapi.yml",
+    "api-evangelist-apis-api-openapi.yml",
+    "api-evangelist-areas-api-openapi.yml",
+    "api-evangelist-building-blocks-api-openapi.yml",
+    "api-evangelist-contact-api-openapi.yml",
+    "api-evangelist-guidance-api-openapi.yml",
+    "api-evangelist-insights-api-openapi.yml",
+    "api-evangelist-media-api-openapi.yml",
+    "api-evangelist-operations-api-openapi.yml",
+    "api-evangelist-overview-api-openapi.yml",
+    "api-evangelist-papers-api-openapi.yml",
+    "api-evangelist-reference-api-openapi.yml",
+    "api-evangelist-services-api-openapi.yml",
+    "api-evangelist-stories-api-openapi.yml",
+    "api-evangelist-synthesis-api-openapi.yml",
+    "api-evangelist-tags-api-openapi.yml",
+    "api-evangelist-timelines-api-openapi.yml",
+    "api-evangelist-toolbox-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/apievangelist-governance-openapi.json",
+    "archived openapi/apievangelist-v1-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "apievangelist-governance-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apievangelist-v1-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "tag 'Governance' spans 2 source specs (apievangelist-governance-openapi.json, apievangelist-v1-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+20 apis, 35 total)"
+  ],
+  "skipped": []
+}
