@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "@context": "https://apievangelist.com/context.jsonld",
+      "anchor": "https://vocabularies.apievangelist.com/",
+      "title": "api-evangelist/vocabularies",
+      "service-desc": [
+        {
+          "href": "https://vocabularies.apievangelist.com/apis.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://vocabularies.apievangelist.com/apis.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://vocabularies.apievangelist.com/",
+          "type": "text/html"
+        }
+      ]
+    }
+  ]
+}

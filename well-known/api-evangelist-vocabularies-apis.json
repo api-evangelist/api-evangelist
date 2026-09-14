@@ -1,0 +1,73 @@
+{
+  "aid": "api-evangelist-vocabularies",
+  "specificationVersion": "0.19",
+  "type": "Index",
+  "name": "Vocabularies",
+  "description": "Organizing the words we use to describe API resources and capabilities \u2014 controlled vocabularies that help us get on the same page.",
+  "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+  "tags": [
+    "Vocabularies",
+    "Taxonomy"
+  ],
+  "created": "2024-10-14",
+  "modified": "2026-05-20",
+  "url": "https://github.com/api-evangelist/vocabularies/blob/main/apis.yml",
+  "apis": [
+    {
+      "aid": "api-evangelist-vocabularies:vocabularies",
+      "name": "Vocabularies Feed",
+      "description": "Organizing the words we use to describe API resources and capabilities \u2014 controlled vocabularies that help us get on the same page.",
+      "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+      "humanURL": "https://developer.apievangelist.com/feeds/vocabularies/",
+      "baseURL": "https://vocabularies.apievangelist.com",
+      "tags": [
+        "Vocabularies",
+        "Taxonomy"
+      ],
+      "properties": [
+        {
+          "type": "Documentation",
+          "url": "https://developer.apievangelist.com/feeds/vocabularies/"
+        },
+        {
+          "type": "JSONFeed",
+          "url": "https://vocabularies.apievangelist.com/vocabularies.json"
+        },
+        {
+          "type": "GitHubRepository",
+          "url": "https://github.com/api-evangelist/vocabularies"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Kin Lane",
+          "email": "info@apievangelist.com"
+        }
+      ]
+    }
+  ],
+  "common": [
+    {
+      "type": "DeveloperPortal",
+      "url": "https://developer.apievangelist.com/"
+    },
+    {
+      "type": "Network",
+      "url": "https://developer.apievangelist.com/network/"
+    },
+    {
+      "type": "GitHubOrganization",
+      "url": "https://github.com/api-evangelist"
+    },
+    {
+      "type": "APIsJSON",
+      "url": "https://developer.apievangelist.com/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "Kin Lane",
+      "email": "kin@apievangelist.com"
+    }
+  ]
+}

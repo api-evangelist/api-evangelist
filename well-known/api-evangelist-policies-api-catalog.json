@@ -1,0 +1,895 @@
+{
+  "linkset": [
+    {
+      "@context": "https://apievangelist.com/context.jsonld",
+      "anchor": "https://policies.apievangelist.com/",
+      "title": "api-evangelist/policies",
+      "service-desc": [
+        {
+          "href": "https://policies.apievangelist.com/apis.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://policies.apievangelist.com/apis.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://policies.apievangelist.com/",
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/api-metadata-descriptions/",
+      "title": "Descriptions for APIs",
+      "description": "Providing a robust description of each API, providing the right amount of information for consumers to understand what is possible and what the business use case is."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/api-metadata-images/",
+      "title": "Images for APIs",
+      "description": "Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/api-metadata-names/",
+      "title": "Names for APIs",
+      "description": "Providing a clear, descriptive, and concise name for each API, as well as the APIs it contains, properly defining the scope, with an intuitive first impression of an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/api-metadata-tags/",
+      "title": "Tags for APIs",
+      "description": "Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/api-metadata-unique-identifiers/",
+      "title": "Unique Identifiers for APIs",
+      "description": "Providing unique identifiers for API apis, as well as the APIs that are indexed as part of an API, providing a key reference for discovery and automating around a contract."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/api-metadata/",
+      "title": "Metadata for APIs",
+      "description": "Unique identifier, name, description, tags, and other metadata for the API that defines the purpose of each individual API, and how it benefits API producer and consumers, establishing the base of the agreement."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/apis-json-created-info/",
+      "title": "Created Date for APIs.json Contracts",
+      "description": "Providing the data in which an API contract was created, establishing the inception of a specific contract involving one or more APIs, which defines the age of the contract."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/apis-json-modified-info/",
+      "title": "Modified Date for APIs.json Contracts",
+      "description": "Providing the data in which an API contract was last modified, tracking the change that occurs with each API contract, understanding the velocity as well as stagnation of APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/apis-json-url-info/",
+      "title": "URL for APIs.json Contracts",
+      "description": "Providing the valid URL for the APIs.json contract, identifying the source of the contract which may or may not be where it is found, helping make contract authoritative."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/authentication-jwt/",
+      "title": "JWT (Authentication)",
+      "description": "Require JWT usage meets standards set by authentication policies."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/authentication-keys/",
+      "title": "Keys (Authentication)",
+      "description": "Require the API key usage meets standards set by authentication policies."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/authentication-oauth/",
+      "title": "OAuth (Authentication)",
+      "description": "Require that OAuth usage meets standards set by authentication policies."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/authentication-scopes/",
+      "title": "Scopes (Authentication)",
+      "description": "Require Oauth scopes meets standards set by authentication policies."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/authentication/",
+      "title": "Authentication",
+      "description": "The details for how to authenticate with an API should always be part of the business and technical contracts for an API. Information on how to authenticate with an API should be readily available for developers and travel anywhere documentation for an API will be traveling."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/base-url/",
+      "title": "Base URL for API",
+      "description": "Providing a valid URL to the base for an API that is designed for machines to use when making call to an API by an consumer."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/blog-feeds/",
+      "title": "Blog Feeds",
+      "description": "A blog RSS or Atom feed provides a simple way to syndicate information and updates about APIs with producers and consumers, allowing it to be pushed out to where they are located and regularly consuming information, without having to visit a blog."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/blogs/",
+      "title": "Blogs",
+      "description": "A blog helps provide a regular channel for publishing relevant stories and information for both producers and consumers of an API, providing a simple, informative, and recurring way to stay in engaged and receive regular updates about an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/business-contract-validator/",
+      "title": "Business Contract Validator",
+      "description": "The APIs.json business contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/change-log-date/",
+      "title": "Change Log Date",
+      "description": "The date of the change that was made to an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/change-log-details/",
+      "title": "Change Log Details",
+      "description": "The description of the change that was made to an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/change-log-title/",
+      "title": "Change Log Title",
+      "description": "The title of the change that was made to an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/change-log-version/",
+      "title": "Change Log Version",
+      "description": "The version of the change that was made to an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/change-log/",
+      "title": "Change Log",
+      "description": "Having a change log of anything added, updated, or removed for an API, but also for the other operational and supporting resources for each API, ensuring there is a easy to read manifest of what has happened for an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/contract-metadata-descriptions/",
+      "title": "Descriptions for APIs.json Contracts",
+      "description": "Providing a robust description of the API contract, as well as each API it contains, providing my context for stakeholders of the contract."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/contract-metadata-images/",
+      "title": "Images for APIs.json Contracts",
+      "description": "Including images as part of the metadata for your APIs helps make APIs more visible as part of portals, documentation, and other resources."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/contract-metadata-names/",
+      "title": "Names for APIs.json Contracts",
+      "description": "Providing a clear, descriptive, and concise name for each API contract, as well as the APIs it contains, properly defining the scope."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/contract-metadata-tags/",
+      "title": "Tags for APIs.json Contracts",
+      "description": "Tags provide a bounded context for your APIs, providing keywords that help organize APIs by domains, and  make them more discoverable."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/contract-metadata-unique-identifiers/",
+      "title": "Unique Identifiers for APIs.json Contracts",
+      "description": "Providing unique identifiers for API contracts, as well as the APIs that are indexed as part of a contract, providing a key reference."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/contract-metadata/",
+      "title": "Metadata for APIs.json Contracts",
+      "description": "Unique identifier, name, description, tags, and other metadata for the contract that defines the purpose of the API Contract, and how it benefits API producer and consumers, establishing the base of the agreement."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/documentation-examples/",
+      "title": "Documentation Examples",
+      "description": "Providing examples of request and responses, with as many variations as possible, helping demonstrate wide usage of an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/documentation-paths/",
+      "title": "Documentation Paths",
+      "description": "Providing simple, clean, and intuitive paths as part of the documentation being published for consumers to use."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/documentation-request-bodies/",
+      "title": "Documentation Request Bodies",
+      "description": "Including details and examples regarding the request bodies being submitted for POST, PUT, and other possible methods."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/documentation-responses/",
+      "title": "Documentation Responses",
+      "description": "Making sure there is a complete example for each API response in documentation, including happy and unhappy responses."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/documentation-schema/",
+      "title": "Documentation Schema",
+      "description": "Documenting all of the schema which are used as part of request bodies and responses, providing JSON SChema representations of each."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/documentation/",
+      "title": "Documentation",
+      "description": "The human-readable HTML, Markdown, or PDF representation of the technical surface area of each API, providing path, methods, summaries, description, examples, and the other resources consumers will need."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/environments/",
+      "title": "Environments",
+      "description": "The environments for development, staging, or production environments should be available to manually or automatically working with an API in any environment, providing a machine-readable way for navigating each of the environments available for an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/feedback-issues/",
+      "title": "Feedback Issues",
+      "description": "Allow for teams to receive feedback on API contracts via Git issue."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/feedback/",
+      "title": "Feedback",
+      "description": "Providing feedback on the business and technical details of each API contract, helping facilitate feedback from consumers and other stakeholders, but also from the learnings across other private and public API contracts in use."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/gateway/",
+      "title": "Gateways",
+      "description": "All APIs are made available via a designated gateway for the company, domain, line of business, or team, ensuring that all APIs have access to shared authentication, rate limits, service composition, and the other modern capabilities of API gateways."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/getting-started-authentication/",
+      "title": "Getting Started Authentication",
+      "description": "Needs description."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/getting-started-documentation/",
+      "title": "Getting Started Documentation",
+      "description": "Provide a link and description to your API documentation, providing the entry point for API consumers to begin learning about what your API does."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/getting-started-sdks/",
+      "title": "Getting Started SDKs",
+      "description": "Provide a link and description of where API consumers can learn more about authentication and how it will work when they use an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/getting-started/",
+      "title": "Getting Started",
+      "description": "The step by step walk-through for new API consumers, ensuring they have exactly what is needed to discover and onboard, but also help make sure the getting started steps are as simple, plain language, and easy to follow."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/github-organization-readme/",
+      "title": "GitHub Organization README",
+      "description": "GitHub organization provide the ability to have a dedicated README, providing a single landing page for the API workspace of a domain, line of business, or domain, where all API contracts can be found and searched."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/github-organization-repositories/",
+      "title": "GitHub Organization Repositories",
+      "description": "GitHub organizations provide teams with the ability to create repositories for managing API contracts, separating and organizing contracts by meaningful bounded contexts within a specific domain."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/github-organization-teams/",
+      "title": "GitHub Organization Teams",
+      "description": "GitHub organizations allow for the management of people and teams to help define who has access to repositories, contracts, and other assets managed via this dedicated domain workspace."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/github-organization/",
+      "title": "GitHub Organizations",
+      "description": "A GitHub organization provides a dedicated workspaces for teams to produce APIs, organize all the API contracts in motion, and leverage source countrol, CI/CD, teams, and other resources provided by GitHub to manage API operations."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/github-repository/",
+      "title": "GitHub Repository",
+      "description": "A GitHub repository for an API, providing the single source of truth for the API contract, OpenAPI, and other artifacts, as well as the road map, change log, support, feedback, and other elements of a repository."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/governance-api-rules/",
+      "title": "API Governance Rules",
+      "description": "Spectral rules that apply to the API level, linting OpenAPI."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/governance-lifecycle/",
+      "title": "API Lifecycle",
+      "description": "A human and machine-readable schema of the common and agreed upon API lifecycle."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/governance-operational-rules/",
+      "title": "Operational Governance Rules",
+      "description": "Spectral rules that apply to the operational level, linting APIs.json."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/governance-policies/",
+      "title": "Governance Policies",
+      "description": "Human and machine-readable policies that define an aspect of API operations, which are always kept in alignment with business objectives."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/governance-vocabulary/",
+      "title": "Governance Vocabulary",
+      "description": "A formal vocabulary of words and phrases that can and cannot be used across operations."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/governance/",
+      "title": "Governance",
+      "description": "Governance standardizes APIs across teams using a common platform and lifecycle, applying governance policies and rules, and keeping everyone moving in the same direction using common guidance."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/guidance-business/",
+      "title": "Business Guidance",
+      "description": "Provide access to business API guidance as part of API contract support."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/guidance-people/",
+      "title": "People Guidance",
+      "description": "Provide access to people API guidance as part of API contract support."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/guidance-policies/",
+      "title": "Policy Guidance",
+      "description": "Provide access to API policy guidance as part of API contract support."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/guidance-technical/",
+      "title": "Technical Guidance",
+      "description": "Provide access to technical API guidance as part of API contract support."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/guidance/",
+      "title": "Guidance",
+      "description": "Ensuring there is guidance for teams throughout their API journey, providing simple text and video guidance for all of the topics business and engineering teams will encounter as part of their regular work to produce consistent APis."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/how/",
+      "title": "How Will API Be Used",
+      "description": "How will consumers be putting API resources and capabilities, getting into the details of programming languages and frameworks."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/human-url/",
+      "title": "Human URL for APIs.json Contract",
+      "description": "Providing a valid URL to a landing page for the API that is designed for humans to use when learning more about an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/json-path/",
+      "title": "Usage of JSON Path Standard",
+      "description": "Using JSON Path to identify properties of a schema."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/licensing/",
+      "title": "API Licensing",
+      "description": "Publishing a license for the interface, client code, server code, and data to ensure consumers understand the legal implications of using the API, code, and data into their own applications and integrations."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/login/",
+      "title": "Login for APIs",
+      "description": "Providing a way to login and gain access to an API, offering a simple human-readable URL to the login page, or ideally some sort of automated login process that allows access with as few clicks and steps as possible."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-component-headers/",
+      "title": "Centralizing Headers Using Components",
+      "description": "Requiring that OpenAPI components headers meet the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-component-schema/",
+      "title": "Centralizing Headers Using Components",
+      "description": "Requiring that OpenAPI components headers meet the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-components/",
+      "title": "OpenAPI Components",
+      "description": "The OpenAPI Components object enables the centralization of common technical details within an API, promoting modularity and reusability. Using the components object as a standard practice helps reduce confusion, simplifies governance, and ensures consistency in the technical details across APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-external-docs/",
+      "title": "Providing External Document References",
+      "description": "Requiring that all OpenAPI external documentation meet the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-info-contact/",
+      "title": "Contact Information for APIs",
+      "description": "Requiring that there is a contact included in the OpenAPI info."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-info-description/",
+      "title": "Description of APIs",
+      "description": "Requiring the info description property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-info-license/",
+      "title": "License for APIs",
+      "description": "Requiring the info license property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-info-terms-of-service/",
+      "title": "Terms of Service for APIs",
+      "description": "Requiring the info terms of service property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-info-title/",
+      "title": "Title of APIs",
+      "description": "Requiring the info title property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-info-version/",
+      "title": "Version of APIs",
+      "description": "Requiring the info version property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-description/",
+      "title": "Description of API Operations",
+      "description": "Requiring that all operational descriptions meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-identifiers/",
+      "title": "Unique Identrifiers for API Operations",
+      "description": "Requiring that all operational unique identifiers meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameter-descriptions/",
+      "title": "Parameter Descriptions",
+      "description": "Requiring that all operational parameters descriptions meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameter-enum/",
+      "title": "Parameter Enumerators",
+      "description": "Requiring that all operational parameters enums meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameter-in/",
+      "title": "Parameter In Query or Path",
+      "description": "Requiring that all operational parameters in property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameter-names/",
+      "title": "Parameter Names",
+      "description": "Requiring that all operational parameters names meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameter-schema/",
+      "title": "Parameter Schema",
+      "description": "Requiring that all operational parameters schema meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameter-types/",
+      "title": "Parameter Types",
+      "description": "Requiring that all operational parameters type property meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-parameters/",
+      "title": "Parameters",
+      "description": "Requiring that all operational parameters meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-request-bodies-examples/",
+      "title": "Request Bodies Examples",
+      "description": "Requiring that all operational request body examples meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-request-bodies-media-types/",
+      "title": "Request Bodies Media Types",
+      "description": "Requiring that all operational request body media types meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-request-bodies-schema/",
+      "title": "Request Bodies Schema",
+      "description": "Requiring that all operational request body schema meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-request-bodies/",
+      "title": "Request Bodies",
+      "description": "Requiring that all operational request bodies meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-response-2xx/",
+      "title": "Response 2xx",
+      "description": "Requiring that all 2xx responses meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-response-4xx/",
+      "title": "Response 4xx",
+      "description": "Requiring that all 4xx responses meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-response-5xx/",
+      "title": "Response 5xx",
+      "description": "Requiring that all 5xx responses meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-security/",
+      "title": "Operation Security",
+      "description": "Requiring that all operational security meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-summary/",
+      "title": "Operation Summary",
+      "description": "Requiring that all operational summaries meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-operation-tags/",
+      "title": "Operation Tags",
+      "description": "Requiring that all operational tags meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-path-names/",
+      "title": "Path Names",
+      "description": "Requiring API paths meets the policy standards that are set."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-descriptions/",
+      "title": "Schema Descriptions",
+      "description": "Requiring that all schema descriptions meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-names/",
+      "title": "Schema Names",
+      "description": "Requiring that all schema names meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-properties/",
+      "title": "Schema Properties",
+      "description": "Requiring that all schema properties meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-property-descriptions/",
+      "title": "Schema Property Descriptions",
+      "description": "Requiring that all schema property descriptions meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-property-names/",
+      "title": "Schema Property Names",
+      "description": "Requiring that all schema property names meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-property-shapes/",
+      "title": "Schema Property Shapes",
+      "description": "Requiring that all schema property shapes meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-property-types/",
+      "title": "Schema Property Type",
+      "description": "Requiring that all schema property types meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-schema-type/",
+      "title": "Schema Type",
+      "description": "Requiring that all schema type meets the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-security/",
+      "title": "OpenAPI Security",
+      "description": "Requiring that OpenAPI security meet the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-tags/",
+      "title": "OpenAPI Tags",
+      "description": "Requiring that all OpenAPI tags meet the policy standards."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi-version/",
+      "title": "OpenAPI Version",
+      "description": "Requiring there is the latest version of OpenAPI available."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/openapi/",
+      "title": "OpenAPI",
+      "description": "A machine-readable OpenAPI using the most recent version of the API specification, describing the surface area of each API, which is then used to render the human-readable documentation, and other supporting elements."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/performance-latency/",
+      "title": "Latency",
+      "description": "Requiring details regarding the regular latency for each available API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/performance-response-time/",
+      "title": "Response Time",
+      "description": "Requiring details regarding the regular response time for each available API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/performance/",
+      "title": "Performance",
+      "description": "Publishing details regarding the performance of APIs, complimenting status and uptime information, but drilling into more detail regarding speed, latency, and other performance related metrics that matter to API consumers."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/plan-elements/",
+      "title": "Elements",
+      "description": "Offering other elements or features of an API that are included or not included within a plan to help API consumers understand scope of what is available."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/plan-metrics/",
+      "title": "Metrics",
+      "description": "Providing details regarding the metrics available for each plan, outlining how the usage of digital resources and capabilities are being measured."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/plan-rate-limits/",
+      "title": "Rate Limits",
+      "description": "Providing details of rate limits being applied as part of each plan, and what is available to consumers as part of their application usage."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/plan-regions/",
+      "title": "Regions",
+      "description": "Providing regional details available for access API resources and capabilities in different geographical regions as part of API plan usage."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/plan-time-frame/",
+      "title": "Time Frame",
+      "description": "Break down usage for for consumers based upon second, minutes, days, weeks, months, or other relevant time-frame for them to understand their usage."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/plans/",
+      "title": "Plans",
+      "description": "Plans are all about being explicit and transparent with all of the access for an API, breaking down the tiers, rate limits, features, and pricing that is available for API consumers, standardizing the business of APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/policies/",
+      "title": "Policies",
+      "description": "Providing the machine-readable policies that link machine-readable rules with the business reasons why we are governing an API and the operations around it, helping organize rules based upon the business reasoning behind them."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/portals/",
+      "title": "Portals",
+      "description": "Dedicated developer portals for an API provide a way to make documentation, sign-up, getting started, plans, SDKs, and other resources API consumers need more easily accessible publicly or privately to a specific audience."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/postman-collection/",
+      "title": "Postman Collection",
+      "description": "A machine-readable Postman Collection describing the surface area of the API contract or providing more modular and executable representations of portions of the API contract. - Postman - Executable"
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/postman-workspace/",
+      "title": "Postman Workspace",
+      "description": "A Postman Workspace provides a dedicated space to manage API contracts within a domain, complimenting other types of workspaces, allowing for private, partner, and public workspaces to exist for managing API operations."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/privacy-policy/",
+      "title": "Privacy Policy",
+      "description": "Publishing a privacy policy covering the producer and consumers of an API, as well as end-users of applications, adding to the legal resources that are available to 3rd party developers when putting APIs to work."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/problem-details-for-http-apis/",
+      "title": "Problem Details for HTTP APIs",
+      "description": "Requiring that errors use the Problem Details for HTTP APIs standard."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/provenance-certifications/",
+      "title": "Certifications",
+      "description": "Provide the provenance of an API contract using regular certifications"
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/provenance-issues/",
+      "title": "Issues",
+      "description": "Provide the provenance of an API contract using Git issues."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/provenance-pull-requests/",
+      "title": "Pull Requests",
+      "description": "Provide the provenance of an API contract using Git pull requests."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/provenance-reviews/",
+      "title": "Reviews",
+      "description": "Provide the provenance of an API contract using API governance reviews."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/provenance/",
+      "title": "Provenance",
+      "description": "Helping curate the provenance of each API contract as it evolves over time, documenting change, and cataloging the reviews, validation, certification, and conversation that occurs as each API moves forward and matures over time."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/questions-issues/",
+      "title": "Questions Issues",
+      "description": "Allow for teams to ask questions and get answers via Git Issues."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/questions/",
+      "title": "Questions",
+      "description": "Empowering teams to ask questions via issue or discussion via Git repository, or directly via email about the API lifecycle, governance, as well as the business or technical elements of producing an API for wider consumption."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/road-map-date/",
+      "title": "Date",
+      "description": "The date for the proposed API change in the road map."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/road-map-details/",
+      "title": "Details",
+      "description": "The description for the proposed API change in the road map."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/road-map-title/",
+      "title": "Title",
+      "description": "The title for the proposed API change in the road map."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/road-map-version/",
+      "title": "Version",
+      "description": "The version of the proposed API change in the road map."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/road-map/",
+      "title": "Road Map",
+      "description": "Providing a simple yet informative look at what features are being planned for future releases of an API, or even sharing that nothing is currently being planned--just providing any insight on what the future will hold."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/rules/",
+      "title": "Rules",
+      "description": "Providing the machine-readable rules used to govern an API that can be used as part of pipelines or other automation to lint an API, making sure the baseline for each API and the operations around it are available as part of the contract."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks-csharp/",
+      "title": "CSharp",
+      "description": "Require a CSharp client SDK available with each API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks-getting-started-/",
+      "title": "SDKs (Getting Started)",
+      "description": "Provide a link and description of where API consumers can get access to SDKs,  libraries, and the code that will jumpstart their integration with an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks-go/",
+      "title": "Go",
+      "description": "Require a Go client SDK available with each API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks-java/",
+      "title": "Java",
+      "description": "Require a Java client SDK available with each API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks-javascript/",
+      "title": "JavaScript",
+      "description": "Require a JavaScript client SDK available with each API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks-php/",
+      "title": "PHP",
+      "description": "Require a PHP client SDK available with each API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/sdks/",
+      "title": "SDKs",
+      "description": "Offering software development kits, or SDKs for an API, handling authentication, and working across all available API operations in a variety of relevant programming languages to the targeted consumers of an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/security-authentication/",
+      "title": "Authentication",
+      "description": "Require details regarding how authentication is handled as part of API security."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/security-owasp-top-10/",
+      "title": "OWASP",
+      "description": "Require that OWASP API security top ten has been applied as part of API security."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/security-testing/",
+      "title": "Testing",
+      "description": "Require that security testing has occurred and publishing results for API security."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/security/",
+      "title": "Security",
+      "description": "Providing an overview of security practices for an API, including details covered as part of authentication and access management, but also security testing and certifications that matter to API consumers."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/source-of-truth-actions/",
+      "title": "GitHub Actions",
+      "description": "Employing actions as a pipeline to make sure that the deliver of each API is a repeatable process."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/source-of-truth-issues/",
+      "title": "Issues",
+      "description": "Leveraging issues as a way to communicate API change and feedback."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/source-of-truth-pull-requests/",
+      "title": "Pull Requests",
+      "description": "Using pull requests to submit changes to business or technical artifacts."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/source-of-truth-readme/",
+      "title": "README",
+      "description": "Require that each API contract repository has a dedicated README."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/source-of-truth-teams/",
+      "title": "Teams",
+      "description": "Require that API contract management is controlled using Git teams."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards-http/",
+      "title": "HTTP",
+      "description": "The Hyper Text Transfer Protocol (HTTP) from the IETF."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards-json-schema/",
+      "title": "JSON Schema",
+      "description": "Using the JSON Schema to define and validate models."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards-json/",
+      "title": "JSON",
+      "description": "Using the JavaScript Object Notation (JSON) format."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards-openapi/",
+      "title": "OpenAPI",
+      "description": "Using the OpenAPI specification to describe HTTP APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards-spectral/",
+      "title": "Spectral",
+      "description": "Using the Spectral to define linting rules for APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards-yaml/",
+      "title": "YAML",
+      "description": "Using the Yet Another Markdown Language (YAML) format."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/standards/",
+      "title": "Standards",
+      "description": "Internet, industry, market, and government standards help make APIs more consistent, but also save time and money for both producer and consumer, while keeping APIs better aligned with existing industry areas of interoperability and reuse."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/status-dashboard/",
+      "title": "Status Dashboard",
+      "description": "Require a link to as well as results from a status dashboard for an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/status-history/",
+      "title": "Status History",
+      "description": "Require a link to as well as results from a status history for an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/status/",
+      "title": "Status",
+      "description": "Making an API status page, monitoring reports, or other real-time updates regarding the uptime and availability of an API, providing current, but also the historical status of API, helping maintain trust with API consumers."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/support-email/",
+      "title": "Support Email",
+      "description": "Require that an API is supported using email."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/support-issues/",
+      "title": "Support Issues",
+      "description": "Require that an API is supported using Git issues."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/support/",
+      "title": "Support",
+      "description": "Outline what support is available for API consumers, including email, tickets, forums, and paid support services, making it easy for API consumers to understand how they can get the help they need across APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/teams/",
+      "title": "Teams",
+      "description": "Requiring at least one product and one engineering, as well as other potential stakeholders involved through the API lifecycle from define to production, ensuring there is always someone actively owning and leading APIs forward."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/technical-contract-validator/",
+      "title": "Technical Contract Validator",
+      "description": "The OpenAPI technical contract must have a link to the validator for each, providing the ability to run linting rules for each type of contract and see the details of rules as they are applied."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/terms-of-service/",
+      "title": "Terms of Service",
+      "description": "Making sure that terms of service are front and center for API consumers, ensuring that the legal side of using API resources and capabilities in applications and integrations by 3rd party consumers is covered."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/use-cases/",
+      "title": "Use Cases",
+      "description": "The who, what, how, and why of producing an API, making sure all of the known use cases are accurately described and kept up to date, then used to ensure each API is delivering what is expected with each use case."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/versioning-date-base/",
+      "title": "Date-Based Versioning",
+      "description": "Require usage of date-base versioning for managing change."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/versioning-semantic-versioning/",
+      "title": "Semantic Versioning",
+      "description": "Require usage of major, minor, and patch Semantic Versioning for managing change."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/versioning/",
+      "title": "Versioning",
+      "description": "Providing semantic or date-based versioning for an API, offering an overview of what is adopted for an API and why, letting consumers know that their is change management in place and how they can tune into communication."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/videos/",
+      "title": "Videos",
+      "description": "Videos offer an engaging way to provide information and updates with producers nad consumers of APIs, demonstrating how an API can be used, providing webinars, workshops, and other useful videos about what is happening with an API."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/what/",
+      "title": "What Will Be Done With API",
+      "description": "What will consumers be building with the resources and capabilities being made available via APIs."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/who/",
+      "title": "Who Will Be Using API",
+      "description": "Who is using an API, focusing on the people who will be putting an API to work in their applications."
+    },
+    {
+      "anchor": "https://policies.apievangelist.com/store/why/",
+      "title": "Why Will API Be Used",
+      "description": "What are the reasons an API consumer will be putting APIs to work in their applications and integrations as part of their business."
+    }
+  ]
+}

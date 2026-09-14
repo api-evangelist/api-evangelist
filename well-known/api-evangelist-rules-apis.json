@@ -1,0 +1,76 @@
+{
+  "aid": "api-evangelist-rules",
+  "specificationVersion": "0.19",
+  "type": "Index",
+  "name": "Rules",
+  "description": "Technical details of API operations that can be automated and enforced, used to align policies with strategy to deliver the desired experience.",
+  "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+  "tags": [
+    "Rules",
+    "Spectral",
+    "Governance"
+  ],
+  "created": "2024-10-14",
+  "modified": "2026-05-20",
+  "url": "https://github.com/api-evangelist/rules/blob/main/apis.yml",
+  "apis": [
+    {
+      "aid": "api-evangelist-rules:rules",
+      "name": "Rules Feed",
+      "description": "Technical details of API operations that can be automated and enforced, used to align policies with strategy to deliver the desired experience.",
+      "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+      "humanURL": "https://developer.apievangelist.com/feeds/rules/",
+      "baseURL": "https://rules.apievangelist.com",
+      "tags": [
+        "Rules",
+        "Spectral",
+        "Governance"
+      ],
+      "properties": [
+        {
+          "type": "Documentation",
+          "url": "https://developer.apievangelist.com/feeds/rules/"
+        },
+        {
+          "type": "JSONFeed",
+          "url": "https://rules.apievangelist.com/rules.json"
+        },
+        {
+          "type": "GitHubRepository",
+          "url": "https://github.com/api-evangelist/rules"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Kin Lane",
+          "email": "info@apievangelist.com"
+        }
+      ]
+    }
+  ],
+  "common": [
+    {
+      "type": "DeveloperPortal",
+      "url": "https://developer.apievangelist.com/"
+    },
+    {
+      "type": "Network",
+      "url": "https://developer.apievangelist.com/network/"
+    },
+    {
+      "type": "GitHubOrganization",
+      "url": "https://github.com/api-evangelist"
+    },
+    {
+      "type": "APIsJSON",
+      "url": "https://developer.apievangelist.com/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "Kin Lane",
+      "email": "info@apievangelist.com",
+      "X-github": "kinlane"
+    }
+  ]
+}

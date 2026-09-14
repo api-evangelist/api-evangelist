@@ -1,0 +1,295 @@
+{
+  "linkset": [
+    {
+      "@context": "https://apievangelist.com/context.jsonld",
+      "anchor": "https://strategies.apievangelist.com/",
+      "title": "api-evangelist/strategies",
+      "service-desc": [
+        {
+          "href": "https://strategies.apievangelist.com/apis.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://strategies.apievangelist.com/apis.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://strategies.apievangelist.com/",
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-authentication-is-standardized/",
+      "title": "API Authentication Is Standardized",
+      "description": "All APIs must use standardized authentication mechanisms including OAuth, JWT, and API keys with properly defined scopes, ensuring that security is consistently implemented and that consumers have a predictable experience when authenticating across all APIs."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-authorization-is-properly-defined-and-enforced/",
+      "title": "API Authorization Is Properly Defined and Enforced",
+      "description": "All APIs must have clearly defined authorization models that control what authenticated consumers can access and perform, using role-based or attribute-based access control to ensure that permissions are granular, auditable, and consistently enforced across all API operations."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-change-is-relative-to-operational-change/",
+      "title": "API Change is Managed Relative to Operational Change",
+      "description": "Individual APIs should be aligned with overall operational change, providing a common operational change log and road-map that is higher level than change for each individual API, but provides a common context across all APIs, teams, and lines of business--keeping everyone in alignment."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-contracts-are-validated/",
+      "title": "API Contracts Are Validated",
+      "description": "All APIs must have a link to the evidence of the contract validation for business and technical contracts, allowing any stakeholder to review the details of the contract, as well as the rules applied to govern the details of contracts."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-data-is-classified-and-protected/",
+      "title": "API Data Is Classified and Protected",
+      "description": "All data exposed through APIs must be classified by sensitivity level, with appropriate protections applied based on classification, ensuring that PII, financial data, and other sensitive information is properly handled, encrypted, and only accessible to authorized consumers."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-delivery-is-fast-and-design-first/",
+      "title": "API Delivery Is Fast and Design-First",
+      "description": "API delivery must follow a design-first approach with mock servers, contract testing, and schema registries that enable parallel development, allowing consumers to begin integration before implementation is complete and accelerating the overall time from concept to production."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-dependencies-are-tracked-and-managed/",
+      "title": "API Dependencies Are Tracked and Managed",
+      "description": "All API-to-API dependencies must be documented and tracked, with upstream and downstream impact analysis performed before changes are made, ensuring that teams understand the ripple effects of changes and can proactively notify dependent consumers."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-development-is-collaborative-across-teams/",
+      "title": "API Development Is Collaborative Across Teams",
+      "description": "API development must be a collaborative effort across product, engineering, and operations teams, with shared workspaces, design reviews, and cross-functional feedback loops that ensure APIs reflect both business requirements and technical best practices."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-errors-are-standardized-and-informative/",
+      "title": "API Errors Are Standardized and Informative",
+      "description": "All API error responses must follow standardized formats like RFC 7807 Problem Details, providing consistent error codes, human-readable messages, and correlation IDs that enable consumers to programmatically handle errors and quickly diagnose issues."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-governance-is-automated-in-cicd/",
+      "title": "API Governance Is Automated in CI/CD",
+      "description": "All API governance checks including linting, contract testing, and schema validation must be automated within the CI/CD pipeline, ensuring that governance is enforced consistently at build time rather than relying on manual review processes that slow delivery and introduce human error."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-info-and-metadata-is-complete-and-accurate/",
+      "title": "API Info and Metadata Is Complete and Accurate",
+      "description": "All OpenAPI definitions must have complete info objects including title, description, version, contact information, license, and terms of service, providing both humans and machines with the context needed to understand, evaluate, and properly use each API."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-maturity-is-measured-and-improved/",
+      "title": "API Maturity Is Measured and Improved",
+      "description": "All APIs must be assessed against a maturity model that measures documentation, security, testing, monitoring, and consumer experience, providing a measurable way to track progress, compare APIs, and prioritize governance investments where they will have the greatest impact."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-parameters-are-well-defined-and-consistent/",
+      "title": "API Parameters Are Well-Defined and Consistent",
+      "description": "All API parameters must have clear names, descriptions, types, and constraints following consistent casing and naming conventions, with reusable parameters centralized in OpenAPI components to reduce duplication and ensure uniformity across operations."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-paths-must-conform-to-the-organization/",
+      "title": "API Paths Must Conform to the Organization",
+      "description": "All API paths must conform to the overall organizational domain standards, utilizing plain language and a resourceful approach to delivering digital resources and capabilities via HTTP APIs, providing a common set of paths that can be used and reused across many different applications and consumers."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-provenance-is-maintained-and-auditable/",
+      "title": "API Provenance Is Maintained and Auditable",
+      "description": "All API contracts must maintain a clear record of their provenance including reviews, certifications, pull requests, and change history, ensuring that the evolution of each API is traceable, auditable, and supports compliance and quality assurance efforts."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-responses-must-be-meaningful-and-consistent/",
+      "title": "API Responses Must Be Meaningful and Consistent",
+      "description": "All API responses should follow Internet, industry, and enterprise standards, providing a meaningful and consistent communication and structure, always providing what was intended for API consumers, while ensuring things are always as simple as possible--always reducing the cognitive load."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/api-versioning-follows-a-defined-standard/",
+      "title": "API Versioning Follows a Defined Standard",
+      "description": "All APIs must follow a defined versioning strategy, whether semantic versioning or date-based versioning, with clear policies for how versions are communicated, how consumers are migrated, and how multiple versions are maintained during transition periods."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-always-have-well-defined-owners-and-stakeholders/",
+      "title": "APIs Always Have Well-Defined Owners and Stakeholders",
+      "description": "Each API should ideally have a dedicated product as well as an engineering owner, with other stakeholders across the API lifecycle defined in an easy to access human readable location, but also defined in a machine-readable API to help automate coordination amongst owners and stakeholders."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-aligned-with-industry-using-standards/",
+      "title": "APIs Are Aligned with Industry Using Standards",
+      "description": "All APIs must be using relevant Internet, industry, and government standards available, ensuring to properly research areas of operations to see what existing standards may exist before the creation of any new schema or process, helping align operations with the wider industry API landscape."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-always-aligned-with-wider-enterprise/",
+      "title": "APIs Are Always Aligned with the Wider Enterprise",
+      "description": "All API contracts must have use cases that align the business reasons why an API is being delivered to consumers with the actual technical details of each API contract, ensuring that operations all have a valid business use case."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-always-high-quality-and-reliable/",
+      "title": "APIs Are Always High Quality and Reliable",
+      "description": "All APIs should be high quality and reliable, providing adequate levels of monitoring of its availability and performance, with the proper provenance and communication with producer and consumers regarding quality of the APIs, as well as with any future release of API resources."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-always-well-documented/",
+      "title": "APIs Are Always Well Documented",
+      "description": "All APIs must have human-readable documentation that defines the technical surface area of each API being made available to API consumers, providing a simple, intuitive, and ideally interactive HTML representation of APIs, methods, operations, requests, responses, errors, and other elements."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-defined-as-api-contracts/",
+      "title": "APIs are Defined as API Contracts",
+      "description": "All APIs are defined as API contracts so that we can align both the business and technology of delivering consistent high quality APIs, employing source control to manage the technical, but also the business side of things, while actively checking in on the alignment between the two over time."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-defined-by-technical-contracts/",
+      "title": "APIs are Defined by Technical Contracts",
+      "description": "All APIs must have machine-readable artifacts that defines the technical surface area of each API being made available to API consumers, utilizing open-source community specifications like OpenAPI and JSON Schema to define the technical details of each API that is being made available."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-discoverable-through-a-central-catalog/",
+      "title": "APIs Are Discoverable Through a Central Catalog",
+      "description": "All APIs must be registered in a central catalog or registry with consistent metadata, tags, and descriptions, ensuring that producers and consumers can find existing APIs before building new ones, reducing duplication and improving reuse across the organization."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-gracefully-deprecated-and-retired/",
+      "title": "APIs Are Gracefully Deprecated and Retired",
+      "description": "All APIs must follow a formal deprecation and retirement process that provides consumers with adequate notice, migration support, and a clear timeline from deprecation to removal, ensuring that no consumer is left stranded when APIs reach end-of-life."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-interoperable-across-systems/",
+      "title": "APIs Are Interoperable Across Systems",
+      "description": "All APIs must prioritize interoperability by using standard media types, hypermedia link relations, and well-known specifications, enabling consumers to integrate multiple APIs together and reducing vendor lock-in and rework when switching between providers."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-legally-covered/",
+      "title": "APIs Are Legally Covered",
+      "description": "All APIs must be reviewed by legal council and posses terms of service,  privacy policy, licensing, and other regulatory and compliance requirements, making sure all the legal bases are covered before any API is made available to any external consumers of digital resources."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-made-available-through-a-platform-gateway/",
+      "title": "APIs Are Made Available Through a Platform Gateway",
+      "description": "All APIs must be deployed through a common platform gateway established for the domain, line of business, or team, leveraging development, staging, and production environments, and a common set of policies for configuring access to digital resources and capabilities via APis."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-observable-and-monitored/",
+      "title": "APIs Are Observable and Monitored",
+      "description": "All APIs must have comprehensive observability including monitoring, logging, health checks, and alerting, with defined SLIs and SLOs that ensure teams can proactively detect, diagnose, and resolve issues before they impact consumers."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-part-of-regular-active-communication/",
+      "title": "APIs Are Part of Regular Active Communication",
+      "description": "All APIs are considered and included as part of regular internal and external communication channels, sharing road maps, change logs, blog posts, videos, and other relevant information that producers and consumers will find useful around their regular technical or business applications."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-are-protected-from-abuse-and-misuse/",
+      "title": "APIs Are Protected from Abuse and Misuse",
+      "description": "All APIs must have abuse prevention mechanisms beyond basic rate limiting, including throttling, quotas, circuit breakers, and bot detection, ensuring the stability and availability of APIs for legitimate consumers while protecting the platform from malicious or excessive usage."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-deliver-an-exceptional-developer-experience/",
+      "title": "APIs Deliver an Exceptional Developer Experience",
+      "description": "All APIs must prioritize the developer experience by providing interactive documentation, sandbox environments, realistic examples, and intuitive naming, ensuring that developers can quickly understand, experiment with, and successfully integrate APIs with minimal friction."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-earn-and-maintain-consumer-trust/",
+      "title": "APIs Earn and Maintain Consumer Trust",
+      "description": "All APIs must demonstrate trustworthiness through transparent service level commitments, consistent deprecation policies, reliable performance, proper security, and clear legal terms, building the confidence consumers need to depend on APIs for critical business applications."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-follow-consistent-design-patterns/",
+      "title": "APIs Follow Consistent Design Patterns",
+      "description": "All APIs must follow consistent design patterns for naming conventions, media types, pagination, filtering, sorting, and error handling, ensuring that consumers can learn patterns once and apply them across all APIs within the organization."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-have-clear-business-models/",
+      "title": "APIs Have Clear Business Models",
+      "description": "All APIs must have defined business models that articulate the value exchange between producer and consumer, including pricing tiers, plan features, rate limits, and metrics, ensuring that APIs are sustainable products with clear revenue or cost reduction value."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-have-clear-service-level-commitments/",
+      "title": "APIs Have Clear Service Level Commitments",
+      "description": "All production APIs must have defined service level agreements (SLAs) that specify uptime, availability, latency, and throughput commitments for each plan tier, providing consumers with the confidence needed to build reliable applications on top of API services."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-have-one-click-access/",
+      "title": "APIs Have One Click Access",
+      "description": "All APIs possess a URL for humans to follow when engaging as well as the base path URL for machines to use when calling each API, ensuring that the front door for API operations within this domain is always one click away, and present in all artifacts supporting humans and the applications."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-meet-regulatory-and-compliance-requirements/",
+      "title": "APIs Meet Regulatory and Compliance Requirements",
+      "description": "All APIs must be mapped to applicable regulatory and compliance requirements including GDPR, SOC2, PCI-DSS, and HIPAA, ensuring that API designs, data handling, and operations satisfy legal obligations and can be audited for conformance at any time."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-must-be-actively-governed/",
+      "title": "APIs Must Be Actively Governed",
+      "description": "All APIs being produced must be governed as part of the overall strategy, using the platform, as well as a common API lifecycle, applying policies and rules, and keeping teams moving in the same direction using guidance, and speaking the same language with a common API vocabulary."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-must-be-supported-and-have-feedback-loops/",
+      "title": "APIs Must Be Supported and Have Feedback Loops",
+      "description": "All APIs must have support mechanisms to ensure API consumers have self-service or direct support channels, as well as regular feedback loops for soliciting feedback or answering specific API questions from consumers, going beyond the problems consumers may have encountered using APIs."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-must-reusable-whenever-possible/",
+      "title": "APIs Must Reusable Whenever Possible",
+      "description": "The components of any API should be made modular and reusable whenever it makes sense to the business use case, keeping schema, parameters, examples, error responses, and other common parts of an API as reusable and interchangeable as possible within a single API, but also across all APIs."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-operations-possess-dedicated-workspaces/",
+      "title": "APIs Operations Possess Dedicated Workspaces",
+      "description": "API operations should provide dedicated workspace for domains, lines of business, and teams who are producing APIs, providing a dedicated location where work, collaboration, and automation can occur around APIs establishing the virtual factory floor that exist across enterprise API operations."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-possess-informative-metadata/",
+      "title": "APIs Possess Informative Metadata",
+      "description": "All APIs possess metadata that is relevant to what APIs do, but also how they can be used in business by API consumers, and metadata helps ensure that the front door for API operations within this domain is always one click away, and present in all artifacts we use to support API operations."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-scale-efficiently-under-load/",
+      "title": "APIs Scale Efficiently Under Load",
+      "description": "All APIs must be designed to scale efficiently as consumer traffic and data volumes grow, employing caching, pagination, filtering, and batch operations to ensure consistent performance and avoid degraded experiences at scale."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-support-event-driven-and-asynchronous-patterns/",
+      "title": "APIs Support Event-Driven and Asynchronous Patterns",
+      "description": "APIs that require event-driven or asynchronous communication must follow consistent standards for webhook registration, payload formats, retry policies, and delivery guarantees, enabling reliable and predictable event-driven integrations alongside synchronous request-response patterns."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/apis-work-across-multiple-programming-languages/",
+      "title": "APIs Work Across Multiple Programming Languages",
+      "description": "All APIs should have SDK and other client or server code available in multiple programming languages used by targeted API consumers for known business use cases, making it as simple as possible for consumers to put an API to use in their own language and frameworks, via their own infrastructure."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/breaking-changes-are-prevented-or-carefully-managed/",
+      "title": "Breaking Changes Are Prevented or Carefully Managed",
+      "description": "All changes to APIs must be evaluated for breaking impact before release, with breaking changes requiring explicit approval, version increments, migration guides, and proactive consumer communication, minimizing disruption to existing integrations."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/change-is-actively-managed-for-each-api/",
+      "title": "Change is Actively Managed for Each API",
+      "description": "All APIs must have change management baked into the definition, delivery, and iteration, ensuring that producers and consumers are in alignment regarding the communication, quality, and velocity of change that is occurring for each individual API, driving planning as well as API provenance."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/data-should-be-well-defined-and-validated/",
+      "title": "Data Should Be Well-Defined and Validated",
+      "description": "The schema for data that is sent and received via API should always be well-defined, possess a well-known shape, and always be validated, ensuring that digital resources and capabilities are what they should be, and only accessible to those who should have access our API digital resources."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/onboarding-is-always-as-easy-as-possible/",
+      "title": "Onboarding is Always as Easy as Possible",
+      "description": "API operations is made easier by making common elements like documentation, authentication, SDKs easy to find and available as just a couple of simple steps that API consumers can follow when it comes to onboarding with an API, helping producers simplify the onboarding for their consumers."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/operations-must-always-be-secure/",
+      "title": "Operations Must Always Be Secure",
+      "description": "Individual API operations should always be properly secured during design, develop, and run-time, making sure data, credentials, logs, and all other related resources are properly secured and operating as expected by both the API producer and the consumer--protecting both parties equally."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/operations-must-be-useful-and-consistent/",
+      "title": "Operations Must Be Useful and Consistent",
+      "description": "All individual API operations must be useful and follow consistent Internet, industry, and enterprise standards, providing a simple and relevant HTTP API operation that does one thing and does it well, making the value intuitive to API consumers who will be using each API operation."
+    },
+    {
+      "anchor": "https://strategies.apievangelist.com/store/producing-apis-must-be-repeatable/",
+      "title": "Producing APIs MUST Be Repeatable",
+      "description": "All APIs must have a single source of truth for all artifacts, as well as the conversations and always be able to be delivered using a repeatable process, leveraging existing software development infrastructure to ensure for continuous integration and delivery consistently across all APIs."
+    }
+  ]
+}

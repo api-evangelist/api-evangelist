@@ -1,0 +1,1 @@
+{"resource":"https://mcp.apievangelist.com/mcp","authorization_servers":["https://api.apievangelist.com"],"scopes_supported":["ae:read"],"bearer_methods_supported":["header"],"resource_name":"API Evangelist MCP","resource_documentation":"https://developer.apievangelist.com/mcp-server","resource_policy_uri":"https://developer.apievangelist.com/plans/"}

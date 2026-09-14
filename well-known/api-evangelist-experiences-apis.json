@@ -1,0 +1,74 @@
+{
+  "aid": "api-evangelist-experiences",
+  "specificationVersion": "0.19",
+  "type": "Index",
+  "name": "Experiences",
+  "description": "The real-world human experience across teams producing APIs and the consumers who are applying and integrating them as part of business.",
+  "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+  "tags": [
+    "Experiences",
+    "Developer Experience"
+  ],
+  "created": "2024-11-24",
+  "modified": "2026-05-20",
+  "url": "https://github.com/api-evangelist/experiences/blob/main/apis.yml",
+  "apis": [
+    {
+      "aid": "api-evangelist-experiences:experiences",
+      "name": "Experiences Feed",
+      "description": "The real-world human experience across teams producing APIs and the consumers who are applying and integrating them as part of business.",
+      "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+      "humanURL": "https://developer.apievangelist.com/feeds/experiences/",
+      "baseURL": "https://experiences.apievangelist.com",
+      "tags": [
+        "Experiences",
+        "Developer Experience"
+      ],
+      "properties": [
+        {
+          "type": "Documentation",
+          "url": "https://developer.apievangelist.com/feeds/experiences/"
+        },
+        {
+          "type": "JSONFeed",
+          "url": "https://experiences.apievangelist.com/experiences.json"
+        },
+        {
+          "type": "GitHubRepository",
+          "url": "https://github.com/api-evangelist/experiences"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Kin Lane",
+          "email": "info@apievangelist.com"
+        }
+      ]
+    }
+  ],
+  "common": [
+    {
+      "type": "DeveloperPortal",
+      "url": "https://developer.apievangelist.com/"
+    },
+    {
+      "type": "Network",
+      "url": "https://developer.apievangelist.com/network/"
+    },
+    {
+      "type": "GitHubOrganization",
+      "url": "https://github.com/api-evangelist"
+    },
+    {
+      "type": "APIsJSON",
+      "url": "https://developer.apievangelist.com/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "Kin Lane",
+      "email": "kin@apievangelist.com",
+      "X-github": "kinlane"
+    }
+  ]
+}

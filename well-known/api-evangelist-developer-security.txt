@@ -1,0 +1,8 @@
+# API Evangelist -- vulnerability disclosure. Full policy: https://developer.apievangelist.com/security
+# Generated on every portal build so Expires never lapses (RFC 9116 s2.5.5).
+
+Contact: mailto:info@apievangelist.com
+Expires: 2027-02-22T12:16:26Z
+Preferred-Languages: en
+Canonical: https://developer.apievangelist.com/.well-known/security.txt
+Policy: https://developer.apievangelist.com/security

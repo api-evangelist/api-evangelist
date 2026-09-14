@@ -1,0 +1,49 @@
+aid: api-evangelist-properties
+specificationVersion: '0.19'
+type: Index
+name: Properties
+description: Individual properties of API operations that can be linked to strategy, experience, and policies — and then governed
+  to standardize how things work.
+image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+tags:
+- Properties
+- Governance
+created: '2024-11-11'
+modified: '2026-05-20'
+url: https://github.com/api-evangelist/properties/blob/main/apis.yml
+apis:
+- aid: api-evangelist-properties:properties
+  name: Properties Feed
+  description: Individual properties of API operations that can be linked to strategy, experience, and policies — and then
+    governed to standardize how things work.
+  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+  humanURL: https://developer.apievangelist.com/feeds/properties/
+  baseURL: https://properties.apievangelist.com
+  tags:
+  - Properties
+  - Governance
+  properties:
+  - type: Documentation
+    url: https://developer.apievangelist.com/feeds/properties/
+  - type: JSONFeed
+    url: https://properties.apievangelist.com/properties.json
+  - type: GitHubRepository
+    url: https://github.com/api-evangelist/properties
+  - type: OpenAPI
+    url: https://github.com/api-evangelist/properties/blob/main/openapi.yml
+  contact:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+common:
+- type: DeveloperPortal
+  url: https://developer.apievangelist.com/
+- type: Network
+  url: https://developer.apievangelist.com/network/
+- type: GitHubOrganization
+  url: https://github.com/api-evangelist
+- type: APIsJSON
+  url: https://developer.apievangelist.com/apis.json
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  X-github: kinlane

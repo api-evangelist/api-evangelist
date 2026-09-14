@@ -1,0 +1,21 @@
+{
+  "linkset": [
+    {
+      "@context": "https://apievangelist.com/context.jsonld",
+      "anchor": "https://guidance.apievangelist.com/",
+      "title": "api-evangelist/guidance",
+      "service-doc": [
+        {
+          "href": "https://guidance.apievangelist.com/",
+          "type": "text/html"
+        }
+      ],
+      "service-desc": [
+        {
+          "href": "https://guidance.apievangelist.com/apis.yml",
+          "type": "application/yaml"
+        }
+      ]
+    }
+  ]
+}

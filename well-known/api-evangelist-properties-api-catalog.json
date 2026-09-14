@@ -1,0 +1,3720 @@
+{
+  "linkset": [
+    {
+      "@context": "https://apievangelist.com/context.jsonld",
+      "anchor": "https://properties.apievangelist.com/",
+      "title": "api-evangelist/properties",
+      "service-desc": [
+        {
+          "href": "https://properties.apievangelist.com/apis.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://properties.apievangelist.com/apis.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://properties.apievangelist.com/",
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/42crunchaudit/",
+      "title": "42CrunchAudit",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/42crunchcapture/",
+      "title": "42CrunchCapture",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/42crunchprotect/",
+      "title": "42CrunchProtect",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/42crunchscan/",
+      "title": "42CrunchScan",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/42crunchvscodeplugin/",
+      "title": "42CrunchVSCodePlugin",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/about/",
+      "title": "About",
+      "description": "An about page telling about an API, the enttity, team, or group behind the API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/acceptableusepolicy/",
+      "title": "AcceptableUsePolicy",
+      "description": "The legal details guiding the acceptable use of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/accessibility/",
+      "title": "Accessibility",
+      "description": "The information regarding accessibility for people with disabilities."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/affiliate/",
+      "title": "Affiliate",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/akamaicompliance/",
+      "title": "AkamaiCompliance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/akamaiddos/",
+      "title": "AkamaiDDoS",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/akamaiedge/",
+      "title": "AkamaiEdge",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/akamaiprotector/",
+      "title": "AkamaiProtector",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/akamaisecurity/",
+      "title": "AkamaiSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/allinclusive/",
+      "title": "AllInclusive",
+      "description": "Information regarding everything being included for use with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/amabassadoredgestackgateway/",
+      "title": "AmabassadorEdgeStackGateway",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ambassadorblackbirddevelop/",
+      "title": "AmbassadorBlackbirdDevelop",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ambassadorblackbirdmock/",
+      "title": "AmbassadorBlackbirdMock",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ambassadorenvoyproxy/",
+      "title": "AmbassadorEnvoyProxy",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/analysts/",
+      "title": "Analysts",
+      "description": "Information about and for analysts awareness and guidance for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/announcements/",
+      "title": "Announcements",
+      "description": "A page dedicated to announcments regarding an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/answers/",
+      "title": "Answers",
+      "description": "Resources dedicated to answering specific questions about an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiableexperience/",
+      "title": "ApiableExperience",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiablemonetization/",
+      "title": "ApiableMonetization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiableportal/",
+      "title": "ApiablePortal",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiableproducts/",
+      "title": "ApiableProducts",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiablesecurity/",
+      "title": "ApiableSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiablesynchronization/",
+      "title": "ApiableSynchronization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apicontextagents/",
+      "title": "APIContextAgents",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apicontextalerts/",
+      "title": "APIContextAlerts",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apicontextanalytics/",
+      "title": "APIContextAnalytics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apicontextmonitoring/",
+      "title": "APIContextMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apicontexttracing/",
+      "title": "APIContextTracing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apicuriostudio/",
+      "title": "ApicurioStudio",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apidogdebugging/",
+      "title": "ApiDogDebugging",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apidogdesign/",
+      "title": "ApiDogDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apidogdocumentation/",
+      "title": "ApiDogDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apidogmocking/",
+      "title": "ApiDogMocking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apidogtesting/",
+      "title": "ApiDogTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apievangelistpolicies/",
+      "title": "APIEvangelistPolicies",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apifiddledocumentation/",
+      "title": "APIFiddleDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apigitcollaboration/",
+      "title": "APIgitCollaboration",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apigitdesign/",
+      "title": "APIgitDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apigitdocumentation/",
+      "title": "APIgitDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apigitgovernance/",
+      "title": "APIgitGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apigitmocking/",
+      "title": "APIgitMocking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apigittesting/",
+      "title": "APIgitTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiidacontrolplane/",
+      "title": "ApiidaControlPlane",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiidagatewaymanager/",
+      "title": "ApiidaGatewayManager",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiidaportals/",
+      "title": "ApiidaPortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiinsightsreview/",
+      "title": "APIInsightsReview",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticcodeplayground/",
+      "title": "APIMATICCodePlayground",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticcodesamples/",
+      "title": "APIMATICCodeSamples",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticfixopenapi/",
+      "title": "APIMATICFixOpenAPI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticmerging/",
+      "title": "APIMATICMerging",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticportal/",
+      "title": "APIMATICPortal",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticrateopenapi/",
+      "title": "APIMATICRateOpenAPI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticsdks/",
+      "title": "APIMATICSDKs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimatictransform/",
+      "title": "APIMATICTransform",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticvscodelinter/",
+      "title": "ApimaticVscodeLinter",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apimaticwalkthroughs/",
+      "title": "APIMATICWalkThroughs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apinitymarketplace/",
+      "title": "ApinityMarketplace",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apinityportals/",
+      "title": "ApinityPortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apirules/",
+      "title": "ApiRules",
+      "description": "The rules that are governing the technical details of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisharegovernance/",
+      "title": "ApiShareGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisiosearch/",
+      "title": "ApisIoSearch",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisixdashboard/",
+      "title": "APISIXDashboard",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisixdocker/",
+      "title": "APISIXDocker",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisixgopluginrunner/",
+      "title": "APISIXGOPluginRunner",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisixingresscontroller/",
+      "title": "APISIXIngressController",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisixjavapluginrunner/",
+      "title": "APISIXJavaPluginRunner",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisixpythonpluginrunner/",
+      "title": "APISIXPythonPluginRunner",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apisjson/",
+      "title": "APIsJson",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apispecs/",
+      "title": "APISpecs",
+      "description": "Information regarding the adoption and usage of specifications."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apistackdiscovery/",
+      "title": "APIStackDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apistackmarketplace/",
+      "title": "APIStackMarketplace",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apitags/",
+      "title": "ApiTags",
+      "description": "Information about how tagging associated with an API will work."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apitoolkitanalytics/",
+      "title": "APItoolkitAnalytics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apitoolkiterrortracking/",
+      "title": "APItoolkitErrorTracking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apitoolkitmanagement/",
+      "title": "APItoolkitManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apitoolkitobservability/",
+      "title": "APItoolkitObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apivalidation/",
+      "title": "APIValidation",
+      "description": "Information regarding the validation of API requests and responses."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwimonitoring/",
+      "title": "ApiwiMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizcompliance/",
+      "title": "ApiwizCompliance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizconnectors/",
+      "title": "ApiwizConnectors",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizdesign/",
+      "title": "ApiwizDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizdocumentation/",
+      "title": "ApiwizDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizgateway/",
+      "title": "ApiwizGateway",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizgovernance/",
+      "title": "ApiwizGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizmarketplace/",
+      "title": "ApiwizMarketplace",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizobservability/",
+      "title": "ApiwizObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizschemaregistry/",
+      "title": "ApiwizSchemaRegistry",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwizsecurity/",
+      "title": "ApiwizSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apiwiztesting/",
+      "title": "ApiwizTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/appliance/",
+      "title": "Appliance",
+      "description": "Information regarding appliance implementations of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/applicationdirectory/",
+      "title": "ApplicationDirectory",
+      "description": "Information and location of a directory of applications developed on an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/applicationloadbalancers/",
+      "title": "ApplicationLoadBalancers",
+      "description": "Informationi regarding how to load balance applications on APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/applications/",
+      "title": "Applications",
+      "description": "Information regarding the application of digial resources and capabilities provided by APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubcollaboration/",
+      "title": "ApyHubCollaboration",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubdesign/",
+      "title": "ApyHubDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubdevelop/",
+      "title": "ApyHubDevelop",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubdiscovery/",
+      "title": "ApyHubDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubdocumentation/",
+      "title": "ApyHubDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubmonetization/",
+      "title": "ApyHubMonetization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubpublish/",
+      "title": "ApyHubPublish",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/apyhubtesting/",
+      "title": "ApyHubTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/architecture/",
+      "title": "Architecture",
+      "description": "Information regarding infrastructure available to support and operate APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/articles/",
+      "title": "Articles",
+      "description": "A dedicated resource of articles published to support APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/assertibleenvironments/",
+      "title": "AssertibleEnvironments",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/assertiblemonitoring/",
+      "title": "AssertibleMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/assertiblesync/",
+      "title": "AssertibleSync",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/assertibletesting/",
+      "title": "AssertibleTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/asyncapi/",
+      "title": "AsyncAPI",
+      "description": "A technical definition for event-driven APIs using the AsyncAPI specification."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/atlassianbitbucketrepositories/",
+      "title": "AtlassianBitbucketRepositories",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/atlassianconfluencewiki/",
+      "title": "AtlassianConfluenceWiki",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/atlassianjiratickets/",
+      "title": "AtlassianJiraTickets",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/attribution/",
+      "title": "Attribution",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/auth0authentication/",
+      "title": "Auth0Authentication",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/auth0authorization/",
+      "title": "Auth0Authorization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/auth0oauth/",
+      "title": "Auth0OAuth",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/authentication/",
+      "title": "Authentication",
+      "description": "Information about the authentication in use for a single API, or across many APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/authorization/",
+      "title": "Authorization",
+      "description": "Information regarding how authorization of digital resources is handled for an API/"
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/awsapigateway/",
+      "title": "AWSAPIGateway",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/awsapikeys/",
+      "title": "AWSAPIKeys",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/awsapiusage/",
+      "title": "AWSAPIUsage",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/awscloudwatch/",
+      "title": "AWSCloudwatch",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/beeceptormocking/",
+      "title": "BeeceptorMocking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/beeceptormonitoring/",
+      "title": "BeeceptorMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/beeceptortesting/",
+      "title": "BeeceptorTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bestpractices/",
+      "title": "BestPractices",
+      "description": "Information regarding the best practices recommended when using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/betaprogram/",
+      "title": "BetaProgram",
+      "description": "A dedicated beta program available to support early consumers of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bigpandaanalytics/",
+      "title": "BigPandaAnalytics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bigpandainsights/",
+      "title": "BigPandaInsights",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/billing/",
+      "title": "Billing",
+      "description": "Information regarding the billing of usage for APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/blog/",
+      "title": "Blog",
+      "description": "A dedicated blog to support the community surrounding an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/blogfeeds/",
+      "title": "BlogFeeds",
+      "description": "A dedicated RSS or Atom feed supporting syndication the blog for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/blogs/",
+      "title": "Blogs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/boomiintegrations/",
+      "title": "BoomiIntegrations",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/boomimanagement/",
+      "title": "BoomiManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/boomiworkflows/",
+      "title": "BoomiWorkflows",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bots/",
+      "title": "Bots",
+      "description": "Information that defines and governs the development of bots on top of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bounties/",
+      "title": "Bounties",
+      "description": "Information regarding bug and security bounty program surround APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/branding/",
+      "title": "Branding",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/brandkit/",
+      "title": "BrandKit",
+      "description": "A kit providing branding guidance and resources in support of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/breakingchanges/",
+      "title": "BreakingChanges",
+      "description": "Information regarding what a breaking change is and how it is handled for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/breakingchangespolicy/",
+      "title": "BreakingChangesPolicy",
+      "description": "Information regarding what the policy for handling breaking changes is for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/brunocli/",
+      "title": "BrunoCLI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/brunoclient/",
+      "title": "BrunoClient",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/brunocollection/",
+      "title": "BrunoCollection",
+      "description": "A single or set of Bruno collections available for working with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/brunoenvironment/",
+      "title": "BrunoEnvironment",
+      "description": "A single or set of Bruno environments to support working with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bumpshexplorer/",
+      "title": "BumpShExplorer",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/bumpshportal/",
+      "title": "BumpShPortal",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/buyerguide/",
+      "title": "BuyerGuide",
+      "description": "Information to onboarding the buyers behind applications and integrations of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/c-/",
+      "title": "C+",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/c-plus/",
+      "title": "C Plus SDKs",
+      "description": "SDKs for an API in the C+ programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/callbacks/",
+      "title": "Callbacks",
+      "description": "Information regarding the callbacks available for available APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/careers/",
+      "title": "Careers",
+      "description": "Information regarding the jobs available for entity behind an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/casestudies/",
+      "title": "CaseStudies",
+      "description": "One or many business case studies for an API, showing how it can be used in an industry."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cequencecompliance/",
+      "title": "CequenceCompliance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cequencediscovery/",
+      "title": "CequenceDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cequenceedge/",
+      "title": "CequenceEdge",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cequenceprotection/",
+      "title": "CequenceProtection",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/certificates/",
+      "title": "Certificates",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/certifications/",
+      "title": "Certifications",
+      "description": "Information regarding the certification of specific skills involved with using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/changelog/",
+      "title": "ChangeLog",
+      "description": "A log of changes for an API or across many APIs, providing details of all updates."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/charlesproxy/",
+      "title": "CharlesProxy",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cheatsheet/",
+      "title": "Cheatsheet",
+      "description": "A summarized cheat sheet for the most common and relevant features of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/checklist/",
+      "title": "Checklist",
+      "description": "A check list of steps involved with putting an API to work in applications or integrations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/circlecipipelines/",
+      "title": "CircleCIPipelines",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/classicloadbalancers/",
+      "title": "ClassicLoadBalancers",
+      "description": "Information regarding load balancers available to support APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cli/",
+      "title": "CLI",
+      "description": "Information regarding a command line interface (CLI) available on top of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cloudflaredns/",
+      "title": "CloudflareDns",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cloudflaregateways/",
+      "title": "CloudflareGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/code/",
+      "title": "Code",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/codeofconduct/",
+      "title": "CodeOfConduct",
+      "description": "Information regarding the code of coduct in place for the community surrounding an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/codesnippets/",
+      "title": "CodeSnippets",
+      "description": "One or many snippets of code in a variety of programming languages for working wth an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/commandlineinterface/",
+      "title": "CommandLineInterface",
+      "description": "Information regarding a command line interface (CLI) available on top of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/community/",
+      "title": "Community",
+      "description": "The community of people and resources available surrounding APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/communitysdks/",
+      "title": "CommunitySDKs",
+      "description": "The software development kits (SDKs) for an API provided by the community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/compliance/",
+      "title": "Compliance",
+      "description": "Information regarding what compliance looks like for one or many APIs, and applications or integrations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/components/",
+      "title": "Components",
+      "description": "Information regarding the available components for an API that enable modular reuse."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/computepricing/",
+      "title": "ComputePricing",
+      "description": "Information regarding the pricing of compute resources involved with API usage."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/concepts/",
+      "title": "Concepts",
+      "description": "Information regarding the concepts one will need to know when using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/conekttodesign/",
+      "title": "ConekttoDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/conekttolifecycle/",
+      "title": "ConekttoLifecycle",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/conekttoorchestration/",
+      "title": "ConekttoOrchestration",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/conekttotesting/",
+      "title": "ConekttoTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/connections/",
+      "title": "Connections",
+      "description": "Information regarding what connections are available for an API or across many different APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/connectors/",
+      "title": "Connectors",
+      "description": "The pre-configured connectors available for an API or across many different APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/console/",
+      "title": "Console",
+      "description": "A dedicated console for APIs that allow for interactive usage and exploration of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/contact/",
+      "title": "Contact",
+      "description": "The contact information for any available API, and across multiple APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/contactpage/",
+      "title": "ContactPage",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/contactus/",
+      "title": "ContactUs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/contributing/",
+      "title": "Contributing",
+      "description": "Information regarding what is involved with contributing resources to API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/copyright/",
+      "title": "Copyright",
+      "description": "The legal details involved copyright associated with the usage of any API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/core/",
+      "title": "Core",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/cors/",
+      "title": "CORS",
+      "description": "Information regarding Cross-origin resource sharing (CORS) involved with using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/costmanagement/",
+      "title": "CostManagement",
+      "description": "Information regarding how the costs associated with consuming an API can be better managed."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/costoptimization/",
+      "title": "CostOptimization",
+      "description": "Information regarding how the costs associated with using an API can be optimized."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/costoptimizations/",
+      "title": "CostOptimizations",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/credentials/",
+      "title": "Credentials",
+      "description": "Information associated with credentials issued for consuming API resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/customeragreement/",
+      "title": "CustomerAgreement",
+      "description": "Information regarding agreements made with customers who are using APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/customers/",
+      "title": "Customers",
+      "description": "Information regarding who the customers are for an API, or group of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/customersuccess/",
+      "title": "CustomerSuccess",
+      "description": "Information regarding what customer success resources are available to support an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/custoners/",
+      "title": "Custoners",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/dashboard/",
+      "title": "Dashboard",
+      "description": "Information regarding dashboards available for API consumers to use to inform their work."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datadogauditing/",
+      "title": "DatadogAuditing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datadogdasbhoard/",
+      "title": "DatadogDasbhoard",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datadogerrortracking/",
+      "title": "DatadogErrorTracking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datadoglogging/",
+      "title": "DatadogLogging",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datadogmonitoring/",
+      "title": "DatadogMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datadogobservability/",
+      "title": "DatadogObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/datalicensing/",
+      "title": "DataLicensing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/dataproviders/",
+      "title": "DataProviders",
+      "description": "Information regarding who is providing the data made available via APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/deprecation/",
+      "title": "Deprecation",
+      "description": "Information regarding how APIs are deprecated and what the process and communication is."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/developer/",
+      "title": "Developer",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/developerportal/",
+      "title": "DeveloperPortal",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/developerresources/",
+      "title": "DeveloperResources",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/developers/",
+      "title": "Developers",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/devicelist/",
+      "title": "DeviceList",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/devices/",
+      "title": "Devices",
+      "description": "Information about available devices and how devices can put APIs work."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/devicetester/",
+      "title": "DeviceTester",
+      "description": "Information regarding the testing of devices which use APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/discord/",
+      "title": "Discord",
+      "description": "Sharing a discord channel for individuals in a community to gather and discuss APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/discovery/",
+      "title": "Discovery",
+      "description": "Information regarding how the discovery of API is supported with search and other mechanisms."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/discussion/",
+      "title": "Discussion",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/discussions/",
+      "title": "Discussions",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/dockercontainer/",
+      "title": "DockerContainer",
+      "description": "Information about av ailable Docker containers and support for containers when working with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/docs/",
+      "title": "Docs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/doctavedocumentation/",
+      "title": "DoctaveDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/doctavehubs/",
+      "title": "DoctaveHubs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/documentation/",
+      "title": "Documentation",
+      "description": "The available documentation to support working with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/downloads/",
+      "title": "Downloads",
+      "description": "Information about how to download software and other artifacts supporting an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/dynamicclientregistration/",
+      "title": "DynamicClientRegistration",
+      "description": "Information regarding the dynamic registration of API clients."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/education/",
+      "title": "Education",
+      "description": "Information about what education is available in support of API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/edukit/",
+      "title": "Edukit",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/emailsupport/",
+      "title": "EmailSupport",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/embedable/",
+      "title": "Embeddable",
+      "description": "Information regarding embeddable solutions built on top of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/embeddedsolutions/",
+      "title": "EmbeddedSolutions",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/embeds/",
+      "title": "Embeds",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/encryption/",
+      "title": "Encryption",
+      "description": "Information about the encryption in place for APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/enterprise/",
+      "title": "Enterprise",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/enumerators/",
+      "title": "Enumerators",
+      "description": "Information about the enumeration of values used across API parameters and properties."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/environments/",
+      "title": "Environments",
+      "description": "Information regarding the different environments available for workign with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/errorcodes/",
+      "title": "ErrorCodes",
+      "description": "Information about the error codes returned when there is an error using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/errorlogs/",
+      "title": "ErrorLogs",
+      "description": "Information about the logs available for errors encountered when using APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/errors/",
+      "title": "Errors",
+      "description": "Information regarding how errors are handled when working with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/eventbus/",
+      "title": "EventBus",
+      "description": "Information about any available event bus for managing API requests and responses."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/events/",
+      "title": "Events",
+      "description": "Information regarding the events that occur across the operations of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/eventtypes/",
+      "title": "EventTypes",
+      "description": "Information regarding the types of events that can occurr across API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/example/",
+      "title": "Example",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/examples/",
+      "title": "Examples",
+      "description": "Information about what examples are available for applying to API requests and responses."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/executiveinsights/",
+      "title": "ExecutiveInsights",
+      "description": "Information about APIs that is meant for an executive audience, building more awarness through insights."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/experts/",
+      "title": "Experts",
+      "description": "Information about experts available to support the application of API resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/explorer/",
+      "title": "Explorer",
+      "description": "Information about tooling available to explore API resources in an interactive way."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/extensions/",
+      "title": "Extensions",
+      "description": "Information about the different ways in which APIs and API operations are being extended."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/facebook/",
+      "title": "Facebook",
+      "description": "Information about how Facebook is used in support of an API and the community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/fapi/",
+      "title": "FAPI",
+      "description": "Information about using financial grade API authentication as part of API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/faq/",
+      "title": "FAQ",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/faqs/",
+      "title": "FAQs",
+      "description": "Information dedicated to answering the most frequently asked questions across API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/fdx/",
+      "title": "FDX",
+      "description": "Information about the usage of Financial Data Exchange (FDX) in support of API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/feature/",
+      "title": "Feature",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/featured/",
+      "title": "Featured",
+      "description": "Information about featured APIs, applications, integrations, and other elements of API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/features/",
+      "title": "Features",
+      "description": "Information regarding the latest or specific features of an API being made available to consumers."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/featurs/",
+      "title": "Featurs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/feedback/",
+      "title": "Feedback",
+      "description": "Information regarding how API consumers can provide feedback about any API being produced."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/feedbackemail/",
+      "title": "FeedbackEmail",
+      "description": "Information regarding how feedback can be provided via email from consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/feedbackgithubissues/",
+      "title": "FeedbackGitHubIssues",
+      "description": "Information regarding how feedback can be provided using GitHub issues by consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ferndocumentation/",
+      "title": "FernDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/fernsdks/",
+      "title": "FernSdks",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/forum/",
+      "title": "Forum",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/forums/",
+      "title": "Forums",
+      "description": "Information regarding forums available for supporting the community surrounding an API, or APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/frameworks/",
+      "title": "Frameworks",
+      "description": "Information about different frameworks available to support producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/freetier/",
+      "title": "FreeTier",
+      "description": "Information about the free tier of access to an API that is available for consumers."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gallery/",
+      "title": "Gallery",
+      "description": "A gallery of APIs, applications, developers, and other elements of using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gateway/",
+      "title": "Gateway",
+      "description": "Information regarding the gateway available for making APIs available to consumers."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gatewayenvironment/",
+      "title": "GatewayEnvironment",
+      "description": "Information regarding the available environments of a gateway for any API being made available."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gatewayloadbalancers/",
+      "title": "GatewayLoadBalancers",
+      "description": "Information regarding the available load balancers for gateway used to publish APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/genomicssolutions/",
+      "title": "GenomicsSolutions",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gettingstarted/",
+      "title": "GettingStarted",
+      "description": "Information that provides step by step what is needed to onboard with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitbookauthentication/",
+      "title": "GitBookAuthentication",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitbookdocumentation/",
+      "title": "GitBookDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitbooksync/",
+      "title": "GitBookSync",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/github/",
+      "title": "GitHub",
+      "description": "The GitHub account for an API or the entity behind the API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githubactions/",
+      "title": "GitHubActions",
+      "description": "Reference and information to GitHub Actions that can be used with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githubissues/",
+      "title": "GitHubIssues",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githuborg/",
+      "title": "GitHubOrg",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githuborganization/",
+      "title": "GitHubOrganization",
+      "description": "The official GitHub organization for an API or entity behind an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githuborganizations/",
+      "title": "GitHubOrganizations",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githubrepo/",
+      "title": "GithubRepo",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githubrepositories/",
+      "title": "GitHubRepositories",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githubrepository/",
+      "title": "GitHubRepository",
+      "description": "A GitHub repository dedicated to supporting producing or consuming an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/githubteams/",
+      "title": "GitHubTeams",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitlaborganizations/",
+      "title": "GitLabOrganizations",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitlabpipelines/",
+      "title": "GitLabPipelines",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitlabrepositories/",
+      "title": "GitLabRepositories",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/gitlabteams/",
+      "title": "GitLabTeams",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/globaldatabase/",
+      "title": "GlobalDatabase",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/glossary/",
+      "title": "Glossary",
+      "description": "A glossary of terms that are common to an API and consumers should know."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/glossay/",
+      "title": "Glossay",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/go/",
+      "title": "Go SDK",
+      "description": "SDKs for an API in the Go programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/googlecloud/",
+      "title": "GoogleCloud",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/governance/",
+      "title": "Governance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/government/",
+      "title": "Government",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/grafana/",
+      "title": "Grafana",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/grafanaalerting/",
+      "title": "GrafanaAlerting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/grafanadashboards/",
+      "title": "GrafanaDashboards",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/grafanalogging/",
+      "title": "GrafanaLogging",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/grafanaobservability/",
+      "title": "GrafanaObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/grafanatracing/",
+      "title": "GrafanaTracing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graphqlplayground/",
+      "title": "GraphQLPlayground",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteebrokers/",
+      "title": "GraviteeBrokers",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteedesign/",
+      "title": "GraviteeDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteegateways/",
+      "title": "GraviteeGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteemanagement/",
+      "title": "GraviteeManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteeobservability/",
+      "title": "GraviteeObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteeportals/",
+      "title": "GraviteePortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/graviteeproxies/",
+      "title": "GraviteeProxies",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/guide/",
+      "title": "Guide",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/guidelines/",
+      "title": "Guidelines",
+      "description": "The design guidelines that are followed and applied to any API or APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/guides/",
+      "title": "Guides",
+      "description": "Plain language guides that walk API consumers through a specific aspect of API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/headers/",
+      "title": "Headers",
+      "description": "The technical details about the HTTP headers in use to support API transport."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/healthcaresolutions/",
+      "title": "HealthcareSolutions",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/healthdashboard/",
+      "title": "HealthDashboard",
+      "description": "A dashboard dedicated to monitoring and displaying the overall health of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/healthtech/",
+      "title": "Healthtech",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/help/",
+      "title": "Help",
+      "description": "Information dedicated to providing help to API producers or consumers."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/httppieclients/",
+      "title": "HTTPPieClients",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/httppietesting/",
+      "title": "HTTPPieTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ide/",
+      "title": "Integrated Development Environment (IDE)",
+      "description": "Information regarding IDE support associated with producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ideas/",
+      "title": "Ideas",
+      "description": "Information dedicated to submitting, sharing, and evolving ideas surround producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/implementationchecklist/",
+      "title": "ImplementationChecklist",
+      "description": "Information dedicated to a list of things that are needed before you implement an API in any application."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/index/",
+      "title": "Index",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/industries/",
+      "title": "Industries",
+      "description": "Information regarding the industries being served by an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/infrastructure/",
+      "title": "Infrastructure",
+      "description": "Information regarding the infrastructure in use or available surrounding an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/insomniaclients/",
+      "title": "InsomniaClients",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/insomniacollection/",
+      "title": "InsomniaCollection",
+      "description": "Information regarding available Insomnia collections and how the client can be used with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/insomniacollections/",
+      "title": "InsomniaCollections",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/insomniatesting/",
+      "title": "InsomniaTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/instagram/",
+      "title": "Instagram",
+      "description": "Information about how Instagram is being used as part of an API and it's community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/instancetypes/",
+      "title": "InstanceTypes",
+      "description": "Information regarding the types of instances available to support working with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/instantretrieval/",
+      "title": "InstantRetrieval",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/integrations/",
+      "title": "Integrations",
+      "description": "Information about the existing integrations that are available for use with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/intelligentdocumentprocessing/",
+      "title": "IntelligentDocumentProcessing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/interfacelicense/",
+      "title": "InterfaceLicense",
+      "description": "Information and artifacts regarding the license being applied to APIs that are produced or consumed."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/introspection/",
+      "title": "Introspection",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/investors/",
+      "title": "Investors",
+      "description": "Information about who the investors are for an API or information specifically for potential investors."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ioscontentsdk/",
+      "title": "iOSContentSDK",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/issues/",
+      "title": "Issues",
+      "description": "Information about the open issues for an API or where to submit issues encountered using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/jargondatamodeling/",
+      "title": "JargonDataModeling",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/jargondomaindrivendesign/",
+      "title": "JargonDomainDrivenDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/jargondomains/",
+      "title": "JargonDomains",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/java/",
+      "title": "Java",
+      "description": "SDKs for an API in the Java programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/javascript/",
+      "title": "JavaScript",
+      "description": "SDKs for an API in the JavaScript programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/javasdk/",
+      "title": "JavaSDK",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/jsonschema/",
+      "title": "JsonSchema",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/jupyternotebook/",
+      "title": "JupyterNotebook",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/jupyternotebooks/",
+      "title": "JupyterNotebooks",
+      "description": "Information the available Jupyter Notebooks or how they can be applied when using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/knowledge/",
+      "title": "Knowledge",
+      "description": "Information regarding the knowledge acculumated and made available about an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/knowledgebase/",
+      "title": "Knowledgebase",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/knowledgecenter/",
+      "title": "KnowledgeCenter",
+      "description": "Information regarding the knowledge acculumated and made available about an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/kotlin/",
+      "title": "Kotlin",
+      "description": "SDKs for an API in the Kotlin programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendaggregation/",
+      "title": "KrakenDAggregation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendanalytics/",
+      "title": "KrakenDAnalytics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakenddatamanipulation/",
+      "title": "KrakenDDataManipulation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakenddocumentation/",
+      "title": "KrakenDDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendgateways/",
+      "title": "KrakenDGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendmonitoring/",
+      "title": "KrakenDMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendsecurity/",
+      "title": "KrakenDSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendtrafficmanagement/",
+      "title": "KrakenDTrafficManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/krakendtransformations/",
+      "title": "KrakenDTransformations",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/launchchecklist/",
+      "title": "LaunchChecklist",
+      "description": "Information regarding the checklist of items needed to launch an application of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/learn/",
+      "title": "Learn",
+      "description": "Information regarding where anyone can learn more about putting an API to work."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/learningresources/",
+      "title": "LearningResources",
+      "description": "Information and other resources regarding where anyone can learn more about putting an API to work."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/legal/",
+      "title": "Legal",
+      "description": "Legal information that applies to producing or consuming an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/libopenapiparsing/",
+      "title": "libopenapiParsing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/libraries/",
+      "title": "Libraries",
+      "description": "A listing of language libraries available for working with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/license/",
+      "title": "License",
+      "description": "Information about the licensing considerations when integrating with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lifecycle/",
+      "title": "Lifecycle",
+      "description": "Information regarding what the lifecycle of producing or consuming an API is."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lifesciencesolutions/",
+      "title": "LifeScienceSolutions",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/linkedin/",
+      "title": "LinkedIn",
+      "description": "Informaton about the LinkedIn account for an API or how the platform can be applied using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/linter/",
+      "title": "Linter",
+      "description": "Information regarding the linting of API artifacts, requests, or responses."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/locations/",
+      "title": "Locations",
+      "description": "Information regarding the locations where an API is made available."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/login/",
+      "title": "Login",
+      "description": "Where to login and obtain more access to an API and it's support resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lunardevconsumptiongateway/",
+      "title": "LunarDevConsumptionGateway",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lunardevconsumptionresilience/",
+      "title": "LunarDevConsumptionResilience",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lunardevquotas/",
+      "title": "LunarDevQuotas",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lunardevtrafficcontrols/",
+      "title": "LunarDevTrafficControls",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lunardevvisibility/",
+      "title": "LunarDevVisibility",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/lustre/",
+      "title": "Lustre",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mablperformancetesting/",
+      "title": "MablPerformanceTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mabltesting/",
+      "title": "MablTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mabltestingautomation/",
+      "title": "MablTestingAutomation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/machinelearning/",
+      "title": "MachineLearning",
+      "description": "Information about the  machine learning resources available for use with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/machinelearningpricing/",
+      "title": "MachineLearningPricing",
+      "description": "More information about the pricing of machine learning resources made avalable for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/maintainer/",
+      "title": "Maintainer",
+      "description": "Information about who the maintainer of an API is."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/managedservices/",
+      "title": "ManagedServices",
+      "description": "Information regarding the managed services that are available using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/marketplace/",
+      "title": "Marketplace",
+      "description": "Information regarding a marketplace associated with producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/media/",
+      "title": "Media",
+      "description": "Information regarding media available to support producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/metrics/",
+      "title": "Metrics",
+      "description": "Information regarding the metrics available and in use when measuring API usage."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/microcksexamples/",
+      "title": "MicrocksExamples",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/microcksmocks/",
+      "title": "MicrocksMocks",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/microcksperformancetests/",
+      "title": "MicrocksPerformanceTests",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/microcksvalidationtests/",
+      "title": "MicrocksValidationTests",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/migrations/",
+      "title": "Migrations",
+      "description": "Information regarding how migrations can occur from other systems using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ml/",
+      "title": "Ml",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mlpricing/",
+      "title": "MlPricing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mockbinmocking/",
+      "title": "MockbinMocking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mockoonmockservers/",
+      "title": "MockoonMockServers",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mockserver/",
+      "title": "MockServer",
+      "description": "Information regarding mock servers and sandboxes resources are for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mockservermockservers/",
+      "title": "MockServerMockServers",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/mockserverproxies/",
+      "title": "MockServerProxies",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/models/",
+      "title": "Models",
+      "description": "Information regarding the machine learning models available for use with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/moesifbilling/",
+      "title": "MoesifBilling",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/net/",
+      "title": "NET",
+      "description": "SDKs for an API in the .NET programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/netappontap/",
+      "title": "NetappOntap",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/netsdk/",
+      "title": "NETSDK",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/networkloadbalancers/",
+      "title": "NetworkLoadBalancers",
+      "description": "Informationi regarding the network load balancers available for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelicalerts/",
+      "title": "NewRelicAlerts",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelicchangetracking/",
+      "title": "NewRelicChangeTracking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelicdasbhoard/",
+      "title": "NewRelicDasbhoard",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelicdashboards/",
+      "title": "NewRelicDashboards",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelicentityexplorer/",
+      "title": "NewRelicEntityExplorer",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelicmonitoring/",
+      "title": "NewRelicMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelictracing/",
+      "title": "NewRelicTracing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newrelierrorsinbox/",
+      "title": "NewReliErrorsInbox",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/news/",
+      "title": "News",
+      "description": "Information regarding news published about an API or the entity behind API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newsletter/",
+      "title": "Newsletter",
+      "description": "Informationi and sign-up regarding a newsletter being made available for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newspage/",
+      "title": "NewsPage",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/newsroom/",
+      "title": "Newsroom",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokaccesscontrol/",
+      "title": "NgrokAccessControl",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokaudittrail/",
+      "title": "NgrokAuditTrail",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokcli/",
+      "title": "NgrokCLI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokddosprotection/",
+      "title": "NgrokDDOSProtection",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokfirewall/",
+      "title": "NgrokFirewall",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokgateways/",
+      "title": "NgrokGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokloadbalancer/",
+      "title": "NgrokLoadBalancer",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngroksinglesignonsso/",
+      "title": "NgrokSingleSignOnSso",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ngrokterraform/",
+      "title": "NgrokTerraform",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/nodejs/",
+      "title": "Node.js SDK",
+      "description": "SDKs for an API in the Node.js programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/nodesdk/",
+      "title": "NodeSDK",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/none/",
+      "title": "none",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/notebooks/",
+      "title": "Notebooks",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauth20/",
+      "title": "OAuth20",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauth20authorizationframework/",
+      "title": "OAuth20AuthorizationFramework",
+      "description": "Information regarding Oauth 2.0 authorization framework."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauth20authorizationservermetadata/",
+      "title": "OAuth20AuthorizationServerMetadata",
+      "description": "Information regarding Oauth 2.0 server metadata."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauth20dynamicclientregistrationprotocol/",
+      "title": "OAuth20DynamicClientRegistrationProtocol",
+      "description": "Information regarding Oauth 2.0 dynamic client registration."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauth20pushedauthorizationrequests/",
+      "title": "OAuth20PushedAuthorizationRequests",
+      "description": "Information regarding Oauth 2.0 pushed authorization requests."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauth20richauthorizationrequests/",
+      "title": "OAuth20RichAuthorizationRequests",
+      "description": "Information regarding Oauth 2.0 authorization requests."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oauthscopes/",
+      "title": "OAuthScopes",
+      "description": "Information regarding Oauth 2.0 scopes."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oktaauthentication/",
+      "title": "OktaAuthentication",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oktaauthorization/",
+      "title": "OktaAuthorization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oktaidentity/",
+      "title": "OktaIdentity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/oktasso/",
+      "title": "OktaSSO",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/openapi/",
+      "title": "OpenAPI",
+      "description": "Information about OpenAPI usage and artifacts available for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/openapichanges/",
+      "title": "OpenApiChanges",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/openapidoctor/",
+      "title": "OpenAPIDoctor",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/openid/",
+      "title": "OpenID",
+      "description": "Information regarding the usage of OpenId with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/openidconnect/",
+      "title": "OpenIDConnect",
+      "description": "Information regarding the usage of OpenId Connect with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/opensource/",
+      "title": "OpenSource",
+      "description": "Information regarding the availablity of open-source tooling and artifacts with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/opentelemetry/",
+      "title": "OpenTelemetry",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/openzfs/",
+      "title": "Openzfs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/operationalrules/",
+      "title": "OperationalRules",
+      "description": "Information regarding the available rules for governing operational details around APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/operationaltags/",
+      "title": "OperationalTags",
+      "description": "Information regarding the tagging applied to information and artifacts at the API operations level."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/operationalvalidation/",
+      "title": "OperationalValidation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/overview/",
+      "title": "Overview",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/owaspdependencytracker/",
+      "title": "OWASPDependencyTracker",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/owaspspectralrules/",
+      "title": "OWASPSpectralRules",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/owaspzapscanning/",
+      "title": "OWASPZapScanning",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pagination/",
+      "title": "Pagination",
+      "description": "Information regarding how pagination is handled for larger API responses."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/partners/",
+      "title": "Partners",
+      "description": "Information regarding existing partners or partnership opportunities surround API usage."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/payors/",
+      "title": "Payors",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaicontracts/",
+      "title": "PerfAIContracts",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaigovernance/",
+      "title": "PerfAIGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaiprivacy/",
+      "title": "PerfAIPrivacy",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaireleases/",
+      "title": "PerfAIReleases",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaisecurity/",
+      "title": "PerfAISecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaitesting/",
+      "title": "PerfAITesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/perfaiversioning/",
+      "title": "PerfAIVersioning",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/performance/",
+      "title": "Performance",
+      "description": "Information iregarding the performance and any performance testing of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/php/",
+      "title": "PHP SDKs",
+      "description": "SDKs for an API in the PHP programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/phpexamples/",
+      "title": "PHPExamples",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pipelines/",
+      "title": "Pipelines",
+      "description": "Information regarding CI/CD pipeline usage and availability when working with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pipes/",
+      "title": "Pipes",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/plans/",
+      "title": "Plans",
+      "description": "Information about the usage plans that are available for any published API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/platformabledatagovernance/",
+      "title": "PlatformableDataGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/platformablegovernance/",
+      "title": "PlatformableGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/platformablereports/",
+      "title": "PlatformableReports",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/platformabletrends/",
+      "title": "PlatformableTrends",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/playground/",
+      "title": "Playground",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/plugin/",
+      "title": "Plugin",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/plugins/",
+      "title": "Plugins",
+      "description": "Information regarding plugins availble for extending the capabilities of any API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/podcast/",
+      "title": "Podcast",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/podcasts/",
+      "title": "Podcasts",
+      "description": "Information regarding the podcast or podcast appearance supporting an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/policies/",
+      "title": "Policies",
+      "description": "Information regarding the business policies in place governing an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/portal/",
+      "title": "Portal",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/portals/",
+      "title": "Portals",
+      "description": "A dedicated portal for publishing and consuming APIs, providing access to API resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmancapability/",
+      "title": "PostmanCapability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmanclient/",
+      "title": "PostmanClient",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmancollection/",
+      "title": "PostmanCollection",
+      "description": "Information about Postman collections that are available for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmancollections/",
+      "title": "PostmanCollections",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmaninterceptor/",
+      "title": "PostmanInterceptor",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmanmocking/",
+      "title": "PostmanMocking",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmanmonitor/",
+      "title": "PostmanMonitor",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmanmonitoring/",
+      "title": "PostmanMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmannetwork/",
+      "title": "PostmanNetwork",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmanpublicworkspace/",
+      "title": "PostmanPublicWorkspace",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmantesting/",
+      "title": "PostmanTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmantoopenapi/",
+      "title": "PostmanToOpenAPI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/postmanworkspace/",
+      "title": "PostmanWorkspace",
+      "description": "Information regarding the Postman workspaces available for working with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/press/",
+      "title": "Press",
+      "description": "Information regarding press engagement and releases associated with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pressreleases/",
+      "title": "PressReleases",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pricing/",
+      "title": "Pricing",
+      "description": "Information regarding the pricing involved with API access, consumption, and other resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pricingcalculator/",
+      "title": "PricingCalculator",
+      "description": "A pricing calculator to help API consumers understand what they will spend using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pricingpage/",
+      "title": "PricingPage",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/privacy/",
+      "title": "Privacy",
+      "description": "The privacy information and policies in place governing an API and it's platform."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/privacypolicy/",
+      "title": "PrivacyPolicy",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/product/",
+      "title": "Product",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/products/",
+      "title": "Products",
+      "description": "Informaton regarding the API and other products available from an API producer."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/professinoalservices/",
+      "title": "ProfessinoalServices",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/professionalservices/",
+      "title": "ProfessionalServices",
+      "description": "Information regarding professional services available to consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/proofkeyforcodeexchangebyoauthpublicclients/",
+      "title": "ProofKeyforCodeExchangebyOAuthPublicClients",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/property/",
+      "title": "Property",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/providers/",
+      "title": "Providers",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/provonixportals/",
+      "title": "ProvonixPortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/publishing/",
+      "title": "Publishing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pyntfixes/",
+      "title": "PyntFixes",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pyntinventory/",
+      "title": "PyntInventory",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pyntpentest/",
+      "title": "PyntPentest",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pyntpipelines/",
+      "title": "PyntPipelines",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pyntsecurity/",
+      "title": "PyntSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pynttesting/",
+      "title": "PyntTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/python/",
+      "title": "Python SDK",
+      "description": "SDKs for an API in the Python programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/pythonsdk/",
+      "title": "PythonSDK",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/quantumcomputers/",
+      "title": "QuantumComputers",
+      "description": "Information regarding quantum computing resources available for use with any API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/questions/",
+      "title": "Questions",
+      "description": "Information regarding questions that are asked as part of producing or consuming of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/questionsgithubissues/",
+      "title": "QuestionsGitHubIssues",
+      "description": "Information regarding the submission of oquestions for an API using GitHub issues."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/quickstart/",
+      "title": "QuickStart",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/quickstarts/",
+      "title": "Quickstarts",
+      "description": "Information about quick starts available to help API producers and consumer get started faster."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/rapidocdocumentation/",
+      "title": "RapidocDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ratelimits/",
+      "title": "RateLimits",
+      "description": "Information regarding the rate limits in place for any API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ratemyopenapi/",
+      "title": "RateMyOpenAPI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ratings/",
+      "title": "Ratings",
+      "description": "Information regarding the ratings in place for any API, application, or other resource."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/readmecommunity/",
+      "title": "ReadMeCommunity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/readmedashboard/",
+      "title": "ReadMeDashboard",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/readmedocumentation/",
+      "title": "ReadMeDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/readmeportals/",
+      "title": "ReadMePortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/readmes/",
+      "title": "README",
+      "description": "Information about the available README for an API or other associated resource."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ready/",
+      "title": "Ready",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/recipes/",
+      "title": "Recipes",
+      "description": "Information regarding recipes available for putting any API or combination of APIs to use."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/reddit/",
+      "title": "Reddit",
+      "description": "Information regarding how Reddit is being used to support an API and it's community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/referenceapplication/",
+      "title": "ReferenceApplication",
+      "description": "Information about available reference applications developed using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/regions/",
+      "title": "Regions",
+      "description": "Information regarding the available regions in which an API can be used."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/regulations/",
+      "title": "Regulations",
+      "description": "Information regarding the regulations imposed by government impacting the usage of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/releasehistory/",
+      "title": "ReleaseHistory",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/releasenotes/",
+      "title": "ReleaseNotes",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/releases/",
+      "title": "Releases",
+      "description": "Information about the releases that have been made of an API and supporting resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/reports/",
+      "title": "Reports",
+      "description": "Information regarding available reports involved with usage of an API in applications and integrations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/research/",
+      "title": "Research",
+      "description": "Information regarding research conducted or reserch opportunities involving an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/resources/",
+      "title": "Resources",
+      "description": "Information regarding additonal resources available in support of producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/roadmap/",
+      "title": "RoadMap",
+      "description": "information regarding future plans and milestones for the development and support of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/ruby/",
+      "title": "Ruby SDKs",
+      "description": "SDKs for an API in the Ruby programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/rules/",
+      "title": "Rules",
+      "description": "Information regarding the governance rules available and being applied to APIs being produced."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/runinpostman/",
+      "title": "RuninPostman",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/rust/",
+      "title": "Rust SDKs",
+      "description": "SDKs for an API in the Rust programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/saltdiscovery/",
+      "title": "SaltDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/saltincidentresponse/",
+      "title": "SaltIncidentResponse",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/saltremediationinsights/",
+      "title": "SaltRemediationInsights",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/saltsecurity/",
+      "title": "SaltSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/saltthreatprotection/",
+      "title": "SaltThreatProtection",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/samples/",
+      "title": "Samples",
+      "description": "Information about sample code, applications, data, and other resources involved with using APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sandbox/",
+      "title": "Sandbox",
+      "description": "Information regarding sandbox availability for consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalarclient/",
+      "title": "ScalarClient",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalarclients/",
+      "title": "ScalarClients",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalardocumentation/",
+      "title": "ScalarDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalareditor/",
+      "title": "ScalarEditor",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalarexplorer/",
+      "title": "ScalarExplorer",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalarplayground/",
+      "title": "ScalarPlayground",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scalingdata/",
+      "title": "ScalingData",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scheduler/",
+      "title": "Scheduler",
+      "description": "Information avalable regarding the scheduling of jobs and other elements involved with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/schemaconversiontool/",
+      "title": "SchemaConversionTool",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scim/",
+      "title": "SCIM",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/scopes/",
+      "title": "Scopes",
+      "description": "Information regarding the scopes of authentication and other resources involved with using APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sdk/",
+      "title": "SDK",
+      "description": "Information regarding the availability and generation of SDKs that can be used with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sdks/",
+      "title": "SDKs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/security/",
+      "title": "Security",
+      "description": "Information regarding anything to do with the security of platform and it's APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sellerguide/",
+      "title": "SellerGuide",
+      "description": "A guide for people who are selling APIs and their usage in applications and integrations as part of business operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/semanticversioning/",
+      "title": "SemanticVersioning",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sequencediagrams/",
+      "title": "SequenceDiagrams",
+      "description": "Any sequence diagrams available for helping understand the processes involved with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/serverless/",
+      "title": "Serverless",
+      "description": "Information regarding the serverless resources available when working with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/servicelevelagreements/",
+      "title": "ServiceLevelAgreements",
+      "description": "Information regarding service level agreements in place for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/signin/",
+      "title": "SignIn",
+      "description": "Information regarding how to sign-in to an account associated with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/signup/",
+      "title": "Signup",
+      "description": "Information regarding how you can sign-up for access to APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/simulator/",
+      "title": "Simulator",
+      "description": "Information regarding available simulators for working with API and their resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sla/",
+      "title": "Sla",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/slack/",
+      "title": "Slack",
+      "description": "Information regarding the usage of Slack to operate an API and support the community around it."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbeardesign/",
+      "title": "SmartBearDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbeardocumentation/",
+      "title": "SmartBearDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbearexplorer/",
+      "title": "SmartBearExplorer",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbeargovernance/",
+      "title": "SmartBearGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbearhubs/",
+      "title": "SmartBearHubs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbearportals/",
+      "title": "SmartBearPortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbeartesting/",
+      "title": "SmartBearTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/smartbeartracing/",
+      "title": "SmartBearTracing",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/sologateways/",
+      "title": "SoloGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/soloobservability/",
+      "title": "SoloObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/solosecurity/",
+      "title": "SoloSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/solotrafficcontrol/",
+      "title": "SoloTrafficControl",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/solutions/",
+      "title": "Solutions",
+      "description": "Information regarding the business solutions provided by an API and related resources or capabilities."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/spark/",
+      "title": "Spark",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/speakeasydocumentation/",
+      "title": "SpeakEasyDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/speakeasymanagement/",
+      "title": "SpeakEasyManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/speakeasysdks/",
+      "title": "SpeakEasySDKs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/speakeasytesting/",
+      "title": "SpeakEasyTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/specifications/",
+      "title": "Specifications",
+      "description": "Information regarding any use of specifications or availability of specifications for an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/spectralcli/",
+      "title": "SpectralCLI",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/spectralrules/",
+      "title": "SpectralRules",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/splunkdashboards/",
+      "title": "SplunkDashboards",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/splunkmonitoring/",
+      "title": "SplunkMonitoring",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/splunkobservability/",
+      "title": "SplunkObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/splunksecurity/",
+      "title": "SplunkSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stackexchange/",
+      "title": "StackExchange",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stackhawkdiscovery/",
+      "title": "StackHawkDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stackhawksecurity/",
+      "title": "StackHawkSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stackhawktesting/",
+      "title": "StackHawkTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stackoverflow/",
+      "title": "StackOverflow",
+      "description": "Information regarding how Stack Overlow is used to support an API and it's community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stagingenvironment/",
+      "title": "StagingEnvironment",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stainlesssdks/",
+      "title": "StainlessSDKs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/standards/",
+      "title": "Standards",
+      "description": "Information regarding the standards in place as part of producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/statistics/",
+      "title": "Statistics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/status/",
+      "title": "Status",
+      "description": "Information regarding the current or historical status of an API and the platform behind it."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/statuscodes/",
+      "title": "StatusCodes",
+      "description": "Information regarding the HTTP status codes that are being used to communicate successful or problemantic API requests."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/statushistory/",
+      "title": "StatusHistory",
+      "description": "Information regarding the historical status of an API and the platform behind it."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/statuspage/",
+      "title": "StatusPage",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/stories/",
+      "title": "Stories",
+      "description": "Any available or releated stories to API operations and how APIs are being applied or integrated."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/students/",
+      "title": "Students",
+      "description": "Information intended for students and their engagement and usage of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/studio/",
+      "title": "Studio",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/summary/",
+      "title": "Summary",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/support/",
+      "title": "Support",
+      "description": "Information regarding the support of producers and consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/supportemail/",
+      "title": "SupportEmail",
+      "description": "Information regarding how API support can be found using email."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/supportfaqs/",
+      "title": "SupportFAQs",
+      "description": "Information about the most frequently asked questions involved with supporting an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/supportgithubissues/",
+      "title": "SupportGitHubIssues",
+      "description": "Information regarding how API support can be found using GitHub issues."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/supportplan/",
+      "title": "SupportPlan",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/supportplans/",
+      "title": "SupportPlans",
+      "description": "Information regarding the different plans available for obtaining support around an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/swagger/",
+      "title": "Swagger",
+      "description": "Information regarding the usage of a Swagger specification for working with an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/swift/",
+      "title": "Swift SDK",
+      "description": "SDKs for an API in the Swift programming language."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tags/",
+      "title": "Tags",
+      "description": "Information regarding how tags are being applied as part of organizing API operations."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/teams/",
+      "title": "Teams",
+      "description": "Information regarding teams behind APIs or team opportunities within an API community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/templates/",
+      "title": "Templates",
+      "description": "Information regarding the templates available when working with APIs and other resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/terminology/",
+      "title": "Terminology",
+      "description": "Information regarding the terminology being used when producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/termsofservice/",
+      "title": "TermsOfService",
+      "description": "Information regarding the terms and conditions associated wth using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/termsofuse/",
+      "title": "TermsOfUse",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/testimonials/",
+      "title": "Testimonials",
+      "description": "The available testimonials from consumers of a platform showcasing how they feel about an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/testing/",
+      "title": "Testing",
+      "description": "Information regarding the testing of APIs by both API producers, consumers, or other 3rd-parties."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/testingdata/",
+      "title": "TestingData",
+      "description": "Information regarding any data available for use in the testing of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/testuserprofiles/",
+      "title": "TestUserProfiles",
+      "description": "Information regarding any profiles available for use in the testing of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/theneochangelog/",
+      "title": "TheneoChangeLog",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/theneodocumentation/",
+      "title": "TheneoDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/theneoportal/",
+      "title": "TheneoPortal",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/theneosupportbot/",
+      "title": "TheneoSupportBot",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/thinclient/",
+      "title": "ThinClient",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tools/",
+      "title": "Tools",
+      "description": "Information regarding the tools that are available when working with APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/trademark/",
+      "title": "Trademark",
+      "description": "Information regarding the use of trademarks that are associated with the API and entity behind the API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/traefiklabsgateways/",
+      "title": "TraefikLabsGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/traefiklabsmanagement/",
+      "title": "TraefikLabsManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/traefiklabsproxies/",
+      "title": "TraefikLabsProxies",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/training/",
+      "title": "Training",
+      "description": "Information regarding any training available to support producers or consumers of APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/treblleanalytics/",
+      "title": "TreblleAnalytics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/treblledocumentation/",
+      "title": "TreblleDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/trebllegovernance/",
+      "title": "TreblleGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/treblleinsights/",
+      "title": "TreblleInsights",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/treblleobservability/",
+      "title": "TreblleObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/trebllesecurity/",
+      "title": "TreblleSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/treblletesting/",
+      "title": "TreblleTesting",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/troubleshooting/",
+      "title": "Troubleshooting",
+      "description": "Information regarding best practices for troubleshooting any problems encountered using an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/trust/",
+      "title": "Trust",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/trustandsafety/",
+      "title": "TrustAndSafety",
+      "description": "Informaton about how trust and safety is approach within an API community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tryitnow/",
+      "title": "TryItNow",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tutorial/",
+      "title": "Tutorial",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tutorials/",
+      "title": "Tutorials",
+      "description": "Information regarding any available tutorials that API producers and consumers can use."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/twitch/",
+      "title": "Twitch",
+      "description": "Any information available regarding how Twitch is used to support an API platform."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/twitter/",
+      "title": "Twitter",
+      "description": "Information regarding how Twitter is being used as part of an API platform."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykdesign/",
+      "title": "TykDesign",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykdocumentation/",
+      "title": "TykDocumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykgateways/",
+      "title": "TykGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykgovernance/",
+      "title": "TykGovernance",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykmanagement/",
+      "title": "TykManagement",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykmonetization/",
+      "title": "TykMonetization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykobservability/",
+      "title": "TykObservability",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tykportals/",
+      "title": "TykPortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/tyksecurity/",
+      "title": "TykSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/type/",
+      "title": "Type",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/updates/",
+      "title": "Updates",
+      "description": "Information regarding any updates that have occured to an API platform."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/usage/",
+      "title": "Usage",
+      "description": "Information regarding the usage of an API and other resources by consumers."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/usecases/",
+      "title": "UseCases",
+      "description": "Information regarding the business uses of any API being made available."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/useragreement/",
+      "title": "UserAgreement",
+      "description": "Information regarding the user agreement in place when using any API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/userguide/",
+      "title": "UserGuide",
+      "description": "A user guide made available for consumer of an API or end-users of applications built on an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/userjourney/",
+      "title": "UserJourney",
+      "description": "Information about wht the user journey looks like for someone producing or consuming an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/vendors/",
+      "title": "Vendors",
+      "description": "Inform about or for vendors when it comes to producing or consuming API resources."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/versioning/",
+      "title": "Versioning",
+      "description": "Information about how versioning of APIs is handled and how change is managed and communicated."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/versions/",
+      "title": "Versions",
+      "description": "Information about what versions of an API are available, being supported, or deprecated."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/video/",
+      "title": "Video",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/videos/",
+      "title": "Videos",
+      "description": "Information about available videos that support the producers and consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/vocabulary/",
+      "title": "Vocabulary",
+      "description": "The vocabulary avialable to support the alignment of producers and consumers of an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/volumetypes/",
+      "title": "VolumeTypes",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/vscode/",
+      "title": "Vscode",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/wallarmabuseprevention/",
+      "title": "WallarmAbusePrevention",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/wallarmdiscovery/",
+      "title": "WallarmDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/wallarmleaks/",
+      "title": "WallarmLeaks",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/wallarmsecurity/",
+      "title": "WallarmSecurity",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/web/",
+      "title": "Web",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/webhooks/",
+      "title": "Webhooks",
+      "description": "Information regarding how Webhooks are applied to managing events associated with producing and consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/webinars/",
+      "title": "Webinars",
+      "description": "Information regarding the available webinars associated with producing and consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/website/",
+      "title": "Website",
+      "description": "The website available alongside any API for the entity behind producing an API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/websockets/",
+      "title": "Websockets",
+      "description": "Information about available Webhook implementations alongside an HTTP API."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/whatsnew/",
+      "title": "WhatsNew",
+      "description": "Information about what is new when it comes to producing and  consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/whitepapers/",
+      "title": "WhitePapers",
+      "description": "Information regarding any white papers made available to support producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/widget/",
+      "title": "Widget",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/widgets/",
+      "title": "Widgets",
+      "description": "Information about embeddable widgets available on top of existing APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/windows/",
+      "title": "Windows",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/wiremockmockservers/",
+      "title": "WireMockMockServers",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/wiretapdiagnostics/",
+      "title": "WireTapDiagnostics",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/worker/",
+      "title": "Worker",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/workers/",
+      "title": "Workers",
+      "description": "Information about the availabilt of workers and use of them when consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/workspaces/",
+      "title": "Workspaces",
+      "description": "Information regarding available workspaces in support of producing or consuming APIs."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/youtube/",
+      "title": "Youtube",
+      "description": "Information regarding how Youtube is being used to support an API platform and community."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zudokudocumentation/",
+      "title": "ZudokuDOcumentation",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuplo/",
+      "title": "Zuplo",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuplogateways/",
+      "title": "ZuploGateways",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuplokeys/",
+      "title": "ZuploKeys",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuplomonetization/",
+      "title": "ZuploMonetization",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuploplans/",
+      "title": "ZuploPlans",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuploportals/",
+      "title": "ZuploPortals",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuploquotas/",
+      "title": "ZuploQuotas",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuplosubscriptions/",
+      "title": "ZuploSubscriptions",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zuplotunnels/",
+      "title": "ZuploTunnels",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zyladiscovery/",
+      "title": "ZylaDiscovery",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zylahubs/",
+      "title": "ZylaHubs",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zylakeys/",
+      "title": "ZylaKeys",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zylaonboarding/",
+      "title": "ZylaOnboarding",
+      "description": "Needs a description."
+    },
+    {
+      "anchor": "https://properties.apievangelist.com/store/zylasdks/",
+      "title": "ZylaSDKs",
+      "description": "Needs a description."
+    }
+  ]
+}

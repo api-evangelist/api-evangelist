@@ -1,0 +1,51 @@
+aid: api-evangelist-policies
+specificationVersion: '0.19'
+type: Index
+name: Policies
+description: The business reasons behind why we govern API operations — aligning the engineering side of operations with the
+  business side of things.
+image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+tags:
+- Policies
+- Governance
+created: '2024-10-14'
+modified: '2026-05-20'
+url: https://github.com/api-evangelist/policies/blob/main/apis.yml
+apis:
+- aid: api-evangelist-policies:policies
+  name: Policies Feed
+  description: The business reasons behind why we govern API operations — aligning the engineering side of operations with
+    the business side of things.
+  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+  humanURL: https://developer.apievangelist.com/feeds/policies/
+  baseURL: https://policies.apievangelist.com
+  tags:
+  - Policies
+  - Governance
+  properties:
+  - type: Documentation
+    url: https://developer.apievangelist.com/feeds/policies/
+  - type: JSONFeed
+    url: https://policies.apievangelist.com/policies.json
+  - type: GitHubRepository
+    url: https://github.com/api-evangelist/policies
+  - type: OpenAPI
+    url: https://github.com/api-evangelist/policies/blob/main/openapi.yml
+  contact:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+common:
+- type: DeveloperPortal
+  url: https://developer.apievangelist.com/
+- type: Network
+  url: https://developer.apievangelist.com/network/
+- type: GitHubOrganization
+  url: https://github.com/api-evangelist
+- type: APIsJSON
+  url: https://developer.apievangelist.com/apis.json
+- type: LLMsTxt
+  url: https://policies.apievangelist.com/llms.txt
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  X-github: kinlane

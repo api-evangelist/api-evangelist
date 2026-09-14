@@ -1,0 +1,49 @@
+aid: api-evangelist-guidance
+specificationVersion: '0.19'
+type: Index
+name: Guidance
+description: Modular guidance for teams producing and consuming APIs — snackable real-time guidance for keeping API operations
+  moving forward.
+image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+tags:
+- Guidance
+- Best Practices
+created: '2024-11-24'
+modified: '2026-05-20'
+url: https://github.com/api-evangelist/guidance/blob/main/apis.yml
+apis:
+- aid: api-evangelist-guidance:guidance
+  name: Guidance Feed
+  description: Modular guidance for teams producing and consuming APIs — snackable real-time guidance for keeping API operations
+    moving forward.
+  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+  humanURL: https://developer.apievangelist.com/feeds/guidance/
+  baseURL: https://guidance.apievangelist.com
+  tags:
+  - Guidance
+  - Best Practices
+  properties:
+  - type: Documentation
+    url: https://developer.apievangelist.com/feeds/guidance/
+  - type: JSONFeed
+    url: https://guidance.apievangelist.com/guidance.json
+  - type: GitHubRepository
+    url: https://github.com/api-evangelist/guidance
+  contact:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+common:
+- type: DeveloperPortal
+  url: https://developer.apievangelist.com/
+- type: Network
+  url: https://developer.apievangelist.com/network/
+- type: GitHubOrganization
+  url: https://github.com/api-evangelist
+- type: APIsJSON
+  url: https://developer.apievangelist.com/apis.json
+- type: LLMsTxt
+  url: https://guidance.apievangelist.com/llms.txt
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com
+  X-github: kinlane

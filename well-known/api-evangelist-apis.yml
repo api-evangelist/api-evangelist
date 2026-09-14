@@ -1,0 +1,101 @@
+aid: posts
+x-canonical-profile: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/apis.yml
+x-aid-note: >-
+  This index is published at https://apievangelist.com/apis.yml and describes the
+  apievangelist.com website repo. It previously declared `aid: api-evangelist`,
+  which collided with the API Evangelist provider profile: because `aid` is the
+  catalog page slug and relative artifact URLs resolve against
+  api-evangelist/<aid>, every pointer on the provider page resolved to a
+  repository that does not exist. The provider profile now lives in its own repo
+  (see x-canonical-profile); this file is scoped to the repo it ships in.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+specificationVersion: '0.19'
+type: Index
+name: API Evangelist
+description: >-
+  The API Evangelist network as one REST API and an MCP server for agents —
+  sixteen years of API research, served from developer.apievangelist.com.
+image: >-
+  https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+tags:
+  - APIs
+  - API Evangelist
+  - Developer Portal
+created: '2024-10-14'
+modified: '2026-07-14'
+url: https://github.com/api-evangelist/posts/blob/main/apis.yml
+apis:
+- aid: api-evangelist-mcp
+  name: API Evangelist MCP Server
+  description: >-
+    Model Context Protocol server over the same network — concierge tools (get_overview, guide_topic)
+    plus find/get tools for every resource type, served over Streamable HTTP for AI agents.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+  humanURL: https://developer.apievangelist.com/mcp-server
+  baseURL: https://mcp.apievangelist.com/mcp
+  tags:
+  - MCP
+  - Agents
+  properties:
+  - type: Documentation
+    url: https://developer.apievangelist.com/mcp-server
+  - type: MCPServer
+    url: https://mcp.apievangelist.com/mcp
+  - type: MCPServerCard
+    url: https://apievangelist.com/.well-known/mcp/server-card.json
+  - type: GitHubRepository
+    url: https://github.com/api-evangelist/apievangelist-aws
+  contact:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+- aid: posts:api-evangelist-network-api
+  name: API Evangelist Network API
+  description: >-
+    Sixteen years of API research as one read-only REST API — stories, topic areas,
+    guidance, rules, policies, standards, strategies, papers, reports, conversations,
+    tools, videos and the full vocabulary. Free discovery; the research depth
+    (full content, curated topic guides, catalog stats) is Pro.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png
+  humanURL: https://developer.apievangelist.com
+  baseURL: https://api.apievangelist.com/v1
+  tags:
+  - APIs
+  - API Evangelist
+  - Research
+  properties:
+  - type: OpenAPI
+    url: https://developer.apievangelist.com/apis/apievangelist-v1-openapi.yml
+  - type: Documentation
+    url: https://developer.apievangelist.com
+  - type: Plans
+    url: https://developer.apievangelist.com/plans/
+  - type: GitHubRepository
+    url: https://github.com/api-evangelist/apievangelist-aws
+  contact:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+common:
+  - type: DeveloperPortal
+    url: https://developer.apievangelist.com/
+  - type: Network
+    url: https://developer.apievangelist.com/network/
+  - type: GitHubOrganization
+    url: https://github.com/api-evangelist
+  - type: APIsJSON
+    url: https://apievangelist.com/apis.yml
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    X-github: kinlane

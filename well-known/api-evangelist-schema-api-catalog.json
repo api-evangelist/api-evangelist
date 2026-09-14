@@ -1,0 +1,80 @@
+{
+  "linkset": [
+    {
+      "@context": "https://apievangelist.com/context.jsonld",
+      "anchor": "https://schema.apievangelist.com/",
+      "title": "api-evangelist/schema",
+      "service-desc": [
+        {
+          "href": "https://schema.apievangelist.com/apis.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://schema.apievangelist.com/apis.yml",
+          "type": "application/yaml"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://schema.apievangelist.com/",
+          "type": "text/html"
+        }
+      ]
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/apis-json/",
+      "title": "APIs.json (V0.19)",
+      "description": "This is the JSON Schema for V0.19 of the APIs.json specification, which is  used to valid API contracts, indexes, and other ways in which APIs are being produced, consumed, and aggregated."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/arazzo/",
+      "title": "Arazzo (v1.0)",
+      "description": "This is the JSON Schema for V1.0 of the Arazzo specification, which is used to define and validate workflow documents that describe sequences of API calls across multiple APIs."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/asyncapi/",
+      "title": "AsyncAPI (v3.0)",
+      "description": "This is the JSON Schema for V3.0 of the AsyncAPI specification, which is used to define and validate AsyncAPI documents describing event-driven APIs and message-driven applications. The complete schema with all definitions is available at the $id URL."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/json-schema/",
+      "title": "JSON Schema",
+      "description": "This is the JSON Schema for the JSON Schema specification, which is used to define and validate all the other JSON Schema specifications to make sure they are compliant with the specification--still need the rest of vocabulary."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/model-context-protocol/",
+      "title": "Model Context Protocol (MCP)",
+      "description": "This is the JSON Schema for the Model Context Protocol (MCP) specification, which defines the JSON-RPC based communication protocol between AI model clients and tool/resource servers. The complete schema with all definitions is available at https://raw.githubusercontent.com/modelcontextprotocol/specification/main/schema/2025-11-25/schema.json."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/openapi-overlays/",
+      "title": "OpenAPI Overlays (v1.0)",
+      "description": "This is the JSON Schema for V1.0 of the OpenAPI Overlay specification, which is used to define and validate any Overlay document that modifies an existing OpenAPI description."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/openapi-v20/",
+      "title": "OpenAPI (v2.0)",
+      "description": "This is the JSON Schema for V2.0 of the OpenAPI specification, which is used to define and validate any OpenAPI describing the surface area of an HTTP API."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/openapi-v30/",
+      "title": "OpenAPI (v3.0)",
+      "description": "This is the JSON Schema for V3.0 of the OpenAPI specification, which is used to define and validate any OpenAPI describing the surface area of an HTTP API."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/openapi-v31/",
+      "title": "OpenAPI (v3.1)",
+      "description": "This is the JSON Schema for V3.1 of the OpenAPI specification, which is used to define and validate any OpenAPI describing the surface area of an HTTP API."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/postman-collections/",
+      "title": "Postman Collection (v2.1)",
+      "description": "This is the JSON Schema for V2.1 of the Postman Collection format, which is used to define and validate Postman Collections describing API requests, tests, and workflows."
+    },
+    {
+      "anchor": "https://schema.apievangelist.com/store/spectral/",
+      "title": "Spectral",
+      "description": "This is the JSON Schema for the Spectral rules specification, which is used to define and validate individual rules to ensure they are compliant with the spectification."
+    }
+  ]
+}

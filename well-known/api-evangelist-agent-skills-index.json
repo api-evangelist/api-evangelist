@@ -9,21 +9,21 @@
       "type": "skill",
       "description": "Discover the structure of the api-evangelist network — its subdomains, machine-readable catalogs, and content-negotiation conventions — so other skills can find APIs and contracts efficiently.",
       "url": "https://apievangelist.com/skills/discover-apievangelist/SKILL.md",
-      "sha256": "9372312f934b5cbaaf861bb37e2edb437d518e9ebe90017b9a7bab16525b9e0b"
+      "sha256": "607e02ce04f78717b7918c954a81c96a030b0aec7741befc57722de34eebb909"
     },
     {
       "name": "search-apis",
       "type": "skill",
       "description": "Find APIs and contracts in the api-evangelist network by keyword, provider, or tag, using the RFC 9264 api-catalog endpoints.",
       "url": "https://apievangelist.com/skills/search-apis/SKILL.md",
-      "sha256": "92d4db5d31c81373405c32f2fe1f67c5f726f7f3010d2883580ff2e902959744"
+      "sha256": "1519419d045f7c31783f14cfebae3356ebeedeed0bc663b2a62be045e4708ae9"
     },
     {
       "name": "fetch-api-spec",
       "type": "skill",
       "description": "Given an api-evangelist URL or catalog entry, fetch the OpenAPI / AsyncAPI / JSON Schema specification for that API.",
       "url": "https://apievangelist.com/skills/fetch-api-spec/SKILL.md",
-      "sha256": "fcb3fd075ea1135b08399726ef4d220d99f81c462544c6429521ca9076e3df56"
+      "sha256": "1c55e01f896ecfba07593be755bbb88fce8e4cfd788a4cce1d67ead9b31bb0bc"
     },
     {
       "name": "brief-on-topic",

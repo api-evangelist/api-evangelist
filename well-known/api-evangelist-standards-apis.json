@@ -1,0 +1,74 @@
+{
+  "aid": "api-evangelist-standards",
+  "specificationVersion": "0.19",
+  "type": "Index",
+  "name": "Standards",
+  "description": "Common Internet or industry standards used to consistently define API operations and keep the API factory floor well-defined and interoperable.",
+  "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+  "tags": [
+    "Standards",
+    "Interoperability"
+  ],
+  "created": "2024-11-11",
+  "modified": "2026-05-20",
+  "url": "https://github.com/api-evangelist/standards/blob/main/apis.yml",
+  "apis": [
+    {
+      "aid": "api-evangelist-standards:standards",
+      "name": "Standards Feed",
+      "description": "Common Internet or industry standards used to consistently define API operations and keep the API factory floor well-defined and interoperable.",
+      "image": "https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-logo-butterfly.png",
+      "humanURL": "https://developer.apievangelist.com/feeds/standards/",
+      "baseURL": "https://standards.apievangelist.com",
+      "tags": [
+        "Standards",
+        "Interoperability"
+      ],
+      "properties": [
+        {
+          "type": "Documentation",
+          "url": "https://developer.apievangelist.com/feeds/standards/"
+        },
+        {
+          "type": "JSONFeed",
+          "url": "https://standards.apievangelist.com/apis.json"
+        },
+        {
+          "type": "GitHubRepository",
+          "url": "https://github.com/api-evangelist/standards"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "Kin Lane",
+          "email": "info@apievangelist.com"
+        }
+      ]
+    }
+  ],
+  "common": [
+    {
+      "type": "DeveloperPortal",
+      "url": "https://developer.apievangelist.com/"
+    },
+    {
+      "type": "Network",
+      "url": "https://developer.apievangelist.com/network/"
+    },
+    {
+      "type": "GitHubOrganization",
+      "url": "https://github.com/api-evangelist"
+    },
+    {
+      "type": "APIsJSON",
+      "url": "https://developer.apievangelist.com/apis.json"
+    }
+  ],
+  "maintainers": [
+    {
+      "FN": "Kin Lane",
+      "email": "kin@apievangelist.com",
+      "X-github": "kinlane"
+    }
+  ]
+}

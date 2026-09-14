@@ -1,0 +1,22 @@
+aid: api-evangelist-providers
+url: https://github.com/api-evangelist/providers/blob/main/apis.yml
+apis: []
+name: API Evangelist Providers
+tags:
+  - Providers
+kind: providers
+image: >-
+  https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+access: 3rd-Party
+common:
+  - url: https://github.com/api-evangelist/
+    type: GitHubOrganization
+created: '2024-10-14'
+modified: '2026-06-03'
+position: Consuming
+description: An alphabetical listing of every company tracked across the API Evangelist network.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+    X-github: kinlane
+specificationVersion: '0.18'
