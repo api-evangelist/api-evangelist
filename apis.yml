@@ -62,9 +62,11 @@ x-self-hosted-profile: https://developer.apievangelist.com/apis.yml
 apis:
 - aid: api-evangelist:api-evangelist-mcp
   name: API Evangelist MCP Server
-  description: Model Context Protocol server over the same network — concierge tools (get_overview, guide_topic)
+  description: >-
+    Model Context Protocol server over the same network — concierge tools (get_overview, guide_topic)
     plus find/get tools for every resource type, served over Streamable HTTP for AI agents.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://developer.apievangelist.com/mcp-server
   baseURL: https://mcp.apievangelist.com/mcp
   tags:
@@ -92,9 +94,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-apis
   name: API Evangelist APIs
-  description: Individual API resources tracked across the API Evangelist network, drawn from many providers
-    and business sectors and accompanied by OpenAPI reviews.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Individual API resources tracked across the API Evangelist network, drawn from many providers and
+    business sectors and accompanied by OpenAPI reviews.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://apis.apievangelist.com
   baseURL: https://apis.apievangelist.com
   tags:
@@ -112,9 +116,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-posts
   name: API Evangelist Posts
-  description: Over 4,000 stories on the API Evangelist blog since 2010 — the technology, business, and
-    politics of how APIs are changing the way we live and work.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Over 4,000 stories on the API Evangelist blog since 2010 — the technology, business, and politics
+    of how APIs are changing the way we live and work.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://apievangelist.com
   baseURL: https://api.apievangelist.com/v1/posts
   tags:
@@ -131,9 +137,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-conversations
   name: API Evangelist Conversations
-  description: Regular conversations with API producers, consumers, and service providers about how they
-    see APIs and what their biggest challenges are.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Regular conversations with API producers, consumers, and service providers about how they see APIs
+    and what their biggest challenges are.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://conversations.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/conversations
   tags:
@@ -149,9 +157,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-companies
   name: API Evangelist Companies
-  description: An alphabetical listing of every company tracked across the API Evangelist network, operating
-    in almost every business sector.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    An alphabetical listing of every company tracked across the API Evangelist network, operating in almost
+    every business sector.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://providers.apievangelist.com
   baseURL: https://providers.apievangelist.com
   tags:
@@ -167,9 +177,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-experiences
   name: API Evangelist Experiences
-  description: The real-world human experience across teams producing APIs and the consumers who are applying
-    and integrating them as part of business.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    The real-world human experience across teams producing APIs and the consumers who are applying and
+    integrating them as part of business.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://experiences.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/experiences
   tags:
@@ -188,9 +200,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-guidance
   name: API Evangelist Guidance
-  description: Modular guidance for teams producing and consuming APIs — snackable real-time guidance
-    for keeping API operations moving forward.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Modular guidance for teams producing and consuming APIs — snackable real-time guidance for keeping
+    API operations moving forward.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://guidance.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/guidance
   tags:
@@ -206,9 +220,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-policies
   name: API Evangelist Policies
-  description: The business reasons behind why we govern API operations — aligning the engineering side
-    of operations with the business side of things.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    The business reasons behind why we govern API operations — aligning the engineering side of operations
+    with the business side of things.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://policies.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/policies
   tags:
@@ -224,9 +240,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-properties
   name: API Evangelist Properties
-  description: Individual properties of API operations that can be linked to strategy, experience, and
-    policies — and then governed to standardize how things work.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Individual properties of API operations that can be linked to strategy, experience, and policies —
+    and then governed to standardize how things work.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://properties.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/properties
   tags:
@@ -242,9 +260,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-rules
   name: API Evangelist Rules
-  description: Technical details of API operations that can be automated and enforced, used to align policies
-    with strategy to deliver the desired experience.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Technical details of API operations that can be automated and enforced, used to align policies with
+    strategy to deliver the desired experience.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://rules.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/rules
   tags:
@@ -261,9 +281,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-schema
   name: API Evangelist Schema
-  description: The naming and structure of the digital objects we pass back and forth via APIs within
-    the business and personal applications we use.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    The naming and structure of the digital objects we pass back and forth via APIs within the business
+    and personal applications we use.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://schema.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/schema
   tags:
@@ -284,9 +306,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-standards
   name: API Evangelist Standards
-  description: Common Internet or industry standards used to consistently define API operations and keep
-    the API factory floor well-defined and interoperable.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Common Internet or industry standards used to consistently define API operations and keep the API
+    factory floor well-defined and interoperable.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://standards.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/standards
   tags:
@@ -302,9 +326,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-strategies
   name: API Evangelist Strategies
-  description: High-level approaches to shifting the direction of API operations — aligning policies and
-    experiences across the platform.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    High-level approaches to shifting the direction of API operations — aligning policies and experiences
+    across the platform.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://strategies.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/strategies
   tags:
@@ -320,8 +346,10 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-videos
   name: API Evangelist Videos
-  description: Video content covering API topics, interviews, and walkthroughs of API concepts and technologies.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Video content covering API topics, interviews, and walkthroughs of API concepts and technologies.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://video.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/videos
   tags:
@@ -335,9 +363,11 @@ apis:
     email: info@apievangelist.com
 - aid: api-evangelist:api-evangelist-vocabularies
   name: API Evangelist Vocabularies
-  description: Organizing the words we use to describe API resources and capabilities — controlled vocabularies
-    that help us get on the same page.
-  image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
+  description: >-
+    Organizing the words we use to describe API resources and capabilities — controlled vocabularies that
+    help us get on the same page.
+  image: >-
+    https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
   humanURL: https://vocabularies.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/vocabulary
   tags:
@@ -361,43 +391,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/api-evangelist-account-api-openapi.yml
-  - type: Documentation
-    url: https://developer.apievangelist.com
-  - type: APIReference
-    url: https://developer.apievangelist.com/api
-  - type: Pricing
-    url: https://developer.apievangelist.com/plans/
-  - type: RateLimits
-    url: https://developer.apievangelist.com/plans/
-  - type: JSONSchema
-    url: schema/index.yml
-  - type: JSONSchema
-    url: schema/Doc.yml
-  - type: JSONSchema
-    url: schema/Area.yml
-  - type: JSONSchema
-    url: schema/PagedEnvelope.yml
-  - type: JSONSchema
-    url: schema/SearchEnvelope.yml
-  - type: JSONSchema
-    url: schema/Engage.yml
-  - type: JSONSchema
-    url: schema/ContactOption.yml
-  - type: JSONSchema
-    url: schema/Error.yml
-  - type: APIReference
-    url: https://developer.apievangelist.com/governance-api
-- aid: api-evangelist:api-evangelist-apis-api
-  name: API Evangelist AP Is API
-  description: Individual API resources tracked across the network, and the relevance graph between them.
-  humanURL: https://developer.apievangelist.com
-  baseURL: https://api.apievangelist.com/v1
-  tags: []
-  tags_raw:
-  - APIs
-  properties:
-  - type: OpenAPI
-    url: openapi/api-evangelist-apis-api-openapi.yml
   - type: Documentation
     url: https://developer.apievangelist.com
   - type: APIReference
@@ -462,8 +455,9 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-building-blocks-api
   name: API Evangelist Building Blocks API
-  description: The governance building blocks — guidance, rules, policies, standards, strategies, schema,
-    properties, experiences and lifecycle — and the relevance graph between them.
+  description: >-
+    The governance building blocks — guidance, rules, policies, standards, strategies, schema, properties,
+    experiences and lifecycle — and the relevance graph between them.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -571,8 +565,9 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-governance-api
   name: API Evangelist Governance API
-  description: Lint, coverage, waivers, reporting, certification, agent export, pipeline audit, toolsmith,
-    context gate.
+  description: >-
+    Lint, coverage, waivers, reporting, certification, agent export, pipeline audit, toolsmith, context
+    gate.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -608,8 +603,9 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-guidance-api
   name: API Evangelist Guidance API
-  description: Editorial guidance across the history, technology, business, politics, governance, and
-    evangelism of APIs.
+  description: >-
+    Editorial guidance across the history, technology, business, politics, governance, and evangelism
+    of APIs.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -645,9 +641,10 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-insights-api
   name: API Evangelist Insights API
-  description: Demand-side intelligence — what ~5,800 companies (Fortune 1000 + API providers) build,
-    buy, and hire for around APIs, data, and AI. Discovery is free; per-company depth + gaps are Pro.
-    (The supply↔demand provider match lives on apis.io.)
+  description: >-
+    Demand-side intelligence — what ~5,800 companies (Fortune 1000 + API providers) build, buy, and hire
+    for around APIs, data, and AI. Discovery is free; per-company depth + gaps are Pro. (The supply↔demand
+    provider match lives on apis.io.)
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -936,8 +933,9 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-synthesis-api
   name: API Evangelist Synthesis API
-  description: 'Curated synthesis over the network rather than raw retrieval: guides assembled for a topic,
-    and the counts behind the catalog.'
+  description: >-
+    Curated synthesis over the network rather than raw retrieval: guides assembled for a topic, and the
+    counts behind the catalog.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -973,8 +971,9 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-tags-api
   name: API Evangelist Tags API
-  description: The tag taxonomy across the whole network — the map of everything API Evangelist covers,
-    and the join key behind every /related response.
+  description: >-
+    The tag taxonomy across the whole network — the map of everything API Evangelist covers, and the join
+    key behind every /related response.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -1046,7 +1045,8 @@ apis:
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-toolbox-api
   name: API Evangelist Toolbox API
-  description: Standards, solutions, tools, schema, and properties — the raw materials of API operations.
+  description: >-
+    Standards, solutions, tools, schema, and properties — the raw materials of API operations.
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
@@ -1054,6 +1054,43 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/api-evangelist-toolbox-api-openapi.yml
+  - type: Documentation
+    url: https://developer.apievangelist.com
+  - type: APIReference
+    url: https://developer.apievangelist.com/api
+  - type: Pricing
+    url: https://developer.apievangelist.com/plans/
+  - type: RateLimits
+    url: https://developer.apievangelist.com/plans/
+  - type: JSONSchema
+    url: schema/index.yml
+  - type: JSONSchema
+    url: schema/Doc.yml
+  - type: JSONSchema
+    url: schema/Area.yml
+  - type: JSONSchema
+    url: schema/PagedEnvelope.yml
+  - type: JSONSchema
+    url: schema/SearchEnvelope.yml
+  - type: JSONSchema
+    url: schema/Engage.yml
+  - type: JSONSchema
+    url: schema/ContactOption.yml
+  - type: JSONSchema
+    url: schema/Error.yml
+  - type: APIReference
+    url: https://developer.apievangelist.com/governance-api
+- aid: api-evangelist:api-evangelist-apis-api
+  name: API Evangelist AP Is API
+  description: >-
+    Individual API resources tracked across the network, and the relevance graph between them.
+  humanURL: https://developer.apievangelist.com/mcp-server
+  baseURL: https://mcp.apievangelist.com/mcp
+  tags:
+  - APIs
+  properties:
+  - type: OpenAPI
+    url: openapi/api-evangelist-apis-api-openapi.yml
   - type: Documentation
     url: https://developer.apievangelist.com
   - type: APIReference
