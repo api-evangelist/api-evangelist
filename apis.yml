@@ -167,6 +167,9 @@ apis:
   tags:
   - Companies
   - APIs.json
+  tags_raw:
+  - Companies
+  - APIs.json
   properties:
   - type: Documentation
     url: https://developer.apievangelist.com/catalog-feeds
@@ -353,6 +356,9 @@ apis:
   humanURL: https://video.apievangelist.com
   baseURL: https://api.apievangelist.com/v1/videos
   tags:
+  - Video
+  - Media
+  tags_raw:
   - Videos
   - Media
   properties:
@@ -793,6 +799,8 @@ apis:
   humanURL: https://developer.apievangelist.com
   baseURL: https://api.apievangelist.com/v1
   tags:
+  - Paper
+  tags_raw:
   - Papers
   properties:
   - type: OpenAPI
@@ -1086,7 +1094,8 @@ apis:
     Individual API resources tracked across the network, and the relevance graph between them.
   humanURL: https://developer.apievangelist.com/mcp-server
   baseURL: https://mcp.apievangelist.com/mcp
-  tags:
+  tags: []
+  tags_raw:
   - APIs
   properties:
   - type: OpenAPI
