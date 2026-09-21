@@ -2,13 +2,15 @@
   "repo": "api-evangelist",
   "feeds": [
     {
-      "source": "https://developer.apievangelist.com",
-      "feed_url": "https://developer.apievangelist.com",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "source": "https://apievangelist.com",
+      "feed_url": "https://apievangelist.com/atom.xml",
+      "title": "API Evangelist",
+      "saved": 294,
+      "method": "feed"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-09-19T20:17:39Z"
+  "post_count": 294,
+  "fetched": "2026-09-19T20:17:39Z",
+  "feed_nature": "vendor-blog",
+  "feed_nature_basis": "path_blog"
 }
