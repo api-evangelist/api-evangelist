@@ -9,30 +9,7 @@ info:
 
     lifecycle), conversations, videos, white papers, tools, timelines, services, and the API
 
-    vocabulary — served as a single, searchable REST API.
-
-
-    **Tiers.** The API works without a key on the free tier (5 req/s, 1,000 req/day). Requests
-
-    from apievangelist.com network sites get the internal tier automatically. Higher-limit keys
-
-    are available by request — email info@apievangelist.com.
-
-
-    **Providers.** The API provider catalog (4,500+ companies) intentionally lives on
-
-    [APIs.io](https://apis.io/developer/) — this API covers API Evangelist''s own research
-
-    network and does not duplicate it.
-
-
-    **MCP.** Every resource here is also available as MCP tools at
-
-    `https://mcp.apievangelist.com/mcp` (Streamable HTTP), including concierge tools
-
-    (`get_overview`, `guide_topic`) that bundle curated guidance for a topic.
-
-    '
+    vocabulary — served as a single, searchable REST API.'
   contact:
     name: API Evangelist
     email: info@apievangelist.com
@@ -59,7 +36,7 @@ paths:
       - ApiKeyAuth: []
       tags:
       - Synthesis
-      summary: PRO — Curated cross-network guide for a topic.
+      summary: PRO — Curated cross-network guide for a topic
       description: PRO — Bundles the matching topic area (with related areas), top guidance, rules, policies, and standards, relevant papers and recent stories, plus the services that can help a team with this topic.
       parameters:
       - name: topic
@@ -99,7 +76,7 @@ paths:
       - ApiKeyAuth: []
       tags:
       - Synthesis
-      summary: PRO — Catalog intelligence.
+      summary: PRO — Catalog intelligence
       description: PRO — Per-type counts, stories-per-year, and the top tags by reach across the network.
       responses:
         '200':
@@ -120,18 +97,18 @@ paths:
               $ref: '#/components/headers/XRateLimitTier'
 components:
   headers:
-    XRateLimitTier:
-      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
-      schema:
-        type: string
-        examples:
-        - free
     XRateLimitLimit:
       description: The daily request quota for the tier that served this response.
       schema:
         type: integer
         examples:
         - 1000
+    XRateLimitTier:
+      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
+      schema:
+        type: string
+        examples:
+        - free
     XRateLimitWindow:
       description: The quota window in seconds. Always 86400 (one day).
       schema:

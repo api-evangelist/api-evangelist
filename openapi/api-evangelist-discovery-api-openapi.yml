@@ -2,7 +2,7 @@ openapi: 3.2.0
 info:
   title: Evangelist Governance Discovery API
   version: 1.0.0
-  description: The API Commons governance and discovery tools — lint, coverage, waivers, reporting, certification, agent export, pipeline audit, MCP/skill forging, consumer gating, reusability, and experience mapping — as one hosted REST API. Every endpoint runs the same engine the browser tools at apicommons.org/tools run, server-side. Discovery-grade linting is free; the capabilities that generate artifacts, certify, audit repos, or roll up across many APIs are Pro. Free tier is keyless (5 req/s, 1,000/day, one document per call). Send a Pro key in the x-api-key header to unlock the Pro endpoints, SARIF output, and bulk input. Get a key at https://api.apievangelist.com/v1/auth/login.
+  description: The API Commons governance and discovery tools — lint, coverage, waivers, reporting, certification, agent export, pipeline audit, MCP/skill forging, consumer gating, reusability, and experience mapping — as one hosted REST API.
   contact:
     name: API Evangelist
     url: https://apievangelist.com
@@ -199,6 +199,31 @@ paths:
       x-mcp-tool: map_api_experience
       x-agent-skill: api-agent-readiness
 components:
+  headers:
+    XRateLimitLimit:
+      description: The daily request quota for the tier that served this response.
+      schema:
+        type: integer
+        examples:
+        - 1000
+    XRateLimitTier:
+      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
+      schema:
+        type: string
+        examples:
+        - free
+    XRateLimitWindow:
+      description: The quota window in seconds. Always 86400 (one day).
+      schema:
+        type: integer
+        examples:
+        - 86400
+    RateLimitPolicy:
+      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
+      schema:
+        type: string
+        examples:
+        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
   responses:
     BadRequest:
       description: Invalid request.
@@ -226,31 +251,6 @@ components:
               upgrade:
                 type: string
                 example: https://developer.apievangelist.com/plans
-  headers:
-    XRateLimitTier:
-      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
-      schema:
-        type: string
-        examples:
-        - free
-    XRateLimitLimit:
-      description: The daily request quota for the tier that served this response.
-      schema:
-        type: integer
-        examples:
-        - 1000
-    XRateLimitWindow:
-      description: The quota window in seconds. Always 86400 (one day).
-      schema:
-        type: integer
-        examples:
-        - 86400
-    RateLimitPolicy:
-      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
-      schema:
-        type: string
-        examples:
-        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
   securitySchemes:
     ApiKey:
       type: apiKey

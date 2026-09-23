@@ -1,8 +1,8 @@
 {
   "provider": "api-evangelist",
   "sources": [
-    "apievangelist-governance-openapi.json",
-    "apievangelist-v1-openapi.yml"
+    "_original/apievangelist-governance-openapi.json",
+    "_original/apievangelist-v1-openapi.yml"
   ],
   "outputs": [
     "api-evangelist-account-api-openapi.yml",
@@ -27,16 +27,38 @@
     "api-evangelist-toolbox-api-openapi.yml"
   ],
   "archived": [
-    "archived openapi/apievangelist-governance-openapi.json",
-    "archived openapi/apievangelist-v1-openapi.yml"
+    "deleted 1 superseded output(s) from the previous generation"
   ],
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "apievangelist-governance-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apievangelist-v1-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "tag 'Governance' spans 2 source specs (apievangelist-governance-openapi.json, apievangelist-v1-openapi.yml): per-path servers applied",
-    "apis.yml register: written (+20 apis, 35 total)"
+    "superseded outputs removed: api-evangelist-ap-is-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 35 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "api-evangelist-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-ap-is-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-areas-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-building-blocks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-contact-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-discovery-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-governance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-guidance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-insights-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-media-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-operations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-overview-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-papers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-reference-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-services-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-stories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-synthesis-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-timelines-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "api-evangelist-toolbox-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
