@@ -1,16 +1,19 @@
 aid: api-evangelist
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - api-evangelist/posts
   open_source: unknown
   commercial: true
   callable_host: true
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - openapi
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -44,6 +47,7 @@ tags:
 - Agents
 - API Standards
 - API Vocabulary
+- A2A
 tags_raw:
 - APIs
 - API Evangelist
@@ -55,6 +59,7 @@ tags_raw:
 - Agents
 - API Standards
 - API Vocabulary
+- A2A
 created: '2024-10-14'
 modified: '2026-08-10'
 url: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/apis.yml
@@ -293,12 +298,13 @@ apis:
   baseURL: https://api.apievangelist.com/v1/schema
   tags:
   - Schema
-  - JSON-Schema
+  - JSON Schema
   - Data Models
   tags_raw:
   - Schema
   - JSON Schema
   - Data Models
+  - JSON-Schema
   properties:
   - type: Documentation
     url: https://developer.apievangelist.com/api
@@ -1089,7 +1095,7 @@ apis:
   - type: APIReference
     url: https://developer.apievangelist.com/governance-api
 - aid: api-evangelist:api-evangelist-apis-api
-  name: API Evangelist AP Is API
+  name: API Evangelist APIs API
   description: >-
     Individual API resources tracked across the network, and the relevance graph between them.
   humanURL: https://developer.apievangelist.com/mcp-server
@@ -1229,3 +1235,10 @@ x-enrichment:
   status: enriched
   artifacts_added: 26
   pass: local-v1
+x-a2a:
+  verified: true
+  probed: '2026-09-26'
+  url: "https://apievangelist.com/.well-known/agent-card.json"
+  grade: "conformant"
+  protocol_version: "0.3"
+  control: 404

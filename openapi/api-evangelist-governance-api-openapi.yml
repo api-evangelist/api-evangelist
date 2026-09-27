@@ -1305,30 +1305,30 @@ paths:
     - url: https://api.apievangelist.com/v1
 components:
   headers:
-    XRateLimitLimit:
-      description: The daily request quota for the tier that served this response.
-      schema:
-        type: integer
-        examples:
-        - 1000
-    XRateLimitTier:
-      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
-      schema:
-        type: string
-        examples:
-        - free
-    XRateLimitWindow:
-      description: The quota window in seconds. Always 86400 (one day).
-      schema:
-        type: integer
-        examples:
-        - 86400
     RateLimitPolicy:
       description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
       schema:
         type: string
         examples:
         - '"quota";q=1000;w=86400, "burst";q=5;w=1'
+    XRateLimitLimit:
+      description: The daily request quota for the tier that served this response.
+      schema:
+        type: integer
+        examples:
+        - 1000
+    XRateLimitWindow:
+      description: The quota window in seconds. Always 86400 (one day).
+      schema:
+        type: integer
+        examples:
+        - 86400
+    XRateLimitTier:
+      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
+      schema:
+        type: string
+        examples:
+        - free
   responses:
     BadRequest:
       description: Invalid request.
@@ -1374,12 +1374,29 @@ components:
           schema:
             $ref: '#/components/schemas/Error'
   parameters:
-    Slug:
-      name: slug
-      in: path
-      required: true
+    Q:
+      name: q
+      in: query
+      description: Free-text query over title, summary, tags, and body.
       schema:
         type: string
+    Page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    Match:
+      name: match
+      in: query
+      description: Tag match mode.
+      schema:
+        type: string
+        enum:
+        - any
+        - all
+        default: any
     Include:
       name: include
       in: query
@@ -1388,6 +1405,19 @@ components:
         type: string
         enum:
         - content
+    Fields:
+      name: fields
+      in: query
+      description: Comma-separated sparse field projection.
+      schema:
+        type: string
+        example: slug,title,url
+    Slug:
+      name: slug
+      in: path
+      required: true
+      schema:
+        type: string
     Limit:
       name: limit
       in: query
@@ -1400,36 +1430,6 @@ components:
       name: tags
       in: query
       description: Comma-separated tag slugs.
-      schema:
-        type: string
-    Match:
-      name: match
-      in: query
-      description: Tag match mode.
-      schema:
-        type: string
-        enum:
-        - any
-        - all
-        default: any
-    Page:
-      name: page
-      in: query
-      schema:
-        type: integer
-        minimum: 1
-        default: 1
-    Fields:
-      name: fields
-      in: query
-      description: Comma-separated sparse field projection.
-      schema:
-        type: string
-        example: slug,title,url
-    Q:
-      name: q
-      in: query
-      description: Free-text query over title, summary, tags, and body.
       schema:
         type: string
   schemas:
