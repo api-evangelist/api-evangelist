@@ -422,13 +422,12 @@ components:
       description: Free-text query over title, summary, tags, and body.
       schema:
         type: string
-    Page:
-      name: page
-      in: query
+    Slug:
+      name: slug
+      in: path
+      required: true
       schema:
-        type: integer
-        minimum: 1
-        default: 1
+        type: string
     Include:
       name: include
       in: query
@@ -437,12 +436,6 @@ components:
         type: string
         enum:
         - content
-    Slug:
-      name: slug
-      in: path
-      required: true
-      schema:
-        type: string
     Limit:
       name: limit
       in: query
@@ -457,19 +450,14 @@ components:
       description: Comma-separated tag slugs.
       schema:
         type: string
-  headers:
-    RateLimitPolicy:
-      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
-      schema:
-        type: string
-        examples:
-        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
-    XRateLimitWindow:
-      description: The quota window in seconds. Always 86400 (one day).
+    Page:
+      name: page
+      in: query
       schema:
         type: integer
-        examples:
-        - 86400
+        minimum: 1
+        default: 1
+  headers:
     XRateLimitLimit:
       description: The daily request quota for the tier that served this response.
       schema:
@@ -482,39 +470,19 @@ components:
         type: string
         examples:
         - free
-  responses:
-    NotFound:
-      description: No such resource.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
+    RateLimitPolicy:
+      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
+      schema:
+        type: string
+        examples:
+        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
+    XRateLimitWindow:
+      description: The quota window in seconds. Always 86400 (one day).
+      schema:
+        type: integer
+        examples:
+        - 86400
   schemas:
-    Doc:
-      type: object
-      description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
-      properties:
-        type:
-          type: string
-        slug:
-          type: string
-        title:
-          type: string
-        summary:
-          type: string
-        url:
-          type: string
-          format: uri
-        tags:
-          type: array
-          items:
-            type: string
-        date:
-          type: string
-        content:
-          type: string
-          description: Full markdown body when include=content.
-      additionalProperties: true
     PagedEnvelope:
       type: object
       properties:
@@ -543,6 +511,38 @@ components:
           type: string
         detail:
           type: string
+    Doc:
+      type: object
+      description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
+      properties:
+        type:
+          type: string
+        slug:
+          type: string
+        title:
+          type: string
+        summary:
+          type: string
+        url:
+          type: string
+          format: uri
+        tags:
+          type: array
+          items:
+            type: string
+        date:
+          type: string
+        content:
+          type: string
+          description: Full markdown body when include=content.
+      additionalProperties: true
+  responses:
+    NotFound:
+      description: No such resource.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

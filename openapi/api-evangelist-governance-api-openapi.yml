@@ -1305,30 +1305,30 @@ paths:
     - url: https://api.apievangelist.com/v1
 components:
   headers:
-    RateLimitPolicy:
-      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
-      schema:
-        type: string
-        examples:
-        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
     XRateLimitLimit:
       description: The daily request quota for the tier that served this response.
       schema:
         type: integer
         examples:
         - 1000
-    XRateLimitWindow:
-      description: The quota window in seconds. Always 86400 (one day).
-      schema:
-        type: integer
-        examples:
-        - 86400
     XRateLimitTier:
       description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
       schema:
         type: string
         examples:
         - free
+    RateLimitPolicy:
+      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
+      schema:
+        type: string
+        examples:
+        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
+    XRateLimitWindow:
+      description: The quota window in seconds. Always 86400 (one day).
+      schema:
+        type: integer
+        examples:
+        - 86400
   responses:
     BadRequest:
       description: Invalid request.
@@ -1380,6 +1380,41 @@ components:
       description: Free-text query over title, summary, tags, and body.
       schema:
         type: string
+    Slug:
+      name: slug
+      in: path
+      required: true
+      schema:
+        type: string
+    Include:
+      name: include
+      in: query
+      description: Set to `content` to inline the full markdown body (up to 200 KB).
+      schema:
+        type: string
+        enum:
+        - content
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 25
+    Tags:
+      name: tags
+      in: query
+      description: Comma-separated tag slugs.
+      schema:
+        type: string
+    Fields:
+      name: fields
+      in: query
+      description: Comma-separated sparse field projection.
+      schema:
+        type: string
+        example: slug,title,url
     Page:
       name: page
       in: query
@@ -1397,67 +1432,7 @@ components:
         - any
         - all
         default: any
-    Include:
-      name: include
-      in: query
-      description: Set to `content` to inline the full markdown body (up to 200 KB).
-      schema:
-        type: string
-        enum:
-        - content
-    Fields:
-      name: fields
-      in: query
-      description: Comma-separated sparse field projection.
-      schema:
-        type: string
-        example: slug,title,url
-    Slug:
-      name: slug
-      in: path
-      required: true
-      schema:
-        type: string
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        minimum: 1
-        maximum: 100
-        default: 25
-    Tags:
-      name: tags
-      in: query
-      description: Comma-separated tag slugs.
-      schema:
-        type: string
   schemas:
-    Doc:
-      type: object
-      description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
-      properties:
-        type:
-          type: string
-        slug:
-          type: string
-        title:
-          type: string
-        summary:
-          type: string
-        url:
-          type: string
-          format: uri
-        tags:
-          type: array
-          items:
-            type: string
-        date:
-          type: string
-        content:
-          type: string
-          description: Full markdown body when include=content.
-      additionalProperties: true
     PagedEnvelope:
       type: object
       properties:
@@ -1486,6 +1461,31 @@ components:
           type: string
         detail:
           type: string
+    Doc:
+      type: object
+      description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
+      properties:
+        type:
+          type: string
+        slug:
+          type: string
+        title:
+          type: string
+        summary:
+          type: string
+        url:
+          type: string
+          format: uri
+        tags:
+          type: array
+          items:
+            type: string
+        date:
+          type: string
+        content:
+          type: string
+          description: Full markdown body when include=content.
+      additionalProperties: true
   securitySchemes:
     ApiKey:
       type: apiKey
