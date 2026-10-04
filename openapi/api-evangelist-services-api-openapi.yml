@@ -124,26 +124,24 @@ paths:
           $ref: '#/components/responses/NotFound'
 components:
   parameters:
-    Q:
-      name: q
-      in: query
-      description: Free-text query over title, summary, tags, and body.
-      schema:
-        type: string
     Slug:
       name: slug
       in: path
       required: true
       schema:
         type: string
-    Include:
-      name: include
+    Q:
+      name: q
       in: query
-      description: Set to `content` to inline the full markdown body (up to 200 KB).
+      description: Free-text query over title, summary, tags, and body.
       schema:
         type: string
-        enum:
-        - content
+    Tags:
+      name: tags
+      in: query
+      description: Comma-separated tag slugs.
+      schema:
+        type: string
     Limit:
       name: limit
       in: query
@@ -152,12 +150,14 @@ components:
         minimum: 1
         maximum: 100
         default: 25
-    Tags:
-      name: tags
+    Include:
+      name: include
       in: query
-      description: Comma-separated tag slugs.
+      description: Set to `content` to inline the full markdown body (up to 200 KB).
       schema:
         type: string
+        enum:
+        - content
     Page:
       name: page
       in: query
@@ -172,24 +172,31 @@ components:
         type: integer
         examples:
         - 1000
-    XRateLimitTier:
-      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
-      schema:
-        type: string
-        examples:
-        - free
     RateLimitPolicy:
       description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
       schema:
         type: string
         examples:
         - '"quota";q=1000;w=86400, "burst";q=5;w=1'
+    XRateLimitTier:
+      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
+      schema:
+        type: string
+        examples:
+        - free
     XRateLimitWindow:
       description: The quota window in seconds. Always 86400 (one day).
       schema:
         type: integer
         examples:
         - 86400
+  responses:
+    NotFound:
+      description: No such resource.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   schemas:
     PagedEnvelope:
       type: object
@@ -212,13 +219,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Doc'
-    Error:
-      type: object
-      properties:
-        error:
-          type: string
-        detail:
-          type: string
     Doc:
       type: object
       description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
@@ -244,13 +244,13 @@ components:
           type: string
           description: Full markdown body when include=content.
       additionalProperties: true
-  responses:
-    NotFound:
-      description: No such resource.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        detail:
+          type: string
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

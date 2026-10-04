@@ -1304,34 +1304,9 @@ paths:
     servers:
     - url: https://api.apievangelist.com/v1
 components:
-  headers:
-    XRateLimitLimit:
-      description: The daily request quota for the tier that served this response.
-      schema:
-        type: integer
-        examples:
-        - 1000
-    XRateLimitTier:
-      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
-      schema:
-        type: string
-        examples:
-        - free
-    RateLimitPolicy:
-      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
-      schema:
-        type: string
-        examples:
-        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
-    XRateLimitWindow:
-      description: The quota window in seconds. Always 86400 (one day).
-      schema:
-        type: integer
-        examples:
-        - 86400
   responses:
-    BadRequest:
-      description: Invalid request.
+    Unprocessable:
+      description: The document could not be processed.
       content:
         application/json:
           schema:
@@ -1356,8 +1331,8 @@ components:
               upgrade:
                 type: string
                 example: https://developer.apievangelist.com/plans
-    Unprocessable:
-      description: The document could not be processed.
+    BadRequest:
+      description: Invalid request.
       content:
         application/json:
           schema:
@@ -1373,39 +1348,36 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-  parameters:
-    Q:
-      name: q
-      in: query
-      description: Free-text query over title, summary, tags, and body.
+  headers:
+    RateLimitPolicy:
+      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
       schema:
         type: string
+        examples:
+        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
+    XRateLimitLimit:
+      description: The daily request quota for the tier that served this response.
+      schema:
+        type: integer
+        examples:
+        - 1000
+    XRateLimitTier:
+      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
+      schema:
+        type: string
+        examples:
+        - free
+    XRateLimitWindow:
+      description: The quota window in seconds. Always 86400 (one day).
+      schema:
+        type: integer
+        examples:
+        - 86400
+  parameters:
     Slug:
       name: slug
       in: path
       required: true
-      schema:
-        type: string
-    Include:
-      name: include
-      in: query
-      description: Set to `content` to inline the full markdown body (up to 200 KB).
-      schema:
-        type: string
-        enum:
-        - content
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        minimum: 1
-        maximum: 100
-        default: 25
-    Tags:
-      name: tags
-      in: query
-      description: Comma-separated tag slugs.
       schema:
         type: string
     Fields:
@@ -1415,13 +1387,20 @@ components:
       schema:
         type: string
         example: slug,title,url
-    Page:
-      name: page
+    Q:
+      name: q
+      in: query
+      description: Free-text query over title, summary, tags, and body.
+      schema:
+        type: string
+    Limit:
+      name: limit
       in: query
       schema:
         type: integer
         minimum: 1
-        default: 1
+        maximum: 100
+        default: 25
     Match:
       name: match
       in: query
@@ -1432,6 +1411,27 @@ components:
         - any
         - all
         default: any
+    Tags:
+      name: tags
+      in: query
+      description: Comma-separated tag slugs.
+      schema:
+        type: string
+    Include:
+      name: include
+      in: query
+      description: Set to `content` to inline the full markdown body (up to 200 KB).
+      schema:
+        type: string
+        enum:
+        - content
+    Page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
   schemas:
     PagedEnvelope:
       type: object
@@ -1454,13 +1454,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Doc'
-    Error:
-      type: object
-      properties:
-        error:
-          type: string
-        detail:
-          type: string
     Doc:
       type: object
       description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
@@ -1486,6 +1479,13 @@ components:
           type: string
           description: Full markdown body when include=content.
       additionalProperties: true
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        detail:
+          type: string
   securitySchemes:
     ApiKey:
       type: apiKey

@@ -205,86 +205,34 @@ paths:
             X-RateLimit-Tier:
               $ref: '#/components/headers/XRateLimitTier'
 components:
-  parameters:
-    Q:
-      name: q
-      in: query
-      description: Free-text query over title, summary, tags, and body.
-      schema:
-        type: string
-    Limit:
-      name: limit
-      in: query
-      schema:
-        type: integer
-        minimum: 1
-        maximum: 100
-        default: 25
-    Fields:
-      name: fields
-      in: query
-      description: Comma-separated sparse field projection.
-      schema:
-        type: string
-        example: slug,title,url
-    Tags:
-      name: tags
-      in: query
-      description: Comma-separated tag slugs.
-      schema:
-        type: string
-    Sort:
-      name: sort
-      in: query
-      schema:
-        type: string
-        enum:
-        - default
-        - title
-        - date
-    Page:
-      name: page
-      in: query
-      schema:
-        type: integer
-        minimum: 1
-        default: 1
-    Match:
-      name: match
-      in: query
-      description: Tag match mode.
-      schema:
-        type: string
-        enum:
-        - any
-        - all
-        default: any
-  headers:
-    XRateLimitLimit:
-      description: The daily request quota for the tier that served this response.
-      schema:
-        type: integer
-        examples:
-        - 1000
-    XRateLimitTier:
-      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
-      schema:
-        type: string
-        examples:
-        - free
-    RateLimitPolicy:
-      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
-      schema:
-        type: string
-        examples:
-        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
-    XRateLimitWindow:
-      description: The quota window in seconds. Always 86400 (one day).
-      schema:
-        type: integer
-        examples:
-        - 86400
   schemas:
+    SearchEnvelope:
+      allOf:
+      - $ref: '#/components/schemas/PagedEnvelope'
+      - type: object
+        properties:
+          meta:
+            type: object
+            properties:
+              facets:
+                type: object
+                properties:
+                  types:
+                    type: object
+                    additionalProperties:
+                      type: integer
+    Engage:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        services_url:
+          type: string
+          format: uri
+        newsletter:
+          type: string
+          format: uri
     PagedEnvelope:
       type: object
       properties:
@@ -306,18 +254,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Doc'
-    Engage:
-      type: object
-      properties:
-        email:
-          type: string
-          format: email
-        services_url:
-          type: string
-          format: uri
-        newsletter:
-          type: string
-          format: uri
     Doc:
       type: object
       description: One network resource. Extra type-specific fields (guest, outline, party, …) appear per type.
@@ -343,21 +279,85 @@ components:
           type: string
           description: Full markdown body when include=content.
       additionalProperties: true
-    SearchEnvelope:
-      allOf:
-      - $ref: '#/components/schemas/PagedEnvelope'
-      - type: object
-        properties:
-          meta:
-            type: object
-            properties:
-              facets:
-                type: object
-                properties:
-                  types:
-                    type: object
-                    additionalProperties:
-                      type: integer
+  parameters:
+    Fields:
+      name: fields
+      in: query
+      description: Comma-separated sparse field projection.
+      schema:
+        type: string
+        example: slug,title,url
+    Sort:
+      name: sort
+      in: query
+      schema:
+        type: string
+        enum:
+        - default
+        - title
+        - date
+    Q:
+      name: q
+      in: query
+      description: Free-text query over title, summary, tags, and body.
+      schema:
+        type: string
+    Limit:
+      name: limit
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 25
+    Tags:
+      name: tags
+      in: query
+      description: Comma-separated tag slugs.
+      schema:
+        type: string
+    Match:
+      name: match
+      in: query
+      description: Tag match mode.
+      schema:
+        type: string
+        enum:
+        - any
+        - all
+        default: any
+    Page:
+      name: page
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+  headers:
+    RateLimitPolicy:
+      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
+      schema:
+        type: string
+        examples:
+        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
+    XRateLimitLimit:
+      description: The daily request quota for the tier that served this response.
+      schema:
+        type: integer
+        examples:
+        - 1000
+    XRateLimitTier:
+      description: The tier this request was served on — `free`, `pro`, `business`, `internal` or `owner`. Keyless requests are `free`; requests from an apievangelist.com origin are `internal`.
+      schema:
+        type: string
+        examples:
+        - free
+    XRateLimitWindow:
+      description: The quota window in seconds. Always 86400 (one day).
+      schema:
+        type: integer
+        examples:
+        - 86400
   securitySchemes:
     ApiKeyAuth:
       type: apiKey

@@ -200,6 +200,12 @@ paths:
       x-agent-skill: api-agent-readiness
 components:
   headers:
+    RateLimitPolicy:
+      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
+      schema:
+        type: string
+        examples:
+        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
     XRateLimitLimit:
       description: The daily request quota for the tier that served this response.
       schema:
@@ -212,12 +218,6 @@ components:
         type: string
         examples:
         - free
-    RateLimitPolicy:
-      description: 'The rate-limit policy in force for the tier that served this response, in RFC 9331 quota-policy syntax: `"quota";q=1000;w=86400, "burst";q=5;w=1` — a daily quota and a per-second burst. This is the POLICY, not a live counter: `RateLimit-Remaining` and `RateLimit-Reset` are deliberately not sent, because the quota is enforced by the gateway and there is no per-key usage accounting to read. Pace against the policy, and treat a 429 as authoritative.'
-      schema:
-        type: string
-        examples:
-        - '"quota";q=1000;w=86400, "burst";q=5;w=1'
     XRateLimitWindow:
       description: The quota window in seconds. Always 86400 (one day).
       schema:
@@ -225,17 +225,6 @@ components:
         examples:
         - 86400
   responses:
-    BadRequest:
-      description: Invalid request.
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: string
-              message:
-                type: string
     PaymentRequired:
       description: This capability requires a Pro plan.
       content:
@@ -251,6 +240,17 @@ components:
               upgrade:
                 type: string
                 example: https://developer.apievangelist.com/plans
+    BadRequest:
+      description: Invalid request.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+              message:
+                type: string
   securitySchemes:
     ApiKey:
       type: apiKey
