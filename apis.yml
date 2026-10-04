@@ -38,7 +38,7 @@ description: The index of everything available via the API Evangelist developer 
   feeds behind each network collection.
 image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
 tags:
-- API Evangelist
+- API-Evangelist
 - Developer Portal
 - API Research
 - API Governance
@@ -1133,6 +1133,9 @@ apis:
   - type: APIReference
     url: https://developer.apievangelist.com/governance-api
 common:
+- type: CapabilityMap
+  url: capabilities/api-evangelist-capability-edges.yml
+  name: API Evangelist Business Capability Map
 - type: Overlay
   url: overlays/api-evangelist-v1-overlay.yaml
 - type: Overlay
