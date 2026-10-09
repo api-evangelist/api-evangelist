@@ -187,3 +187,52 @@ onboarding:
   notes: >-
     No email required for Pro or Team. Hand-set-up accounts, annual billing and
     volume pricing are available by emailing info@apievangelist.com.
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - period
+  - request
+  plans:
+  - name: Free
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    - request
+    periods:
+    - day
+    - month
+  - name: Pro
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    - request
+    periods:
+    - day
+    - month
+  - name: Team
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    - request
+    periods:
+    - day
+    - month
+  - name: Enterprise
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    - request
+    periods:
+    - day
+    - month
