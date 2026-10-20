@@ -20,7 +20,7 @@ introspection:
   tools_returned: 57
   raw: mcp/api-evangelist-mcp-tools.json
   note: Anonymous tools/list succeeds — every tool below carries its real inputSchema in the raw file.
-tool_count: 57
+tool_count: 68
 tools:
 - name: get_overview
   description: 'START HERE. What the API Evangelist network offers: sixteen years of API research as searchable
@@ -219,8 +219,7 @@ tools:
   source_operations:
   - openapi/apievangelist-v1-openapi.yml#getConversation
 - name: find_papers
-  description: API Evangelist white papers — deep dives distilled from sixteen years of research, with
-    outlines.
+  description: API Evangelist papers — single-PDF deep dives on one practice or topic, with outlines.
   input_properties:
   - q
   - tags
@@ -372,6 +371,46 @@ tools:
   description: A company's weakest investment dimensions — where it is thin. Pro.
   input_properties:
   - slug
+- name: company_dimensions
+  description: 'PRO — a company''s investment dimensions, each read AGAINST the measured cohort: the cohort
+    median, mean and max, this company''s rank and percentile, and an index where 1.0 is exactly typical.
+    A raw dimension score is unreadable on its own; these are the columns that make it mean something.'
+- name: company_peers
+  description: PRO — the companies most comparable to this one (same sub-sector where the data supports
+    it, same industry otherwise), each with signal totals and top dimensions. The response says which
+    basis it used.
+- name: company_whitespace
+  description: PRO — what this company's peers run that it does not, ranked by how many peers carry it.
+    The opening list for a vendor selling into the account.
+- name: company_signals
+  description: PRO — the company's adopted stack entity by entity (services, tools, standards), each with
+    how many companies across the cohort carry it and its radar ring.
+- name: find_entities
+  description: 'Browse the demand-side entity catalog — every service, tool and standard companies are
+    measured against, ranked by how many carry it. Free. This is the left-hand side of the inversion:
+    pick an entity here, then call entity_demand to see WHO.'
+- name: entity_demand
+  description: 'PRO — THE INVERSION. Every other insights tool runs company -> stack; this one runs stack
+    -> companies: which companies show demand for a given service, tool or standard, broken down by industry.
+    This is the prospecting query — "who should I be selling this to" — and it exists in no report, bundle
+    or page. Returns BOTH the authoritative company count and the companies it can actually name, with
+    the basis difference explained.'
+- name: find_measured_standards
+  description: The standards bodies API Evangelist has actually MEASURED — repositories, maturity, governance,
+    coalition. Distinct from find_standards, which searches 613 catalog entries describing what a standard
+    IS. Free.
+- name: standard_adoption
+  description: 'How far a standards body actually got: repositories published, how many graduated past
+    unclassified and the resulting share, release cadence, contributor count — with the provenance of
+    every figure and an explicit list of what is NOT measured. Free, because a specification is a public
+    good.'
+- name: standard_coalition
+  description: 'Who is actually behind a standard: the governing bodies and their membership, the working
+    groups, the member companies, and the named people. Carries the caveats where our machine-readable
+    source disagrees with the body''s own published roster. Free.'
+- name: standard_repositories
+  description: Every repository a standards body publishes, with maturity, stars, forks, open issues and
+    archived status. Free.
 - name: validate_api
   description: Lint an OpenAPI, AsyncAPI, Arazzo, or JSON Schema document against the curated best-of-breed
     ruleset (Spectral) and return the findings. Pass your own `ruleset` to run rules you own instead of
@@ -443,6 +482,11 @@ tools:
 - name: generate_agent_descriptor
   description: Generate an API's llms.txt and an AGENTS.md consumption contract — base URL, auth, the
     operation table, deprecated operations to avoid, and usage rules.
+- name: submit_api_evangelist_feedback
+  description: 'Report something wrong with a result: wrong data, a filter that did not filter, a ranking
+    that put off-topic results first, a number you could not reproduce, or an answer that was useless
+    for your task. Free, and the fastest way to get a defect fixed — the support sweep reads the log this
+    lands in. Say what you expected as well as what you got.'
 deployment:
   mode: remote
   endpoint: https://mcp.apievangelist.com/mcp
@@ -476,3 +520,4 @@ tool_quality:
   scored: false
   note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
     from Glimind's agent-readiness audit.
+tools_count: 68
