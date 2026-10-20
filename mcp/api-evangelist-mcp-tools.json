@@ -1,1376 +1,2535 @@
 {
-  "tools": [
-    {
-      "name": "get_overview",
-      "description": "START HERE. What the API Evangelist network offers: sixteen years of API research as searchable stories, 77 topic areas, governance building blocks (guidance, rules, policies, standards, strategies), papers, conversations, and the consulting services Kin Lane offers teams. Returns counts, entry points, and how to engage.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {}
-      }
-    },
-    {
-      "name": "guide_topic",
-      "description": "PRO \u2014 Curated guide to one API topic (e.g. \"gateways\", \"api governance\", \"discovery\", \"agents\"). Bundles the matching topic area (with related areas), top guidance, rules, policies, and standards, relevant papers and recent stories, plus the API Evangelist services that can help a team with this topic.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "topic"
-        ],
-        "properties": {
-          "topic": {
-            "type": "string",
-            "description": "The topic to build a guide for."
-          }
-        }
-      }
-    },
-    {
-      "name": "find_services",
-      "description": "The services API Evangelist offers teams and customers \u2014 API strategy, governance, discovery, and evangelism engagements by Kin Lane. The front door to working with API Evangelist. (For the third-party vendor registry, use find_solutions.)",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
+  "endpoint": "https://mcp.apievangelist.com/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "api-evangelist",
+    "version": "1.2.0"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "get_overview",
+        "description": "START HERE. What the API Evangelist network offers: sixteen years of API research as searchable stories, 77 topic areas, governance building blocks (guidance, rules, policies, standards, strategies), papers, conversations, and the consulting services Kin Lane offers teams. Returns counts, entry points, and how to engage.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
             }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
           }
+        },
+        "annotations": {
+          "title": "Overview of API Evangelist",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "get_service",
-      "description": "Full detail for one service offering by slug; include=[\"content\"] inlines the full pitch.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "include": {
-            "type": "array",
-            "items": {
+      },
+      {
+        "name": "guide_topic",
+        "description": "PRO — Curated guide to one API topic (e.g. \"gateways\", \"api governance\", \"discovery\", \"agents\"). Bundles the matching topic area (with related areas), top guidance, rules, policies, and standards, relevant papers and recent stories, plus the API Evangelist services that can help a team with this topic.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "topic"
+          ],
+          "properties": {
+            "topic": {
+              "type": "string",
+              "description": "The topic to build a guide for."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Topic guide",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_services",
+        "description": "The services API Evangelist offers teams and customers — API strategy, governance, discovery, and evangelism engagements by Kin Lane. The front door to working with API Evangelist. (For the third-party vendor registry, use find_solutions.)",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
               "enum": [
-                "content"
-              ]
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "find_solutions",
-      "description": "The solutions registry \u2014 740+ third-party API services and tools (gateways, portals, testing, monitoring, \u2026) ranked by adoption across the companies API Evangelist tracks.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_solution",
-      "description": "One solution from the vendor registry by slug, with its website and adoption count.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    {
-      "name": "find_tools",
-      "description": "The open-source tooling registry \u2014 400+ tools in use across the companies API Evangelist tracks, each with adoption counts and technology-radar placement.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_tool",
-      "description": "One tool from the tooling registry by slug, with its website, adoption count, and radar ring.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    {
-      "name": "get_contact",
-      "description": "Every way to reach API Evangelist \u2014 email, contact form, newsletter, GitHub, social channels, and postal mail.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {}
-      }
-    },
-    {
-      "name": "search_api_evangelist",
-      "description": "Unified search across the whole network: 5k+ stories, 77 topic areas, 2.5k governance building blocks, papers, conversations, videos, tools, timelines, services, and vocabulary. Filter with types (posts, areas, guidance, rules, policies, standards, strategies, schema, properties, experiences, lifecycle, conversations, videos, papers, services, solutions, tools, timelines, vocabulary).",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "types": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "find_posts",
-      "description": "Search or browse 5,100+ API Evangelist stories (2010\u2013present); filter by year or tags.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "year": {
-            "type": "string"
-          },
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_post",
-      "description": "One story by slug (YYYY-MM-DD-slug); include=[\"content\"] returns the full markdown body.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "include": {
-            "type": "array",
-            "items": {
+            "sort": {
+              "type": "string",
               "enum": [
-                "content"
-              ]
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "find_areas",
-      "description": "The 77 focused topic areas of the network (agents, gateways, security, \u2026), each a subsite with its own catalog.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_area",
-      "description": "One topic area with its related-area graph resolved \u2014 walk the network from here.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    {
-      "name": "find_building_blocks",
-      "description": "Search the governance building blocks by type: guidance (177), rules (617), policies (283), standards (432), strategies (75), schema (11), properties (790), experiences (46), lifecycle (29).",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "type"
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidance",
-              "rules",
-              "policies",
-              "standards",
-              "strategies",
-              "schema",
-              "properties",
-              "experiences",
-              "lifecycle"
-            ]
-          },
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
             }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
           }
+        },
+        "annotations": {
+          "title": "Find services",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "get_building_block",
-      "description": "One building block by type + slug; include=[\"content\"] returns the full body.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "type",
-          "slug"
-        ],
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "guidance",
-              "rules",
-              "policies",
-              "standards",
-              "strategies",
-              "schema",
-              "properties",
-              "experiences",
-              "lifecycle"
-            ]
-          },
-          "slug": {
-            "type": "string"
-          },
-          "include": {
-            "type": "array",
-            "items": {
+      },
+      {
+        "name": "get_service",
+        "description": "Full detail for one service offering by slug; include=[\"content\"] inlines the full pitch.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Service slug, as find_services returns it, e.g. \"governance-agent-readiness\"."
+            },
+            "include": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "content"
+                ]
+              },
+              "description": "Pass [\"content\"] to inline the full body (Pro). Omitted, you get the summary."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get service",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_solutions",
+        "description": "The solutions registry — 740+ third-party API services and tools (gateways, portals, testing, monitoring, …) ranked by adoption across the companies API Evangelist tracks.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
               "enum": [
-                "content"
-              ]
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "find_conversations",
-      "description": "API Evangelist Conversations \u2014 recorded discussions with API practitioners (guest, company, YouTube/SoundCloud links).",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_conversation",
-      "description": "One conversation with guest detail and media links; include=[\"content\"] returns the writeup.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "include": {
-            "type": "array",
-            "items": {
+            "sort": {
+              "type": "string",
               "enum": [
-                "content"
-              ]
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "find_papers",
-      "description": "API Evangelist white papers \u2014 deep dives distilled from sixteen years of research, with outlines.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_paper",
-      "description": "One paper with its full outline and purchase/landing URL.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    {
-      "name": "find_videos",
-      "description": "The API Evangelist video library \u2014 interviews and discussions from across the API space, searchable by transcript.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
             }
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
           }
+        },
+        "annotations": {
+          "title": "Find solutions",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "get_video",
-      "description": "One video by slug with its YouTube id; include=[\"content\"] returns the full transcript.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "include": {
-            "type": "array",
-            "items": {
+      },
+      {
+        "name": "get_solution",
+        "description": "One solution from the vendor registry by slug, with its website and adoption count.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Solution (vendor) slug, as find_solutions returns it, e.g. \"adobe\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get solution",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_tools",
+        "description": "The open-source tooling registry — 400+ tools in use across the companies API Evangelist tracks, each with adoption counts and technology-radar placement.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
               "enum": [
-                "content"
-              ]
-            }
-          }
-        }
-      }
-    },
-    {
-      "name": "get_timeline",
-      "description": "One of the four research timelines in chronological order: api (the moments that shaped web APIs), resources (which digital resources became APIs and when), industries (the industrial history framing API infrastructure), people (the people who made compute and APIs possible).",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "timeline"
-        ],
-        "properties": {
-          "timeline": {
-            "type": "string",
-            "enum": [
-              "api",
-              "resources",
-              "industries",
-              "people"
-            ]
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_guidance_section",
-      "description": "One editorial guidance section as a list: history, technology, business, politics, governance, or evangelism \u2014 the six lenses API Evangelist organizes guidance through.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "section"
-        ],
-        "properties": {
-          "section": {
-            "type": "string",
-            "enum": [
-              "history",
-              "technology",
-              "business",
-              "politics",
-              "governance",
-              "evangelism"
-            ]
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "find_vocabulary",
-      "description": "The API vocabulary \u2014 thousands of resources, actions, personas, domains, schemas, and tags extracted from the API landscape. Filter by category.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "category": {
-            "type": "string",
-            "enum": [
-              "resources",
-              "actions",
-              "personas",
-              "domains",
-              "schemas",
-              "tags"
-            ]
-          },
-          "q": {
-            "type": "string",
-            "description": "Free text over title, summary, tags, and body."
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
             },
-            "description": "Tag slugs; match any by default."
-          },
-          "match": {
-            "type": "string",
-            "enum": [
-              "any",
-              "all"
-            ],
-            "default": "any"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "default",
-              "title",
-              "date"
-            ]
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "string"
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find tools",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_tool",
+        "description": "One tool from the tooling registry by slug, with its website, adoption count, and radar ring.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Tool slug, as find_tools returns it, e.g. \"ajv\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get tool",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_contact",
+        "description": "Every way to reach API Evangelist — email, contact form, newsletter, GitHub, social channels, and postal mail.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Contact Kin Lane",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "search_api_evangelist",
+        "description": "Unified search across the whole network: 5k+ stories, 77 topic areas, 2.5k governance building blocks, papers, conversations, videos, tools, timelines, services, and vocabulary. Filter with types (posts, areas, guidance, rules, policies, standards, strategies, schema, properties, experiences, lifecycle, conversations, videos, papers, services, solutions, tools, timelines, vocabulary).",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Content types to include — plural resource names: posts, services, solutions, tools, areas, papers, videos, conversations, guidance, rules, policies, standards, strategies…, e.g. [\"posts\",\"papers\"]."
+            },
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Search API Evangelist",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_posts",
+        "description": "Search or browse 5,100+ API Evangelist stories (2010–present); filter by year or tags.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "year": {
+              "type": "string",
+              "description": "Four-digit year; only posts whose date starts with it, e.g. \"2024\"."
+            },
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find posts",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_post",
+        "description": "One story by slug (YYYY-MM-DD-slug); include=[\"content\"] returns the full markdown body.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Post slug — date-prefixed, as find_posts returns it, e.g. \"2026-09-29-you-cannot-see-your-own-api-from-the-outside\"."
+            },
+            "include": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "content"
+                ]
+              },
+              "description": "Pass [\"content\"] to inline the full body (Pro). Omitted, you get the summary."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get post",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_areas",
+        "description": "The 77 focused topic areas of the network (agents, gateways, security, …), each a subsite with its own catalog.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find areas",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_area",
+        "description": "One topic area with its related-area graph resolved — walk the network from here.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Area slug, as find_areas returns it, e.g. \"agents\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get area",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_building_blocks",
+        "description": "Search the governance building blocks by type: guidance (177), rules (617), policies (283), standards (432), strategies (75), schema (11), properties (790), experiences (46), lifecycle (29).",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "guidance",
+                "rules",
+                "policies",
+                "standards",
+                "strategies",
+                "schema",
+                "properties",
+                "experiences",
+                "lifecycle"
+              ],
+              "description": "Building-block type: guidance, rules, policies, standards, strategies, schema, properties, experiences or lifecycle."
+            },
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find building blocks",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_building_block",
+        "description": "One building block by type + slug; include=[\"content\"] returns the full body.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "type",
+            "slug"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "guidance",
+                "rules",
+                "policies",
+                "standards",
+                "strategies",
+                "schema",
+                "properties",
+                "experiences",
+                "lifecycle"
+              ],
+              "description": "Building-block type: guidance, rules, policies, standards, strategies, schema, properties, experiences or lifecycle."
+            },
+            "slug": {
+              "type": "string",
+              "description": "Building-block slug within `type`, as find_building_blocks returns it, e.g. \"access\" with type \"guidance\"."
+            },
+            "include": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "content"
+                ]
+              },
+              "description": "Pass [\"content\"] to inline the full body (Pro). Omitted, you get the summary."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get building block",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_conversations",
+        "description": "API Evangelist Conversations — recorded discussions with API practitioners (guest, company, YouTube/SoundCloud links).",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find conversations",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_conversation",
+        "description": "One conversation with guest detail and media links; include=[\"content\"] returns the writeup.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Conversation slug — date-prefixed, as find_conversations returns it, e.g. \"2026-09-01-lukasz-gornicki\"."
+            },
+            "include": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "content"
+                ]
+              },
+              "description": "Pass [\"content\"] to inline the full body (Pro). Omitted, you get the summary."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get conversation",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_papers",
+        "description": "API Evangelist papers — single-PDF deep dives on one practice or topic, with outlines.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find papers",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_paper",
+        "description": "One paper with its full outline and purchase/landing URL.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Paper slug, as find_papers returns it, e.g. \"change-on-the-agent-surface\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get paper",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_videos",
+        "description": "The API Evangelist video library — interviews and discussions from across the API space, searchable by transcript.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find videos",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_video",
+        "description": "One video by slug with its YouTube id; include=[\"content\"] returns the full transcript.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Video slug, as find_videos returns it, e.g. \"adam-duvander\"."
+            },
+            "include": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "content"
+                ]
+              },
+              "description": "Pass [\"content\"] to inline the full body (Pro). Omitted, you get the summary."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get video",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_timeline",
+        "description": "One of the four research timelines in chronological order: api (the moments that shaped web APIs), resources (which digital resources became APIs and when), industries (the industrial history framing API infrastructure), people (the people who made compute and APIs possible).",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "timeline"
+          ],
+          "properties": {
+            "timeline": {
+              "type": "string",
+              "enum": [
+                "api",
+                "resources",
+                "industries",
+                "people"
+              ],
+              "description": "Which timeline: api, resources, industries or people."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get timeline",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_guidance_section",
+        "description": "One editorial guidance section as a list: history, technology, business, politics, governance, or evangelism — the six lenses API Evangelist organizes guidance through.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "section"
+          ],
+          "properties": {
+            "section": {
+              "type": "string",
+              "enum": [
+                "history",
+                "technology",
+                "business",
+                "politics",
+                "governance",
+                "evangelism"
+              ],
+              "description": "Guidance section: history, technology, business, politics, governance or evangelism."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get guidance section",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_vocabulary",
+        "description": "The API vocabulary — thousands of resources, actions, personas, domains, schemas, and tags extracted from the API landscape. Filter by category.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string",
+              "enum": [
+                "resources",
+                "actions",
+                "personas",
+                "domains",
+                "schemas",
+                "tags"
+              ],
+              "description": "Vocabulary category: resources, actions, personas, domains, schemas or tags."
+            },
+            "q": {
+              "type": "string",
+              "description": "Free text over title, summary, tags, and body."
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Tag slugs; match any by default."
+            },
+            "match": {
+              "type": "string",
+              "enum": [
+                "any",
+                "all"
+              ],
+              "default": "any",
+              "description": "How multiple `tags` combine: \"any\" (default, at least one) or \"all\" (every tag)."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "default",
+                "title",
+                "date"
+              ],
+              "description": "Order when there is no `q`: \"default\" (dated content newest first, the rest A-Z), \"title\" (A-Z) or \"date\" (newest first). A `q` always orders by relevance."
+            },
+            "fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Return only these keys on each record, e.g. [\"slug\",\"title\",\"url\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find vocabulary",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_feeds",
+        "description": "The static machine-readable feeds every network site publishes (JSON, APIs.json, zero-auth) — the no-key alternative to this API.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Feeds",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_tags",
+        "description": "Browse and rank the network tag taxonomy — every subject tag across 16k+ docs, by frequency or breadth (how many content types use it). Search with q. The map of what API Evangelist covers.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text matched against tag labels, e.g. \"governance\"."
+            },
+            "sort": {
+              "type": "string",
+              "enum": [
+                "count",
+                "breadth"
+              ],
+              "description": "\"count\" (default, most-used first) or \"breadth\" (spread across the most content types)."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find tags",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_tag",
+        "description": "One tag with its per-type counts and everything it labels across the whole network (stories, areas, guidance, papers, …). Filter with types.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Tag slug, as find_tags returns it, e.g. \"apis\"."
+            },
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Only return tagged items of these types, e.g. [\"posts\"]."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get tag",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_related",
+        "description": "Given any doc (type + slug), the most related content across the whole network, ranked by shared-tag relevance (rare, specific tags weigh most). \"More like this,\" across stories, areas, guidance, papers, conversations, and more.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "type",
+            "slug"
+          ],
+          "properties": {
+            "type": {
+              "type": "string",
+              "description": "Content type of the item `slug` names — the plural path name: posts, services, solutions, tools, areas, papers, videos, conversations, guidance…, e.g. \"posts\"."
+            },
+            "slug": {
+              "type": "string",
+              "description": "Slug of the item to find related content for, within `type`, e.g. \"2026-09-29-you-cannot-see-your-own-api-from-the-outside\"."
+            },
+            "types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Only return related items of these types, e.g. [\"papers\",\"posts\"]."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find related",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_stats",
+        "description": "PRO — catalog intelligence: per-type counts, stories-per-year, and the top tags by reach across the network.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Catalog stats",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_company_insights",
+        "description": "Browse profiled companies (Fortune 1000 + API providers) by name; ranked by technology-readiness signal. Free.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "q": {
+              "type": "string",
+              "description": "Free text matched against company name, e.g. \"chase\"."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find company insights",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "insights_dimensions",
+        "description": "Cross-section ranking of the 40 tracked investment dimensions (AI, cloud, governance, …) by company signal. Free.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Insights dimensions",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "insights_adoption",
+        "description": "Services, tools, or standards ranked by how many companies adopt them. Free.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "service",
+                "tool",
+                "standard"
+              ],
+              "default": "service",
+              "description": "What to rank by adoption across the companies: \"service\" (default), \"tool\" or \"standard\"."
+            },
+            "page": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 25,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Insights adoption",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "get_company_insight",
+        "description": "Full demand-side profile for one company: 40-dimension readiness, adopted stack, per-quarter history. Pro.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Company slug, as find_company_insights returns it, e.g. \"jp-morgan-chase\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Get company insight",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "company_gaps",
+        "description": "A company's weakest investment dimensions — where it is thin. Pro.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Company slug, as find_company_insights returns it, e.g. \"jp-morgan-chase\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Company gaps",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "company_dimensions",
+        "description": "PRO — a company's investment dimensions, each read AGAINST the measured cohort: the cohort median, mean and max, this company's rank and percentile, and an index where 1.0 is exactly typical. A raw dimension score is unreadable on its own; these are the columns that make it mean something.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Company slug, as find_company_insights returns it, e.g. \"jp-morgan-chase\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Company dimensions",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "company_peers",
+        "description": "PRO — the companies most comparable to this one (same sub-sector where the data supports it, same industry otherwise), each with signal totals and top dimensions. The response says which basis it used.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Company slug, as find_company_insights returns it, e.g. \"jp-morgan-chase\"."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "How many peers to return, 1-100."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Company peers",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "company_whitespace",
+        "description": "PRO — what this company's peers run that it does not, ranked by how many peers carry it. The opening list for a vendor selling into the account.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Company slug, as find_company_insights returns it, e.g. \"jp-morgan-chase\"."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200,
+              "description": "How many whitespace rows to return, 1-200."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Company whitespace",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "company_signals",
+        "description": "PRO — the company's adopted stack entity by entity (services, tools, standards), each with how many companies across the cohort carry it and its radar ring.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Company slug, as find_company_insights returns it, e.g. \"jp-morgan-chase\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Company signals",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_entities",
+        "description": "Browse the demand-side entity catalog — every service, tool and standard companies are measured against, ranked by how many carry it. Free. This is the left-hand side of the inversion: pick an entity here, then call entity_demand to see WHO.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "service",
+                "tool",
+                "standard"
+              ],
+              "description": "Entity kind: \"service\", \"tool\" or \"standard\"."
+            },
+            "q": {
+              "type": "string",
+              "description": "Substring match on the entity name."
+            },
+            "min_companies": {
+              "type": "integer",
+              "description": "Only entities carried by at least this many companies."
+            },
+            "page": {
+              "type": "integer",
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find entities",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "entity_demand",
+        "description": "PRO — THE INVERSION. Every other insights tool runs company -> stack; this one runs stack -> companies: which companies show demand for a given service, tool or standard, broken down by industry. This is the prospecting query — \"who should I be selling this to\" — and it exists in no report, bundle or page. Returns BOTH the authoritative company count and the companies it can actually name, with the basis difference explained.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "kind",
+            "slug"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "service",
+                "tool",
+                "standard"
+              ],
+              "description": "Entity kind: \"service\", \"tool\" or \"standard\"."
+            },
+            "slug": {
+              "type": "string",
+              "description": "Entity slug or display name — either resolves (\"spark\" and \"Apache Spark\" both work)."
+            },
+            "industry": {
+              "type": "string",
+              "description": "Restrict the named companies to one industry."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 500,
+              "description": "How many named companies to return, 1-500."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Entity demand",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "find_measured_standards",
+        "description": "The standards bodies API Evangelist has actually MEASURED — repositories, maturity, governance, coalition. Distinct from find_standards, which searches 613 catalog entries describing what a standard IS. Free.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "page": {
+              "type": "integer",
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Find measured standards",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "standard_adoption",
+        "description": "How far a standards body actually got: repositories published, how many graduated past unclassified and the resulting share, release cadence, contributor count — with the provenance of every figure and an explicit list of what is NOT measured. Free, because a specification is a public good.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Standards body slug, as find_measured_standards returns it, e.g. \"asyncapi\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Standard adoption",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "standard_coalition",
+        "description": "Who is actually behind a standard: the governing bodies and their membership, the working groups, the member companies, and the named people. Carries the caveats where our machine-readable source disagrees with the body's own published roster. Free.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Standards body slug, as find_measured_standards returns it, e.g. \"asyncapi\"."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Standard coalition",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "standard_repositories",
+        "description": "Every repository a standards body publishes, with maturity, stars, forks, open issues and archived status. Free.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "slug"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Standards body slug, as find_measured_standards returns it, e.g. \"asyncapi\"."
+            },
+            "page": {
+              "type": "integer",
+              "description": "Page number, 1-based (default 1). Use with `limit` to walk a long list."
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "Results per page, 1-100 (default 25)."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          }
+        },
+        "annotations": {
+          "title": "Standard repositories",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "validate_api",
+        "description": "Lint an OpenAPI, AsyncAPI, Arazzo, or JSON Schema document against the curated best-of-breed ruleset (Spectral) and return the findings. Pass your own `ruleset` to run rules you own instead of the catalog — which is what you should do before gating on anything.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
             }
           },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Lint an API description",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "get_feeds",
-      "description": "The static machine-readable feeds every network site publishes (JSON, APIs.json, zero-auth) \u2014 the no-key alternative to this API.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {}
-      }
-    },
-    {
-      "name": "find_tags",
-      "description": "Browse and rank the network tag taxonomy \u2014 every subject tag across 16k+ docs, by frequency or breadth (how many content types use it). Search with q. The map of what API Evangelist covers.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string"
-          },
-          "sort": {
-            "type": "string",
-            "enum": [
-              "count",
-              "breadth"
-            ]
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
-        }
-      }
-    },
-    {
-      "name": "get_tag",
-      "description": "One tag with its per-type counts and everything it labels across the whole network (stories, areas, guidance, papers, \u2026). Filter with types.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          },
-          "types": {
-            "type": "array",
-            "items": {
-              "type": "string"
+      },
+      {
+        "name": "api_coverage",
+        "description": "Measure how much of an API description your governance actually inspects — coverage by section, each rule's reach, and the rules that match nothing. Like test coverage, one altitude up.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
             }
           },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
-          },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Governance coverage",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "find_related",
-      "description": "Given any doc (type + slug), the most related content across the whole network, ranked by shared-tag relevance (rare, specific tags weigh most). \"More like this,\" across stories, areas, guidance, papers, conversations, and more.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "type",
-          "slug"
-        ],
-        "properties": {
-          "type": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
-          },
-          "types": {
-            "type": "array",
-            "items": {
-              "type": "string"
+      },
+      {
+        "name": "reconcile_waivers",
+        "description": "Reconcile a waivers file against lint output: suppress sanctioned violations and surface the expired, stale, and expiring ones. Returns the effective failing set a build should gate on.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "waivers": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The waivers file to reconcile — sanctioned violations, with expiry."
+            },
+            "violations": {
+              "type": [
+                "array",
+                "object",
+                "string"
+              ],
+              "description": "Lint output to reconcile against the waivers. An array of findings, or the object a linter returned."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
             }
           },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
+          "additionalProperties": true,
+          "required": [
+            "waivers",
+            "violations"
+          ]
+        },
+        "annotations": {
+          "title": "Reconcile waivers",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "get_stats",
-      "description": "PRO \u2014 catalog intelligence: per-type counts, stories-per-year, and the top tags by reach across the network.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {}
-      }
-    },
-    {
-      "name": "find_company_insights",
-      "description": "Browse profiled companies (Fortune 1000 + API providers) by name; ranked by technology-readiness signal. Free.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "q": {
-            "type": "string"
+      },
+      {
+        "name": "governance_report",
+        "description": "Turn Spectral findings into a self-contained HTML governance report — severity summary, grouped by rule, framed toward progress.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": [
+                "array",
+                "object"
+              ],
+              "description": "Spectral findings to render. An array, or the `{ results: [...] }` object a run returned."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
           },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
+          "additionalProperties": true,
+          "required": [
+            "results"
+          ]
+        },
+        "annotations": {
+          "title": "Governance HTML report",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "verify_certificate",
+        "description": "Re-verify a governance certificate against the API it attests to. If the API drifted or the certificate was forged, verification fails.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "certificate": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The governance certificate to re-verify. Alias: `cert`."
+            },
+            "api": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description being attested or verified. String or parsed object."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
           },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
+          "additionalProperties": true,
+          "required": [
+            "certificate",
+            "api"
+          ]
+        },
+        "annotations": {
+          "title": "Verify a governance certificate",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "insights_dimensions",
-      "description": "Cross-section ranking of the 40 tracked investment dimensions (AI, cloud, governance, \u2026) by company signal. Free.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
+      },
+      {
+        "name": "classify_api_fields",
+        "description": "Inventory the PII, secret, and sensitive fields an OpenAPI exposes, across parameters and request/response schemas. Run this before exposing an API to agents.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
           },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
-          }
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Classify sensitive API fields",
+          "readOnlyHint": true,
+          "openWorldHint": false
         }
-      }
-    },
-    {
-      "name": "insights_adoption",
-      "description": "Services, tools, or standards ranked by how many companies adopt them. Free.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "enum": [
-              "service",
-              "tool",
-              "standard"
-            ],
-            "default": "service"
+      },
+      {
+        "name": "diff_api_versions",
+        "description": "Compare two OpenAPI versions and classify every change as breaking, non-breaking, or an addition — at path, operation, parameter, request-body, and response granularity.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "old": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The BASELINE version of the document. Aliases: `from`, `base`."
+            },
+            "new": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The CANDIDATE version to compare against the baseline. Aliases: `to`, `revision`."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
           },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "default": 1
+          "additionalProperties": true,
+          "required": [
+            "old",
+            "new"
+          ]
+        },
+        "annotations": {
+          "title": "Diff two API versions",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "api_scorecard",
+        "description": "Score an API's maturity 0-100 with a letter grade across design, governance coverage, documentation, and (from an apis.json) discoverability, agent-readiness, and operations. Pass your own `ruleset` — a score against rules you never adopted means little.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
           },
-          "limit": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 100,
-            "default": 25
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "API scorecard",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "govern_estate",
+        "description": "PRO — Run the core governance checks across a WHOLE SET of internal APIs and roll them up: per-API score/grade/errors/PII, plus estate aggregates (avg score, grade distribution, APIs with PII/secrets) and a worst-first punch-list of what to fix. Pass `apis` ([{id, document}]) and your own `ruleset`. detail:true adds per-API dimensions.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "apis": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              },
+              "description": "The estate: one entry per API, [{ id, document }]. `document` alone is accepted for a single API."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "apis"
+          ]
+        },
+        "annotations": {
+          "title": "Govern an API estate",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "deprecation_posture",
+        "description": "Report every deprecated operation and whether it actually announces a sunset. The ones that go quiet are the ones that break consumers.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Deprecation posture",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "validate_onboarding",
+        "description": "Validate an API Onboarding Descriptor (AID) against the api-commons schema and report which optional sections it fills in.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "descriptor": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "An API Onboarding Descriptor (AID) to validate. Aliases: `aid`, `document`."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "descriptor"
+          ]
+        },
+        "annotations": {
+          "title": "Validate an onboarding descriptor",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "certify_api",
+        "description": "Issue a tamper-evident governance certificate attesting an API passed a named ruleset at a profile threshold. A SHA-256 fingerprint lets anyone re-verify it.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "api": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description being attested or verified. String or parsed object."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "api"
+          ]
+        },
+        "annotations": {
+          "title": "Certify an API",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "export_agent_rules",
+        "description": "Turn a governance ruleset into agent-native guidance — an AGENTS.md block, a system-prompt set, a per-rule remediation pack, and a digest — so agents follow the rules while authoring, not after linting.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "ruleset": {
+              "type": "object",
+              "description": "A Spectral ruleset to run instead of the catalog default. Score against rules you never adopted means little — pass your own."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "ruleset"
+          ]
+        },
+        "annotations": {
+          "title": "Export rules for agents",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "audit_pipeline",
+        "description": "Score a repository's Spectral CI setup against an 8-point maturity rubric and return a prioritized punch-list. Pass a public `repo` (\"owner/name\") or `files`.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true
+        },
+        "annotations": {
+          "title": "Audit a governance pipeline",
+          "readOnlyHint": true,
+          "openWorldHint": true
+        }
+      },
+      {
+        "name": "forge_mcp_tools",
+        "description": "From an OpenAPI, forge an MCP server design, per-operation tools, Agent Skills, an enriched OpenAPI, a server.json, and apis.json properties.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Forge MCP tools from OpenAPI",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "gate_agent_context",
+        "description": "Choose which operations and fields an API exposes to agents and emit a governed Tyk OpenAPI, an MCP tool manifest, and a Spectral ruleset with PII and secret checks.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true
+        },
+        "annotations": {
+          "title": "Gate agent context",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "apply_overlay",
+        "description": "Apply an OpenAPI Overlay to a document and report what each action matched. Use it for deprecation and migration choreography without forking the contract.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "overlay": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "An OpenAPI Overlay document whose actions are applied to `document`."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "document",
+            "overlay"
+          ]
+        },
+        "annotations": {
+          "title": "Apply an OpenAPI Overlay",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "mock_payloads",
+        "description": "Generate an example request and success-response payload for every operation from its schema.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Mock payloads",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "code_snippets",
+        "description": "Generate runnable curl, JavaScript, and Python samples for every operation, with path params filled in and a realistic body.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "document": {
+              "type": [
+                "string",
+                "object"
+              ],
+              "description": "The API description to operate on — OpenAPI, AsyncAPI, Arazzo or JSON Schema. A YAML/JSON string or an already-parsed object; both are accepted."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true,
+          "required": [
+            "document"
+          ]
+        },
+        "annotations": {
+          "title": "Code snippets",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "score_reusability",
+        "description": "Score how reusable a set of APIs is and detect duplication across them — the anti-sprawl view of an estate.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true
+        },
+        "annotations": {
+          "title": "Score reusability",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "map_api_experience",
+        "description": "Map each REST operation to its MCP tool and Agent Skill — the API -> MCP -> Agent-Skill chain — from an APIs.json, with a free/paid coverage scorecard and a flow map.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true
+        },
+        "annotations": {
+          "title": "Map the API experience",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "generate_agent_descriptor",
+        "description": "Generate an API's llms.txt and an AGENTS.md consumption contract — base URL, auth, the operation table, deprecated operations to avoid, and usage rules.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
+          },
+          "additionalProperties": true
+        },
+        "annotations": {
+          "title": "Generate llms.txt + AGENTS.md",
+          "readOnlyHint": true,
+          "openWorldHint": false
+        }
+      },
+      {
+        "name": "submit_api_evangelist_feedback",
+        "description": "Report something wrong with a result: wrong data, a filter that did not filter, a ranking that put off-topic results first, a number you could not reproduce, or an answer that was useless for your task. Free, and the fastest way to get a defect fixed — the support sweep reads the log this lands in. Say what you expected as well as what you got.",
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "problem"
+          ],
+          "properties": {
+            "problem": {
+              "type": "string",
+              "description": "What was wrong. Be specific — the tool you called, the arguments, and what came back."
+            },
+            "expected": {
+              "type": "string",
+              "description": "What you expected instead."
+            },
+            "about": {
+              "type": "string",
+              "description": "Optional slug, area, paper or story the report concerns."
+            },
+            "tool": {
+              "type": "string",
+              "description": "Optional name of the tool that produced it."
+            },
+            "severity": {
+              "type": "string",
+              "enum": [
+                "wrong",
+                "misleading",
+                "unhelpful"
+              ],
+              "description": "wrong = factually incorrect; misleading = correct but reads as something else; unhelpful = right and useless."
+            },
+            "context": {
+              "type": "string",
+              "description": "Optional: why you are asking. One sentence — the task you are trying to complete, or what you expect to get back. Never included in the answer and never used to rank; it is read only when a result turns out to be wrong, which is when knowing the intent is what makes the report actionable."
+            }
           }
+        },
+        "annotations": {
+          "title": "Send feedback (free)",
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "idempotentHint": false,
+          "openWorldHint": false
         }
       }
-    },
-    {
-      "name": "get_company_insight",
-      "description": "Full demand-side profile for one company: 40-dimension readiness, adopted stack, per-quarter history. Pro.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    {
-      "name": "company_gaps",
-      "description": "A company's weakest investment dimensions \u2014 where it is thin. Pro.",
-      "inputSchema": {
-        "type": "object",
-        "required": [
-          "slug"
-        ],
-        "properties": {
-          "slug": {
-            "type": "string"
-          }
-        }
-      }
-    },
-    {
-      "name": "validate_api",
-      "description": "Lint an OpenAPI, AsyncAPI, Arazzo, or JSON Schema document against the curated best-of-breed ruleset (Spectral) and return the findings. Pass your own `ruleset` to run rules you own instead of the catalog \u2014 which is what you should do before gating on anything.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "api_coverage",
-      "description": "Measure how much of an API description your governance actually inspects \u2014 coverage by section, each rule's reach, and the rules that match nothing. Like test coverage, one altitude up.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "reconcile_waivers",
-      "description": "Reconcile a waivers file against lint output: suppress sanctioned violations and surface the expired, stale, and expiring ones. Returns the effective failing set a build should gate on.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "waivers",
-          "violations"
-        ]
-      }
-    },
-    {
-      "name": "governance_report",
-      "description": "Turn Spectral findings into a self-contained HTML governance report \u2014 severity summary, grouped by rule, framed toward progress.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "results"
-        ]
-      }
-    },
-    {
-      "name": "verify_certificate",
-      "description": "Re-verify a governance certificate against the API it attests to. If the API drifted or the certificate was forged, verification fails.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "certificate",
-          "api"
-        ]
-      }
-    },
-    {
-      "name": "classify_api_fields",
-      "description": "Inventory the PII, secret, and sensitive fields an OpenAPI exposes, across parameters and request/response schemas. Run this before exposing an API to agents.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "diff_api_versions",
-      "description": "Compare two OpenAPI versions and classify every change as breaking, non-breaking, or an addition \u2014 at path, operation, parameter, request-body, and response granularity.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "old",
-          "new"
-        ]
-      }
-    },
-    {
-      "name": "api_scorecard",
-      "description": "Score an API's maturity 0-100 with a letter grade across design, governance coverage, documentation, and (from an apis.json) discoverability, agent-readiness, and operations. Pass your own `ruleset` \u2014 a score against rules you never adopted means little.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "govern_estate",
-      "description": "PRO \u2014 Run the core governance checks across a WHOLE SET of internal APIs and roll them up: per-API score/grade/errors/PII, plus estate aggregates (avg score, grade distribution, APIs with PII/secrets) and a worst-first punch-list of what to fix. Pass `apis` ([{id, document}]) and your own `ruleset`. detail:true adds per-API dimensions.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "apis"
-        ]
-      }
-    },
-    {
-      "name": "deprecation_posture",
-      "description": "Report every deprecated operation and whether it actually announces a sunset. The ones that go quiet are the ones that break consumers.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "validate_onboarding",
-      "description": "Validate an API Onboarding Descriptor (AID) against the api-commons schema and report which optional sections it fills in.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "descriptor"
-        ]
-      }
-    },
-    {
-      "name": "certify_api",
-      "description": "Issue a tamper-evident governance certificate attesting an API passed a named ruleset at a profile threshold. A SHA-256 fingerprint lets anyone re-verify it.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "api"
-        ]
-      }
-    },
-    {
-      "name": "export_agent_rules",
-      "description": "Turn a governance ruleset into agent-native guidance \u2014 an AGENTS.md block, a system-prompt set, a per-rule remediation pack, and a digest \u2014 so agents follow the rules while authoring, not after linting.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "ruleset"
-        ]
-      }
-    },
-    {
-      "name": "audit_pipeline",
-      "description": "Score a repository's Spectral CI setup against an 8-point maturity rubric and return a prioritized punch-list. Pass a public `repo` (\"owner/name\") or `files`.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true
-      }
-    },
-    {
-      "name": "forge_mcp_tools",
-      "description": "From an OpenAPI, forge an MCP server design, per-operation tools, Agent Skills, an enriched OpenAPI, a server.json, and apis.json properties.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "gate_agent_context",
-      "description": "Choose which operations and fields an API exposes to agents and emit a governed Tyk OpenAPI, an MCP tool manifest, and a Spectral ruleset with PII and secret checks.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true
-      }
-    },
-    {
-      "name": "apply_overlay",
-      "description": "Apply an OpenAPI Overlay to a document and report what each action matched. Use it for deprecation and migration choreography without forking the contract.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document",
-          "overlay"
-        ]
-      }
-    },
-    {
-      "name": "mock_payloads",
-      "description": "Generate an example request and success-response payload for every operation from its schema.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "code_snippets",
-      "description": "Generate runnable curl, JavaScript, and Python samples for every operation, with path params filled in and a realistic body.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true,
-        "required": [
-          "document"
-        ]
-      }
-    },
-    {
-      "name": "score_reusability",
-      "description": "Score how reusable a set of APIs is and detect duplication across them \u2014 the anti-sprawl view of an estate.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true
-      }
-    },
-    {
-      "name": "map_api_experience",
-      "description": "Map each REST operation to its MCP tool and Agent Skill \u2014 the API -> MCP -> Agent-Skill chain \u2014 from an APIs.json, with a free/paid coverage scorecard and a flow map.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true
-      }
-    },
-    {
-      "name": "generate_agent_descriptor",
-      "description": "Generate an API's llms.txt and an AGENTS.md consumption contract \u2014 base URL, auth, the operation table, deprecated operations to avoid, and usage rules.",
-      "inputSchema": {
-        "type": "object",
-        "properties": {},
-        "additionalProperties": true
-      }
-    }
-  ]
+    ]
+  }
 }
